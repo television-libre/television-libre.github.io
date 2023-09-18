@@ -32,6 +32,10 @@
  #buscar::placeholder {
     color: #000; 
 }
+ .d-none {
+    display: none !important; /* Esto ocultará los elementos y anulará otros estilos */
+}
+
 
 </style>
 <body class="flex flex-col h-screen justify-between dark:bg-slate-800 dark:text-slate-300 font-sans">
@@ -58,9 +62,9 @@
 <div>
 <div class="md:col-span-2" bis_skin_checked="1">
 <!-- Campo de búsqueda -->
+<input type="text" id="buscar" placeholder="Buscar Canal... ej: HBO, Animal Planet, Cinemax.">
 
-
-</div><input type="text" id="buscar" placeholder="Buscar Canal... ej: HBO, Animal Planet, Cinemax.">
+</div>
 <h1 class="text-3xl my-3 text-center">Canales online en vivo y en directo Gratis</h1>
 <div class="channels grid grid-cols-2 md:grid-cols-5 gap-6 my-5">
 <div class="p-2 rounded bg-slate-200 border dark:bg-slate-700 dark:border-gray-600">
