@@ -3,7 +3,7 @@
     border-width: 0;
     border-style: solid;
     border-color: #e5e7eb;
-    color: #fff;
+   
 }
 
 ::before,::after {
@@ -22,7 +22,8 @@ html {
 
 body {
     margin: 0;
-    line-height: inherit
+    line-height: inherit;
+    color:#fff;
 }
 
 hr {
