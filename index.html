@@ -252,18 +252,23 @@
 <a href="/dmca.html" rel="nofollow"> DMCA </a> </a></center>
 </div>
 </footer>
-<script >$(document).ready(function() {
+<script>$(document).ready(function() {
     $('#buscar').on('input', function() {
         var value = $(this).val().toLowerCase();
         $('.channels > div').each(function() {
             var imageAlt = $(this).find('img').attr('alt').toLowerCase();
             var cardVisible = imageAlt.indexOf(value) > -1;
 
-            // Mostrar u ocultar el canal según la búsqueda
-            $(this).toggleClass('d-none', !cardVisible);
+            // Aplicar clases de visibilidad de Bootstrap
+            if (cardVisible) {
+                $(this).removeClass('d-none'); // Mostrar
+            } else {
+                $(this).addClass('d-none'); // Ocultar
+            }
         });
     });
 });
+
 </script>
 </body>
 </html>
