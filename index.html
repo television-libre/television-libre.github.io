@@ -35,6 +35,57 @@
  .d-none {
     display: none !important; /* Esto ocultará los elementos y anulará otros estilos */
 }
+.main__filter-search,.main__filter-wrap {
+    display: flex;
+    flex-direction: row;
+    justify-content: flex-start;
+    align-items: center;
+    width: 100%;
+    position: relative
+}
+
+.main__filter-search {
+    margin-bottom: 10px
+}
+
+.main__filter-search input {
+    width: 100%;
+    height: 40px;
+    background-color: #141d26;
+    color: #fff;
+    font-size: 14px;
+    border-radius: 12px;
+    border: none;
+    padding: 0 60px 0 20px;
+    font-family: Inter,sans-serif
+}
+
+.main__filter-search input:focus {
+    border-color: #141d26
+}
+
+.main__filter-search button {
+    position: absolute;
+    right: 20px;
+    top: 0;
+    height: 40px;
+    width: auto;
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center
+}
+
+.main__filter-search button svg {
+    width: 20px;
+    height: auto;
+    fill: #bdbdbd;
+    transition: .5s ease
+}
+
+.main__filter-search button:hover svg {
+    fill: #6164ff
+}
 
 
 </style>
@@ -62,7 +113,7 @@
 <div>
 <div class="md:col-span-2" bis_skin_checked="1">
 <!-- Campo de búsqueda -->
-<input type="text" id="buscar" placeholder="Buscar Canal... ej: HBO, Animal Planet, Cinemax.">
+<div class="main__filter"><form action="#" class="main__filter-search search-form"><input id="buscar" type="text" placeholder="Buscar canal... ej: ESPN Premium, TNT Sports" class="form-control" data-search="true"><button type="button"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M21.71,20.29,18,16.61A9,9,0,1,0,16.61,18l3.68,3.68a1,1,0,0,0,1.42,0A1,1,0,0,0,21.71,20.29ZM11,18a7,7,0,1,1,7-7A7,7,0,0,1,11,18Z"></path></svg></button></form></div>
 
 </div>
 <h1 class="text-3xl my-3 text-center">Canales online en vivo y en directo Gratis</h1>
