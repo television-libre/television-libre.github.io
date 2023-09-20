@@ -1324,3 +1324,10 @@ body {
         padding-right: 2rem
     }
 }
+.logo {
+    font-size: 30px;
+    font-weight: 700;
+    letter-spacing: 2px;
+    text-transform: uppercase;
+    color: #fff;
+}
