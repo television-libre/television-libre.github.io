@@ -87,7 +87,17 @@
 .main__filter-search button:hover svg {
     fill: #6164ff
 }
-
+.inf {
+    background-color: #ececed;
+    border-radius: 5px;
+    bottom: 90%;
+    color: #1d2745;
+    font-size: 12px;
+    font-weight: 700;
+    padding: 2px 10px;
+    position: absolute;
+    margin-left: 5px;
+}
 
 </style>
 <body class="flex flex-col h-screen justify-between dark:bg-slate-800 dark:text-slate-300 font-sans">
@@ -121,6 +131,7 @@
 <div class="channels grid grid-cols-2 md:grid-cols-5 gap-6 my-5">
 <div class="p-2 rounded bg-slate-200 border dark:bg-slate-700 dark:border-gray-600">
 <a class="flex flex-col justify-evenly items-center h-full channel-link" href="/en-vivo/telefe/">
+ <span class="inf">Argentina</span>
 <img class="w-28 h-28 object-contain rounded" loading="lazy" src="/img/telefe.png" title="Telefe en VIVO online" alt="Telefe">
 <p class="des" >Ver Telefe en vivo online</p>
 <span class="bg-cyan-700 hover:bg-cyan-800 p-2 text-center block w-full m-2 rounded text-white mt-auto">Ver canal</span>
