@@ -89,6 +89,7 @@
 }
 .card-title:not(:last-child) {
     margin-bottom: 0.5rem;
+    font-weight: bold;
 }
 .card-subtitle, .card-text:last-child {
     margin-bottom: 0;
