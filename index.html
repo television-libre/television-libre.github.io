@@ -73,6 +73,7 @@
     align-items: center;
     width: 100%;
     position: relative;
+
 }
 
 .main__filter-search {
@@ -88,7 +89,10 @@
     border-radius: 12px;
     border: none;
     padding: 0 60px 0 20px;
-    font-family: Inter,sans-serif
+    font-family: Inter,sans-serif;
+ --bs-card-border-width: 0.0625rem;
+ --bs-card-border-color: hsla(0,0%,100%,.1);
+  border: var(--bs-card-border-width) solid var(--bs-card-border-color)
 }
 
 .main__filter-search input:focus {
