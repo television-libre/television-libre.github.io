@@ -192,10 +192,7 @@ img,video {
     display: none
 }
 
-* {
-    scrollbar-color: initial;
-    scrollbar-width: initial
-}
+
 
 *,::before,::after {
     --tw-border-spacing-x: 0;
@@ -1330,4 +1327,7 @@ body {
     letter-spacing: 2px;
     text-transform: uppercase;
     color: #fff;
+}
+::-webkit-scrollbar-thumb{
+  background: #eef8fc; 
 }
