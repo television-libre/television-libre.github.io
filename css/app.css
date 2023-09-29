@@ -1328,6 +1328,20 @@ body {
     text-transform: uppercase;
     color: #fff;
 }
-::-webkit-scrollbar-thumb{
+ /* Para navegadores WebKit (Safari y Chrome) */
+::-webkit-scrollbar {
+  width: 12px; 
+}
+
+::-webkit-scrollbar-track {
+  background: #141d26; 
+}
+
+::-webkit-scrollbar-thumb {
   background: #eef8fc; 
 }
+
+ /* firefox */
+
+scrollbar-width: thin; 
+scrollbar-color: #141d26 #eef8fc ; 
