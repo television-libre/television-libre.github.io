@@ -1037,6 +1037,7 @@ body {
     padding: 0;
     transition: all .4s;
     background: #0d141e;
+    color: #ff;
 }
 
 .opacity-0 {
