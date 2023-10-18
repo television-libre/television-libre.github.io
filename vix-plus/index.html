@@ -24,8 +24,8 @@
 <meta charset="UTF-8">
 <meta http-equiv="X-UA-Compatible" content="IE=edge">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>Television Libre - Star +</title>
-<meta name="description" content="Ver Star+. Ver eventos deportivos como Futbol, NBA, NFL, MLB, UFC, etc.">
+<title>Television Libre - VIX +</title>
+<meta name="description" content="Ver VIX+. Ver eventos deportivos como Futbol, NBA, NFL, MLB, UFC, etc.">
 <meta name="robots" content="index,follow">
 <link rel="stylesheet" href="/css/app.css">
 
@@ -1820,101 +1820,91 @@ a {
   
       <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
       <center>
-                <img src="/img/starplus.webp" alt="Star+" width="100" height="60">
+                <img src="/img/vixplus.png" alt="VIX+" width="100" height="60">
                <h2 style="color: #fff;font-size: 25px;font-weight: 600;">Elige el evento:</h2>
             </center>
  
 <div id="eventos"></div>
 <br>
-      <script>
+ <script type="text/javascript">
 function eventos() {
-      var x = Math.random().toString(36).substring(7);
+  var x = Math.random().toString(36).substring(7);
 
-      $.ajax({
-        url: "https://corsproxy.io/?url=https://tcnt.golf/star.json?" + x ,
-        type: "get",
-        success: function (arr) {
-          var content = '';
+  $.ajax({
+    url: "https://corsproxy.io/?url=https://futbolplaytvhd.com/vix.json?" + x, 
+    type: "get",
+    success: function (arr) {
+      var content = '';
 
-          for (var i = 0; i < arr.length; i++) {
-            if (i % 4 == 0) {
-              if (i != 0)
-                content += '</div>';
+      for (var i = 0; i < arr.length; i++) {
+        if (i % 4 == 0) {
+          if (i != 0)
+            content += '</div>';
 
-              content += '<div class="w3-row-padding w3-padding-16 w3-center" id="copa">';
-            }
+          content += '<div class="w3-row-padding w3-padding-16 w3-center" id="copa">';
+        }
 
-            var obj = arr[i];
-            var status, colorClass, additionalClass, decodedUrl, finalUrl;
+        var obj = arr[i];
+        var status, colorClass, additionalClass, finalEncodedUrl;
 
-            if (obj['status'] == "FINALIZADO" || obj['status'] == "EN VIVO")
-              status = obj['status'];
-            else
-              status = 'HOY | <span class="t">' + obj['status'] + '</span> hs';
+        if (obj['status'] == "FINALIZADO" || obj['status'] == "EN VIVO")
+          status = obj['status'];
+        else
+          status = 'HOY | <span class="t">' + obj['status'] + '</span> hs';
 
-            if (status == "EN VIVO") {
-              colorClass = "btn-custom-red"; 
-              additionalClass = "live-indicator-block"; 
-              status = '<i class="fa fa-circle blink" aria-hidden="true"></i> ' + status; 
-            } else {
-              colorClass = "btn-dark"; 
-              additionalClass = ""; 
-            }
-
-            var urlValue = obj['url'];
-
-         
-            if (urlValue && urlValue !== "#") {
-   
-    var encodedPart = urlValue.split("/embed/eventos/?r=")[1];
-
-  
-    var decodedPart = atob(encodedPart);
-
-   
-    var modifiedPart = decodedPart.replace("https://caperchi.click/star.html?get=", "");
-
-  
-    var newUrl = "https://apple-pp.blogspot.com/?get=" + modifiedPart;
+        if (status == "EN VIVO") {
+          colorClass = "btn-custom-red"; 
+          additionalClass = "live-indicator-block"; 
+          status = '<i class="fa fa-circle blink" aria-hidden="true"></i> ' + status; 
+        } else {
+          colorClass = "btn-dark"; 
+          additionalClass = ""; 
+        }
 
 
-    var encodedNewUrl = btoa(newUrl);
+var urlValue = obj['url'];
+var finalEncodedUrl;
 
-    
-    var finalEncodedUrl = "/html/r/?r=" + encodedNewUrl;
+if (urlValue && urlValue !== "#") {
+  var trimmedUrl = urlValue.replace(/\/embed\/eventos\/\?r=/, '');
+  var finalEncodedUrl = "/html/eventos/?r=" + trimmedUrl;
 } else {
-    finalEncodedUrl = "#"; 
+  finalEncodedUrl = "#"; 
 }
 
-        
-            content += '<div class="w3-quarter">';
-            content += '<a href="' + finalEncodedUrl + '"><img src="https://prod-ripcut-delivery.disney-plus.net/v1/variant/star/' + obj['img'] + '/scale?width=500&aspectRatio=1.78&format=jpeg" alt="Star+" style="width:100%" class="w3-hover-opacity"></a>';
-            content += '<a class="btn btn-block ' + colorClass + ' ' + additionalClass + '" href="' + finalEncodedUrl + '">' + status + '</a>';
-            content += '<div class="w3-card-4">';
-            content += '<p><b>' + obj['league'] + '</b></p>';
-            content += '<p>' + obj['title'] + '</p>';
-            content += '</div>';
-            content += '</div>';
 
-            if (i == arr.length - 1)
-              content += '</div>';
-          }
 
-          $("#eventos").html(content);
+    
+        content += '<div class="w3-quarter">';
+        content += '<a href="' + finalEncodedUrl + '"><img src=" ' + obj['img'] + ' " alt="VIX+" style="width:100%" class="w3-hover-opacity"></a>';
+        content += '<a class="btn btn-block ' + colorClass + ' ' + additionalClass + '" href="' + finalEncodedUrl + '">' + status + '</a>';
+        content += '<div class="w3-card-4">';
+        content += '<p><b>' + obj['league'] + '</b></p>';
+        content += '<p>' + obj['title'] + '</p>';
+        content += '</div>';
+        content += '</div>';
 
-          guardaHorario();
-          dT();
-        },
-      });
-    }
+        if (i == arr.length - 1)
+          content += '</div>';
+      }
 
-    eventos();
+      $("#eventos").html(content);
 
-    window.setInterval(function () {
-      eventos();
-    }, 60000);
+      guardaHorario();
+      dT();
+    },
+  });
+}
+
+eventos();
+
+window.setInterval(function () {
+  eventos();
+}, 60000);
+
 
   </script>
+
 
 
 
