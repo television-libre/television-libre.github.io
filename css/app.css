@@ -24,7 +24,7 @@ html {
 body {
     margin: 0;
     line-height: inherit;
-    color:#fff;
+    color:#fff !important;
 }
 
 hr {
@@ -1037,7 +1037,7 @@ body {
     padding: 0;
     transition: all .4s;
     background: #0d141e;
-    color: #ff;
+    color: #fff;
 }
 
 .opacity-0 {
