@@ -31,7 +31,7 @@
 <link href="https://flash669.github.io/star/starp.css" rel="stylesheet">
 <script src="https://kit.fontawesome.com/ccee9ace0a.js" crossorigin="anonymous"></script> 
 <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
-
+<link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.0.6/css/all.css">
 </head>
 <style>
 .button-container {
@@ -45,6 +45,76 @@
 }
 
 </style>
+ <style type:"text/css" >
+  .live-indicator-block  {
+	 font-family: 'Roboto', sans-serif;
+	 background: #ea2429;
+	 color: #fff;
+	 padding: 6px 7px;
+	
+	 border-radius: 3px;
+	 text-transform: uppercase;
+	 display: inline-block;
+	
+	 font-size: 12px;
+	 font-weight: bold;
+	 width: 100%;
+}
+ .live-indicator-block  .blink {
+	 animation: blinker 1s cubic-bezier(0.5, 0, 1, 1) infinite alternate;
+	 font-size: 10px;
+	 margin-right: 5px;
+	 vertical-align: baseline;
+}
+ @keyframes blinker {
+	 from {
+		 opacity: 1;
+	}
+	 to {
+		 opacity: 0;
+	}
+}
+
+.btn-dark.en-vivo {
+  background-color: red;
+  color: white;
+}
+
+.btn-dark.en-vivo .fa-circle {
+ animation: blinker 1s cubic-bezier(0.5, 0, 1, 1) infinite alternate;
+}
+
+@keyframes blink {
+  0%, 100% {
+    opacity: 0;
+  }
+  50% {
+    opacity: 1;
+  }
+	}
+	
+
+.btn-live {
+  background-color: red;
+  color: white;
+font-weight:700;
+}
+
+.btn-dark.en-vivo .fa-circle {
+  animation: blinker 1s cubic-bezier(0.5, 0, 1, 1) infinite alternate;
+	font-size:12px;
+}
+
+.btn-dark {
+  background-color: #212121;
+  color: white;
+		}
+.w3-hover-opacity {
+  border-top-left-radius: 20px;
+  border-top-right-radius: 20px;
+ 
+}		
+ </style>
 <body class="flex flex-col h-screen justify-between dark:bg-slate-800 dark:text-slate-300 font-sans">
 <div id="navbar"></div>
 <script>
@@ -55,10 +125,10 @@
   
       <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
       <center>
-                <img src="https://librefutboltv.com/img/logo-canal/logo-starplus.png" alt="Star+" width="250" height="100">
+                <img src="https://librefutboltv.com/img/logo-canal/logo-starplus.png" alt="Star+" width="100" height="60">
                 <h2>Elige el evento:</h2>
             </center>
- <button class="btn btn-md" onclick="location.reload();" type="button">Recargar Eventos</button>	
+ <button class="bg-cyan-700 hover:bg-cyan-800 p-2 text-center block w-full m-2 rounded text-white mt-auto" onclick="location.reload();" type="button">Recargar Eventos</button>	
 <div id="eventos"></div>
 <br>
       <script>
