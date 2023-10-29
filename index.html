@@ -256,9 +256,9 @@ scrollbar-color: #141d26 #eef8fc ;
 </div>
 </div>
 <div class="button-container">
-   <div class="dropdown">
+   <div style="background-color:#35afe3" class="dropdown">
     <div class="select">
-      <span style="font-weight: 550; color: #000;">C</span>
+      <span style="font-weight: 550; color: #000;">Categorías</span>
       <i class="fa fa-chevron-left"></i>
     </div>
     <input type="hidden" name="category">
@@ -1342,20 +1342,29 @@ scrollbar-color: #141d26 #eef8fc ;
     $(this).parents('.dropdown').find('span').text($(this).text());
     $(this).parents('.dropdown').find('input').attr('value', $(this).attr('id'));
 
-    // Filtrar las tarjetas según la categoría seleccionada
-    var selectedCategory = $(this).text();
-    var cards = $('.p-2.rounded');
 
-    cards.each(function () {
-      var cardCategory = $(this).find('.inf').text();
-      if (selectedCategory === "Todas" || selectedCategory === cardCategory) {
-        $(this).show();
+</script>
+ <script>
+  document.getElementById("category-filter").addEventListener("change", function() {
+    var selectedCategory = this.value;
+    var cards = document.querySelectorAll(".p-2.rounded");
+
+    cards.forEach(function(card) {
+      var category = card.querySelector(".inf").textContent;
+      if (selectedCategory === "Todas" || selectedCategory === category) {
+        card.style.display = "block";
       } else {
-        $(this).hide();
+        card.style.display = "none";
       }
+
+      // Mostrar siempre los elementos con la clase .keep-visible y sus descendientes
+      var keepVisibleElements = card.querySelectorAll(".mt-auto");
+      keepVisibleElements.forEach(function(element) {
+        element.style.display = "block";
+      });
     });
   });
-  /* End Dropdown Menu */
 </script>
+
 </body>
 </html>
