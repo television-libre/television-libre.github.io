@@ -1,53 +1,49 @@
-<!doctype html>
-<html lang="en">
+
+<html lang="es">
 <head>
-
- 
-
-<meta name="robots" content="noindex">
-<meta http-Equiv="Cache-Control" Content="no-cache" />
-<meta http-Equiv="Pragma" Content="no-cache" />
-<meta http-Equiv="Expires" Content="0" />
-<meta name="robots" content="noindex,nofollow">
-
-
- <style type="text/css">
-  html,  body {
-     
-      border: 0;
-      height: 100%;
-      width: 100%;
-      margin:0px;
-      padding:0px;
-    }
-  </style>
+<meta name="robots" content="noindex, nofollow" />
+<meta name="referrer" content="no-referrer" />
+<style type="text/css">
+body {
+   margin: 0;
+   padding: 0;
+}
+</style>
 <script type="text/javascript">
-  function getParameterByName(name) {
-    name = name.replace(/[\[]/, "\[").replace(/[\]]/, "\]");
-    var regex = new RegExp("[\?&]" + name + "=([^&#]*)"),
-      results = regex.exec(location.search);
-    return results === null ? "" : decodeURIComponent(results[1].replace(/\+/g, " "));
-  }
+function getParameterByName(name) {
+	name = name.replace(/[\[]/, "\[").replace(/[\]]/, "\]");
+	var regex = new RegExp("[\?&]" + name + "=([^&#]*)"),
+	results = regex.exec(location.search);
+	return results === null ? "" : decodeURIComponent(results[1].replace(/\+/g, " "));
+}
 
-  var getVal = getParameterByName('get');
-  if (getVal == "#") {
-    alert('Vuelve a la página anterior');
-  }
-  var getLang = getParameterByName('lang');
+var getURL = getParameterByName('get');
+if (getURL == "#") {alert('Vuelve a la pÃ¡gina anterior');}
+var getLang = getParameterByName('lang');
 </script>
-
 </head>
 <body>
 <div id="player"></div>
-
 <script>
-  if (getLang)
-    lang = "&lang=" + getLang;
-  else
-    lang = "";
+if (getLang)
+	lang = "&lang="+getLang;
+else
+	lang = "";
+	
+var url = "";
 
-  document.write('<iframe allow="encrypted-media" sandbox="allow-same-origin allow-scripts" src="https://mpdkflow.blogspot.com/?get=' + getVal + lang + '" width="100%" height="100%" scrolling="no" frameBorder="0" allowfullscreen></iframe>');
+var xhttp = new XMLHttpRequest();
+xhttp.open("GET", "/html/cv.json", true);
+xhttp.send();
+xhttp.onreadystatechange = function() {
+	if (xhttp.readyState == 4 && xhttp.status == 200) {
+		var data = JSON.parse(xhttp.responseText);
+		url = data["url"];
+		
+		document.getElementById('iframe').src = '//' +url + "/cvatt.html?get="+getURL+lang;
+	}
+}
+
+document.write('<iframe id="iframe" allow="encrypted-media" width="100%" height="100%" scrolling="no" frameBorder="0" allowfullscreen></iframe>');
 </script>
-
 </body>
-</html>
