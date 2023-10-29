@@ -169,81 +169,7 @@
 
 scrollbar-width: thin; 
 scrollbar-color: #141d26 #eef8fc ; 
-  * {
-  outline: 0;
- 
-}
- /*Styling Selectbox*/
-.dropdown {
-  width: 300px;
-  display: inline-block;
-  background-color: #35afe3;
-  border-radius: 2px;
-  box-shadow: 0 0 2px rgb(204, 204, 204);
-  transition: all .5s ease;
-  position: relative;
-  font-size: 14px;
-  color: #474747;
-  height: 100%;
-  text-align: left
-}
-.dropdown .select {
-    cursor: pointer;
-    display: block;
-    padding: 10px
-}
-.dropdown .select > i {
-    font-size: 13px;
-    color: #000;
-    cursor: pointer;
-    transition: all .3s ease-in-out;
-    float: right;
-    line-height: 20px
-}
-.dropdown:hover {
-    box-shadow: 0 0 4px rgb(204, 204, 204)
-}
-.dropdown:active {
-    background-color: #f8f8f8
-}
-.dropdown.active:hover,
-.dropdown.active {
-    box-shadow: 0 0 4px rgb(204, 204, 204);
-    border-radius: 2px 2px 0 0;
-    background-color: #f8f8f8
-}
-.dropdown.active .select > i {
-    transform: rotate(-90deg)
-}
-.dropdown .dropdown-menu {
-    position: absolute;
-    background-color: #fff;
-    width: 100%;
-    left: 0;
-    margin-top: 1px;
-    box-shadow: 0 1px 2px rgb(204, 204, 204);
-    border-radius: 0 1px 2px 2px;
-    overflow: hidden;
-    display: none;
-    max-height: 144px;
-    overflow-y: auto;
-    z-index: 9
-}
-.dropdown .dropdown-menu li {
-    padding: 10px;
-    transition: all .2s ease-in-out;
-    cursor: pointer
-} 
-.dropdown .dropdown-menu {
-    padding: 0;
-    list-style: none
-}
-.dropdown .dropdown-menu li:hover {
-    background-color: #f2f2f2
-}
-.dropdown .dropdown-menu li:active {
-    background-color: #e2e2e2
-}
+
 </style>
  <style type="text/css">@media screen and (min-width:0px) and (max-width:767px){.iframe-container iframe{height:266px}}</style>
 <body class="flex flex-col h-screen justify-between dark:bg-slate-800 dark:text-slate-300 font-sans">
@@ -257,24 +183,7 @@ scrollbar-color: #141d26 #eef8fc ;
 </div>
 <div class="button-container">
    <div style="background-color:#35afe3" class="dropdown">
-    <div class="select">
-      <span style="font-weight: 550; color: #000;">Categorías</span>
-      <i class="fa fa-chevron-left"></i>
-    </div>
-    <input type="hidden" name="category">
-    <ul class="dropdown-menu">
-      <li id="todas">Todas</li>
-      <li id="argentina">Argentina</li>
-      <li id="uruguay">Uruguay</li>
-      <li id="paraguay">Paraguay</li>
-      <li id="chile">Chile</li>
-      <li id="colombia">Colombia</li>
-      <li id="deportes">Deportes</li>
-      <li id="documentales">Documentales</li>
-      <li id="cultura">Cultura</li>
-      <li id="entretenimiento">Entretenimiento</li>
-    </ul>
-  </div>   
+   
 
 
 
@@ -1324,43 +1233,8 @@ scrollbar-color: #141d26 #eef8fc ;
     });
 });
 
-</script><script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
-<script>
-  /* Dropdown Menu */
-  $('.dropdown').click(function () {
-    $(this).attr('tabindex', 1).focus();
-    $(this).toggleClass('active');
-    $(this).find('.dropdown-menu').slideToggle(300);
-  });
-
-  $('.dropdown').focusout(function () {
-    $(this).removeClass('active');
-    $(this).find('.dropdown-menu').slideUp(300);
-  });
-
-  $('.dropdown .dropdown-menu li').click(function () {
-    $(this).parents('.dropdown').find('span').text($(this).text());
-    $(this).parents('.dropdown').find('input').attr('value', $(this).attr('id'));
-
-  var selectedCategory = $(this).text();
-    var cards = $('.p-2.rounded');
-
-    cards.forEach(function(card) {
-      var category = card.querySelector(".inf").textContent;
-      if (selectedCategory === "Todas" || selectedCategory === category) {
-        card.style.display = "block";
-      } else {
-        card.style.display = "none";
-      }
-
-      // Mostrar siempre los elementos con la clase .keep-visible y sus descendientes
-      var keepVisibleElements = card.querySelectorAll(".mt-auto");
-      keepVisibleElements.forEach(function(element) {
-        element.style.display = "block";
-      });
-    });
-  });
 </script>
+
 
 
 </body>
