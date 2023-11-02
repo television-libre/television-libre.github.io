@@ -34,22 +34,23 @@
 <script src="//code.jquery.com/jquery-3.3.1.min.js"></script>
 <script src="https://kit.fontawesome.com/ccee9ace0a.js" crossorigin="anonymous"></script>    
 <script type="text/javascript">
-         function getParameterByName(name) {
-             name = name.replace(/[\[]/, "\\[").replace(/[\]]/, "\\]");
-             var regex = new RegExp("[\\?&]" + name + "=([^&#]*)"),
-                 results = regex.exec(location.search);
-             return results === null ? "" : decodeURIComponent(results[1].replace(/\+/g, " "));
-         }
-          id = getParameterByName('p');
-         if(getParameterByName('embed')){
-            embed = getParameterByName('embed');
-         }else{
-            if(getParameterByName('r')){
-                embed = getParameterByName('r');
-             }else{
-                embed = false;
-         }  
-         }
+            function getParameterByName(name) {
+        name = name.replace(/[\[]/, "\\[").replace(/[\]]/, "\\]");
+        var regex = new RegExp("[\\?&]" + name + "=([^&#]*)"),
+            results = regex.exec(location.search);
+        return results === null ? "" : decodeURIComponent(results[1].replace(/\+/g, " "));
+    }
+
+    id = getParameterByName('p');
+    if (getParameterByName('embed')) {
+        embed = getParameterByName('embed');
+    } else {
+        if (getParameterByName('r')) {
+            embed = getParameterByName('r');
+        } else {
+            embed = false;
+        }
+    }
          
 
       </script>
@@ -79,7 +80,14 @@
   
 <main class="container mx-auto px-4  max-w-7xl mb-auto">
 <div class="my-3">
-<div><h1 class="text-3xl m-3">Reproductor - Television Libre </h1></div>
+<div id="title"> 
+<script>    var titleParam = getParameterByName('title');   
+    if (titleParam) {
+        var titleElement = document.getElementById('title');
+        if (titleElement) {
+            titleElement.innerHTML = '<h1 class="text-3xl m-3">' + titleParam + '</h1>';
+        }
+    }</script></div>
 <div class="grid md:grid-cols-5 gap-3">
  <div class="md:col-span-3 player w-full mx-auto">
 <script type="text/javascript">
