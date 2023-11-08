@@ -1,4 +1,5 @@
-(function(){
+
+(function() {
     if (window.fa83ad1efd77643804bea441d3274d51) return;
     window.fa83ad1efd77643804bea441d3274d51 = 1697519041;
     var h = window;
@@ -23,6 +24,8 @@
 
     k();
 })();
+
+
 
 /* Chatbro Widget Embed Code Start */
 function ChatbroLoader(chats, async) {
