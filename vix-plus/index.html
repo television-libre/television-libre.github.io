@@ -1837,11 +1837,6 @@ function eventos() {
       var content = '';
 
       for (var i = 0; i < arr.length; i++) {
-        // Omitir eventos con status "FINALIZADO"
-        if (arr[i]['status'] === "FINALIZADO") {
-          continue;
-        }
-
         if (i % 4 == 0) {
           if (i != 0)
             content += '</div>';
@@ -1852,23 +1847,34 @@ function eventos() {
         var obj = arr[i];
         var status, colorClass, additionalClass, finalEncodedUrl;
 
-        if (obj['status'] == "EN VIVO")
-          status = '<i class="fa fa-circle blink" aria-hidden="true"></i> ' + obj['status'];
+        if (obj['status'] == "FINALIZADO" || obj['status'] == "EN VIVO")
+          status = obj['status'];
         else
           status = 'HOY | <span class="t">' + obj['status'] + '</span> hs';
 
-        colorClass = (obj['status'] == "EN VIVO") ? "btn-custom-red" : "btn-dark";
-        additionalClass = (obj['status'] == "EN VIVO") ? "live-indicator-block" : "";
-
-        var urlValue = obj['url'];
-
-        if (urlValue && urlValue !== "#") {
-          var trimmedUrl = urlValue.replace(/\/embed\/eventos\/\?r=/, '');
-          finalEncodedUrl = "/html/eventos/?r=" + trimmedUrl;
+        if (status == "EN VIVO") {
+          colorClass = "btn-custom-red"; 
+          additionalClass = "live-indicator-block"; 
+          status = '<i class="fa fa-circle blink" aria-hidden="true"></i> ' + status; 
         } else {
-          finalEncodedUrl = "#";
+          colorClass = "btn-dark"; 
+          additionalClass = ""; 
         }
 
+
+var urlValue = obj['url'];
+var finalEncodedUrl;
+
+if (urlValue && urlValue !== "#") {
+  var trimmedUrl = urlValue.replace(/\/embed\/eventos\/\?r=/, '');
+  var finalEncodedUrl = "/html/eventos/?r=" + trimmedUrl;
+} else {
+  finalEncodedUrl = "#"; 
+}
+
+
+
+    
         content += '<div class="w3-quarter">';
         content += '<a href="' + finalEncodedUrl + '"><img src=" ' + obj['img'] + ' " alt="VIX+" style="width:100%" class="w3-hover-opacity"></a>';
         content += '<a class="btn btn-block ' + colorClass + ' ' + additionalClass + '" href="' + finalEncodedUrl + '">' + status + '</a>';
@@ -1895,7 +1901,6 @@ eventos();
 window.setInterval(function () {
   eventos();
 }, 60000);
-
 
   </script>
 
