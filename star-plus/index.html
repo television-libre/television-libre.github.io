@@ -1838,12 +1838,7 @@ function eventos() {
       var mt = ["//pelotalibre.lat/star_jwp.html?get=", "//mpdkflow.blogspot.com/?get=", "//starjwp.blogspot.com/?get="];
 
       for (var i = 0; i < arr.length; i++) {
-       
-        if (arr[i]['status'] === "FINALIZADO") {
-          continue;
-        }
-
-        if (i % 5 == 0) {
+        if (i % 4 == 0) {
           if (i != 0)
             content += '</div>';
 
@@ -1853,13 +1848,19 @@ function eventos() {
         var obj = arr[i];
         var status, colorClass, additionalClass, decodedUrl, finalUrl;
 
-        if (obj['status'] == "EN VIVO")
-          status = '<i class="fa fa-circle blink" aria-hidden="true"></i> ' + obj['status'];
+        if (obj['status'] == "FINALIZADO" || obj['status'] == "EN VIVO")
+          status = obj['status'];
         else
           status = 'HOY | <span class="t">' + obj['status'] + '</span> hs';
 
-        colorClass = (obj['status'] == "EN VIVO") ? "btn-custom-red" : "btn-dark";
-        additionalClass = (obj['status'] == "EN VIVO") ? "live-indicator-block" : "";
+        if (status == "EN VIVO") {
+          colorClass = "btn-custom-red";
+          additionalClass = "live-indicator-block";
+          status = '<i class="fa fa-circle blink" aria-hidden="true"></i> ' + status;
+        } else {
+          colorClass = "btn-dark";
+          additionalClass = "";
+        }
 
         var urlValue = obj['url'];
 
@@ -1868,6 +1869,7 @@ function eventos() {
           var decodedPart = atob(encodedPart);
           var modifiedPart = decodedPart.replace("/\/star\.html\?get=(.+)/", "");
 
+          
           var randomURL = mt[Math.floor(Math.random() * mt.length)];
 
           var newUrl = randomURL + modifiedPart;
@@ -1903,7 +1905,6 @@ eventos();
 window.setInterval(function () {
   eventos();
 }, 60000);
-
 
 </script>
 
