@@ -1829,15 +1829,21 @@ a {
         <script>
 function eventos() {
   var x = Math.random().toString(36).substring(7);
+  var url = "https://corsproxy.io/?url=https://tcnt.golf/star.json?" + x;
+ 
 
   $.ajax({
-    url: "https://corsproxy.io/?url=https://tcnt.golf/star.json?" + x,
+    url: url,
     type: "get",
     success: function (arr) {
       var content = '';
       var mt = ["//pelotalibre.lat/star_jwp.html?get=", "//mpdkflow.blogspot.com/?get=", "//starjwp.blogspot.com/?get="];
 
-      for (var i = 0; i < arr.length; i++) {
+      var activeEvents = arr.filter(function (event) {
+        return event['status'] !== "FINALIZADO";
+      });
+
+      for (var i = 0; i < activeEvents.length; i++) {
         if (i % 4 == 0) {
           if (i != 0)
             content += '</div>';
@@ -1845,7 +1851,7 @@ function eventos() {
           content += '<div class="w3-row-padding w3-padding-16 w3-center" id="copa">';
         }
 
-        var obj = arr[i];
+        var obj = activeEvents[i];
         var status, colorClass, additionalClass, decodedUrl, finalUrl;
 
         if (obj['status'] == "FINALIZADO" || obj['status'] == "EN VIVO")
@@ -1853,7 +1859,7 @@ function eventos() {
         else
           status = 'HOY | <span class="t">' + obj['status'] + '</span> hs';
 
-        if (status == "EN VIVO") {
+        if (obj['status'] == "EN VIVO") {
           colorClass = "btn-custom-red";
           additionalClass = "live-indicator-block";
           status = '<i class="fa fa-circle blink" aria-hidden="true"></i> ' + status;
@@ -1869,7 +1875,6 @@ function eventos() {
           var decodedPart = atob(encodedPart);
           var modifiedPart = decodedPart.replace("/\/star\.html\?get=(.+)/", "");
 
-          
           var randomURL = mt[Math.floor(Math.random() * mt.length)];
 
           var newUrl = randomURL + modifiedPart;
@@ -1888,7 +1893,7 @@ function eventos() {
         content += '</div>';
         content += '</div>';
 
-        if (i == arr.length - 1)
+        if (i == activeEvents.length - 1)
           content += '</div>';
       }
 
@@ -1905,6 +1910,7 @@ eventos();
 window.setInterval(function () {
   eventos();
 }, 60000);
+
 
 </script>
 
