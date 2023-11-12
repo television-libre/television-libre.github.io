@@ -1831,20 +1831,25 @@ function eventos() {
   var x = Math.random().toString(36).substring(7);
 
   $.ajax({
-    url: "https://corsproxy.io/?url=https://futbolplaytvhd.com/vix.json?" + x, 
+    url: "https://corsproxy.io/?url=https://futbolplaytvhd.com/vix.json?" + x,
     type: "get",
     success: function (arr) {
       var content = '';
+      var mt = ["//pelotalibre.lat/star_jwp.html?get=", "//mpdkflow.blogspot.com/?get=", "//starjwp.blogspot.com/?get="];
 
-      for (var i = 0; i < arr.length; i++) {
-        if (i % 4 == 0) {
-          if (i != 0)
+      var activeEvents = arr.filter(function (event) {
+        return event['status'] !== "FINALIZADO";
+      });
+
+      for (var i = 0; i < activeEvents.length; i++) {
+        if (i % 4 === 0) {
+          if (i !== 0)
             content += '</div>';
 
           content += '<div class="w3-row-padding w3-padding-16 w3-center" id="copa">';
         }
 
-        var obj = arr[i];
+        var obj = activeEvents[i];
         var status, colorClass, additionalClass, finalEncodedUrl;
 
         if (obj['status'] == "FINALIZADO" || obj['status'] == "EN VIVO")
@@ -1853,30 +1858,25 @@ function eventos() {
           status = 'HOY | <span class="t">' + obj['status'] + '</span> hs';
 
         if (status == "EN VIVO") {
-          colorClass = "btn-custom-red"; 
-          additionalClass = "live-indicator-block"; 
-          status = '<i class="fa fa-circle blink" aria-hidden="true"></i> ' + status; 
+          colorClass = "btn-custom-red";
+          additionalClass = "live-indicator-block";
+          status = '<i class="fa fa-circle blink" aria-hidden="true"></i> ' + status;
         } else {
-          colorClass = "btn-dark"; 
-          additionalClass = ""; 
+          colorClass = "btn-dark";
+          additionalClass = "";
         }
 
+        var urlValue = obj['url'];
 
-var urlValue = obj['url'];
-var finalEncodedUrl;
+        if (urlValue && urlValue !== "#") {
+          var trimmedUrl = urlValue.replace(/\/embed\/eventos\/\?r=/, '');
+          finalEncodedUrl = "/html/eventos/?r=" + trimmedUrl;
+        } else {
+          finalEncodedUrl = "#";
+        }
 
-if (urlValue && urlValue !== "#") {
-  var trimmedUrl = urlValue.replace(/\/embed\/eventos\/\?r=/, '');
-  var finalEncodedUrl = "/html/eventos/?r=" + trimmedUrl;
-} else {
-  finalEncodedUrl = "#"; 
-}
-
-
-
-    
         content += '<div class="w3-quarter">';
-        content += '<a href="' + finalEncodedUrl + '"><img src=" ' + obj['img'] + ' " alt="VIX+" style="width:100%" class="w3-hover-opacity"></a>';
+        content += '<a href="' + finalEncodedUrl + '"><img src="' + obj['img'] + '" alt="VIX+" style="width:100%" class="w3-hover-opacity"></a>';
         content += '<a class="btn btn-block ' + colorClass + ' ' + additionalClass + '" href="' + finalEncodedUrl + '">' + status + '</a>';
         content += '<div class="w3-card-4">';
         content += '<p><b>' + obj['league'] + '</b></p>';
@@ -1884,7 +1884,7 @@ if (urlValue && urlValue !== "#") {
         content += '</div>';
         content += '</div>';
 
-        if (i == arr.length - 1)
+        if (i === activeEvents.length - 1)
           content += '</div>';
       }
 
@@ -1902,6 +1902,7 @@ window.setInterval(function () {
   eventos();
 }, 60000);
 
+	
   </script>
 
 
