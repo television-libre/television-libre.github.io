@@ -211,7 +211,13 @@ scrollbar-color: #141d26 #eef8fc ;
 <h1 class="text-3xl my-3 text-center">Canales online en vivo y en directo Gratis</h1>
 <div class="channels grid grid-cols-2 md:grid-cols-5 gap-6 my-5" style="padding-left: 1rem;
     padding-right: 1rem;">
-
+ <h1 class="text-3xl my-3 text-center"></h1>
+<div id="slider"></div>
+<script>
+            $(document).ready(function() {
+                $("#slider").load("/html/slider-debate.html");
+            });
+         </script>
 
  
 <div class="p-2 rounded bg-slate-200 border dark:bg-slate-700 dark:border-gray-600">
@@ -1418,13 +1424,7 @@ scrollbar-color: #141d26 #eef8fc ;
 </a>
 </div>  
 
- <h1 class="text-3xl my-3 text-center">Deebate 2023</h1>
-<div id="slider"></div>
-<script>
-            $(document).ready(function() {
-                $("#slider").load("/html/slider-debate.html");
-            });
-         </script>
+
 </div>
 </div>
 </section> <!-- ShareThis BEGIN --><div class="sharethis-inline-share-buttons"></div><!-- ShareThis END -->
