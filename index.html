@@ -51,7 +51,81 @@
 <script src="https://kit.fontawesome.com/ccee9ace0a.js" crossorigin="anonymous"></script>   
 <link rel="stylesheet" href="/css/app.css">
 <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+  <script src="https://code.jquery.com/jquery-3.5.1.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/OwlCarousel2/2.3.4/owl.carousel.min.js"></script>
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/OwlCarousel2/2.3.4/assets/owl.carousel.min.css">  
 </head>
+
+<style media="screen">
+
+*{
+margin: 0;
+padding: 0;
+box-sizing: border-box;
+}
+body{
+display: flex;
+align-items: center;
+}
+.wrapper{
+width: 100%;
+}
+.carousel{
+max-width: 1200px;
+margin: auto;
+padding: 0 30px;
+}
+.carousel .card{
+color: #fff;
+text-align: center;
+margin: 20px 0;
+line-height: 250px;
+font-size: 90px;
+font-weight: 600;
+border-radius: 10px;
+box-shadow: 0px 4px 15px rgba(0,0,0,0.2);
+}
+
+
+.carousel .card img{
+border-radius:10px;
+ 
+}
+
+
+  .owl-dots{
+text-align: center;
+margin-top: 25px;
+}
+.owl-dot{
+height: 15px;
+width: 30px;
+margin: 0 5px;
+outline: none;
+border-radius: 14px;
+border: 2px solid #35afe3!important;
+box-shadow: 0px 4px 15px rgba(0,0,0,0.2);
+transition: all 0.3s ease;
+}
+.owl-dot.active,
+.owl-dot:hover{
+background: #35afe3!important;
+}
+
+.owl-carousel .card {
+    transition: transform 0.3s ease-in-out;
+}
+.owl-carousel .card:hover {
+    transform: scale(.92);
+}
+
+.card img:hover {
+    transition: all 0.2s ease-in-out;
+    filter: brightness(50%);
+}
+
+  
+</style>
 <style>
 .button-container {
   display: flex;
@@ -203,9 +277,17 @@ scrollbar-color: #141d26 #eef8fc ;
 </div>
 <br>
 <h1 class="text-3xl my-3 text-center">Debate 2023</h1>
-<div  style="padding:0;">
-<iframe allowfullscreen="true" scrolling="auto" src="/html/slider-debate.html" frameborder="0" width="100%" height="300"></iframe>
-</div>
+  <div class="wrapper">
+    <div class="carousel owl-carousel">
+      <a href="/en-vivo/america-tv/"><div class="card"> <img alt="America" src="https://static.flow.com.ar/images/EP00000001004328/S_DESC/500/500/0/0/10104714102.jpg"> </div></a>
+      <a href="/en-vivo/telefe/"><div class="card"> <img alt="Telefe" src="https://static.flow.com.ar/images/EP00000001005379/S_DESC/500/500/0/0/10104745974.jpg"> </div></a>
+      <a href="/en-vivo/tv-publica/"><div class="card"> <img alt="TV Publica" src="https://static.flow.com.ar/images/EP00000001005817/S_DESC/500/500/0/0/10104717831.jpg"> </div></a>
+      <a href="/en-vivo/el-trece/"><div class="card"> <img  alt="El Trece" src="https://static.flow.com.ar/images/EP00000001004548/S_DESC/500/500/0/0/10104710254.jpg"> </div></a>
+      <a href="/en-vivo/tn/"><div class="card"> <img  alt="TN" src="https://static.flow.com.ar/images/EP00000001004515/S_DESC/500/500/0/0/10104717263.jpg"> </div></a>
+      <a href="/en-vivo/a24/"><div class="card"> <img  alt="A24" src="https://static.flow.com.ar/images/EP00000001004332/S_DESC/500/500/0/0/10104713549.jpg"> </div></a>
+      <a href="/en-vivo/ln/"><div class="card"> <img  alt="LN+" src="https://static.flow.com.ar/images/EP00000001004336/S_DESC/500/500/0/0/10104706756.jpg"> </div></a>
+    </div>
+  </div>
 <div style="padding-left: 1rem;
     padding-right: 1rem;" class="main__filter"><form action="#" class="main__filter-search search-form"><input autocomplete="off" id="buscar" type="text" placeholder="Buscar canal..." class="form-control" data-search="true"><button type="button"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M21.71,20.29,18,16.61A9,9,0,1,0,16.61,18l3.68,3.68a1,1,0,0,0,1.42,0A1,1,0,0,0,21.71,20.29ZM11,18a7,7,0,1,1,7-7A7,7,0,0,1,11,18Z"></path></svg></button></form></div>
 
@@ -1452,7 +1534,19 @@ scrollbar-color: #141d26 #eef8fc ;
 });
 
 </script>
-
+  <script> $(".carousel").owlCarousel({
+  margin: 20,
+  loop: true,
+  autoplay: true,
+  autoplayTimeout: 2500,
+  autoplayHoverPause: true,
+  responsive: {
+      0: { items: 1, nav: false },
+      600: { items: 2, nav: false },
+      1000: { items: 3, nav: false },
+  },
+});
+</script>
 
 
 </body>
