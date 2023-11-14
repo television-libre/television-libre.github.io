@@ -95,10 +95,14 @@
                     if (embed) {document.write('<iframe class="shadow-lg rounded" width="100%" style="aspect-ratio:16/9;margin-bottom:20px" frameborder="0" allow="autoplay; encrypted-media" allowfullscreen src="'+atob(embed)+'" scrolling="no" frameBorder="0" allowfullscreen></iframe>');}
                         </script>
 
-
   </div>
   <div style="display: flex; flex-direction: column-reverse; align-items: flex-end;">
-
+<div id="agenda"></div>
+<script>
+            $(document).ready(function() {
+                $("#agenda").load("/agenda/index.html");
+            });
+         </script>
 </div>
 </main>
 
