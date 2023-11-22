@@ -173,6 +173,79 @@ scrollbar-width: thin;
 scrollbar-color: #141d26 #eef8fc ; 
 
 </style>
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/OwlCarousel2/2.3.4/assets/owl.carousel.min.css">  
+<style media="screen">
+
+*{
+margin: 0;
+padding: 0;
+box-sizing: border-box;
+font-family: 'Poppins', sans-serif;
+}
+body{
+min-height: 100vh;
+display: flex;
+align-items: center;
+}
+.wrapper{
+width: 100%;
+}
+.carousel{
+max-width: 1200px;
+margin: auto;
+padding: 0 30px;
+}
+.carousel .card{
+color: #fff;
+text-align: center;
+margin: 20px 0;
+line-height: 250px;
+font-size: 90px;
+font-weight: 600;
+border-radius: 10px;
+box-shadow: 0px 4px 15px rgba(0,0,0,0.2);
+}
+
+
+.carousel .card img{
+border-radius:10px;
+ 
+}
+
+
+  .owl-dots{
+text-align: center;
+margin-top: 25px;
+}
+.owl-dot{
+height: 15px;
+width: 30px;
+margin: 0 5px;
+outline: none;
+border-radius: 14px;
+border: 2px solid #35afe3!important;
+box-shadow: 0px 4px 15px rgba(0,0,0,0.2);
+transition: all 0.3s ease;
+}
+.owl-dot.active,
+.owl-dot:hover{
+background: #35afe3!important;
+}
+
+.owl-carousel .card {
+    transition: transform 0.3s ease-in-out;
+}
+.owl-carousel .card:hover {
+    transform: scale(.92);
+}
+
+.card img:hover {
+    transition: all 0.2s ease-in-out;
+    filter: brightness(50%);
+}
+
+  
+</style>
  <style type="text/css">@media screen and (min-width:0px) and (max-width:767px){.iframe-container iframe{height:266px}}</style>
 <body class="flex flex-col h-screen justify-between dark:bg-slate-800 dark:text-slate-300 font-sans">
 <nav class="bg-slate-100 shadow dark:bg-slate-700">
@@ -1580,7 +1653,11 @@ scrollbar-color: #141d26 #eef8fc ;
 </a>
 </div>  
 
-
+<div class="wrapper">
+    <div class="carousel owl-carousel" style="align-items:center">
+      <a href="/html/eventos/?r=aHR0cHM6Ly90ZWxldmlzaW9uLWxpYnJlLm9ubGluZS8vaHRtbC9mbC8/Z2V0PVJteHZkMTlOZFhOcFkxOVlVQT09"><div class="card"> <img alt="Rogers Waters" src="https://static.flow.com.ar/images/5299x20231122x2200/S_DESC/600/500/0/0/10104845385.jpg"> </div></a>
+    </div>
+  </div>
 </div>
 </div>
 </section> <!-- ShareThis BEGIN --><div class="sharethis-inline-share-buttons"></div><!-- ShareThis END -->
