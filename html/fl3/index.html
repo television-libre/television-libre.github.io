@@ -1,53 +1,52 @@
-<!doctype html>
-<html lang="en">
+
+<!DOCTYPE html>
+<html>
 <head>
-
- 
-
-<meta name="robots" content="noindex">
+ <meta name="robots" content="noindex">
 <meta http-Equiv="Cache-Control" Content="no-cache" />
 <meta http-Equiv="Pragma" Content="no-cache" />
 <meta http-Equiv="Expires" Content="0" />
 <meta name="robots" content="noindex,nofollow">
-
-
- <style type="text/css">
-  html,  body {
-     
-      border: 0;
-      height: 100%;
-      width: 100%;
-      margin:0px;
-      padding:0px;
-    }
-  </style>
-<script type="text/javascript">
-  function getParameterByName(name) {
-    name = name.replace(/[\[]/, "\[").replace(/[\]]/, "\]");
-    var regex = new RegExp("[\?&]" + name + "=([^&#]*)"),
-      results = regex.exec(location.search);
-    return results === null ? "" : decodeURIComponent(results[1].replace(/\+/g, " "));
-  }
-
-  var getVal = getParameterByName('get');
-  if (getVal == "#") {
-    alert('Vuelve a la página anterior');
-  }
-  var getLang = getParameterByName('lang');
-</script>
-
+    <style>body {margin:0;padding:0}</style>
+    <style type="text/css">.jw-icon.jw-icon-inline.jw-button-color.jw-reset.jw-playlist-btn {display: none;}</style>
+    <script src="//ssl.p.jwpcdn.com/player/v/8.26.0/jwplayer.js"></script>
+    <script>
+        jwplayer.key = 'XSuP4qMl+9tK17QNb+4+th2Pm9AWgMO/cYH8CI0HGGr7bdjo';
+    </script>
+    <script data-cfasync="false" type="text/javascript" src="//predictivadnetwork.com/a/display.php?r=7537270"></script>
+    <script cdnd='acacdn.com' data-adel='lwsu' data-cfasync='false' src='//acacdn.com/script/suv4.js' zid='7425742'></script>
 </head>
 <body>
-<div id="player"></div>
+    <div id='player'></div>
+    <script type='text/javascript'>
+        function getParameterByName(name) {
+            name = name.replace(/[\[]/, "\\[").replace(/[\]]/, "\\]");
+            var regex = new RegExp("[\\?&]" + name + "=([^&#]*)");
+            var results = regex.exec(location.search);
+            return results === null ? "" : decodeURIComponent(results[1].replace(/\+/g, " "));
+        }
 
-<script>
-  if (getLang)
-    lang = "&lang=" + getLang;
-  else
-    lang = "";
+        var getURL = getParameterByName('get');
+        var videoURL;
 
-  document.write('<iframe allow="encrypted-media" sandbox="allow-same-origin allow-scripts" src="https://embed3.majorleague.makeup/bpk.html?get=' + getVal + lang + '" width="100%" height="100%" scrolling="no" frameBorder="0" allowfullscreen></iframe>');
-</script>
+        if (getURL) {
+            var mpdBase = "https://dolocallivechannelhls.clarovideo.com/Content/HLS_HLS_FK/Live/Channel(" + getURL + ")/index.m3u8";
+            videoURL = mpdBase;
+        }
 
+        var playerInstance = jwplayer("player");
+        playerInstance.setup({
+            file: videoURL,
+            width: "100%",
+            height: "100%",
+            aspectratio: "16:9",
+            autostart: false,
+            cast:{}
+        }); 
+    </script>
 </body>
-</html>
+</html><meta name="robots" content="noindex">
+<meta http-Equiv="Cache-Control" Content="no-cache" />
+<meta http-Equiv="Pragma" Content="no-cache" />
+<meta http-Equiv="Expires" Content="0" />
+<meta name="robots" content="noindex,nofollow">
