@@ -30,7 +30,7 @@ if (getURL == "") {
 <div id="player"></div>
 
 <script>
-if (getURL == "PREMIERE") // premiere 1
+if (getURL == "PREMIERE") 
 {
     var playerInstance = jwplayer("player");
     playerInstance.setup({
@@ -38,11 +38,11 @@ if (getURL == "PREMIERE") // premiere 1
             "sources": [{
                 "default": false,
                 "type": "dash",
-             "file": atob('aHR0cHM6Ly9jdHItMDEyNzctY2xhcm8tYnIuY2xhcm8tdHYtbGl2ZS5xd2lsdGVkLWNkcy5jcWxvdWQuY29tL0NvbnRlbnQvQ2hhbm5lbC9TUE9QUkhEL2RzYzEvbWFuaWZlc3QubXBk'),
+            "file": atob('aHR0cHM6Ly9jdHItMDEyNzctY2xhcm8tYnIuY2xhcm8tdHYtbGl2ZS5xd2lsdGVkLWNkcy5jcWxvdWQuY29tL0NvbnRlbnQvQ2hhbm5lbC9TUE9QUkhEL2RzYzEvbWFuaWZlc3QubXBk'),
             "drm": {
                 "clearkey": {
-                    "keyId": atob('ZDg2YjdhMmEwNmQ0MjhjZWQ4ZTEzYjNmY2FlOWQ0OGU='),
-                    "key": atob('Yjk2YTQxOThlMzhmZDIxODBmYjM5OTM0NjczYjFlZDc=')
+                    "keyId": atob('MmNhNjc2YWIxMmIzNGU2YWMzMjk0Yjc0YTQ1NTY0M2U='),
+                    "key": atob('OTJlM2Y3NTJiMGMyZjI1NWZjYWVlYjE1NjY3Y2NjZGE=')
                 }
             },
                 "label": "0"
@@ -58,7 +58,7 @@ if (getURL == "PREMIERE") // premiere 1
 }
 
 
-else if (getURL == "U1BPUlRWQlI=") // sportv 1
+else if (getURL == "SPORTV") 
 {
     var playerInstance = jwplayer("player");
     playerInstance.setup({
@@ -84,6 +84,146 @@ else if (getURL == "U1BPUlRWQlI=") // sportv 1
         sharing: {}
     });
 }
-  
+
+
+else if (getURL == "PREMIERE2") 
+{
+    var playerInstance = jwplayer("player");
+    playerInstance.setup({
+        playlist: [{
+            "sources": [{
+                "default": false,
+                "type": "dash",
+             "file": atob('aHR0cHM6Ly9jdHItMDEyNzctY2xhcm8tYnIuY2xhcm8tdHYtbGl2ZS5xd2lsdGVkLWNkcy5jcWxvdWQuY29tL0NvbnRlbnQvQ2hhbm5lbC9TUE9QUjJIRC9kc2MxL21hbmlmZXN0Lm1wZA=='),
+            "drm": {
+                "clearkey": {
+                    "keyId": atob('ZjRkNThiZjM3MzdhMWQyZjYxYTc1NGM1NzczMGQxODY='),
+                    "key": atob('YWY2NGYxNTViY2YzOWYwZjdmYTViNWU1NjZmNWUzMTg=')
+                }
+            },
+                "label": "0"
+            }]
+        }],
+        width: "100%",
+        height: "100%",
+        aspectratio: "16:9",
+        autostart: false,
+        cast: {},
+        sharing: {}
+    });
+}
+
+else if (getURL == "PREMIERE3") 
+{
+    var playerInstance = jwplayer("player");
+    playerInstance.setup({
+        playlist: [{
+            "sources": [{
+                "default": false,
+                "type": "dash",
+             "file": atob('aHR0cHM6Ly9jdHItMDEyNzctY2xhcm8tYnIuY2xhcm8tdHYtbGl2ZS5xd2lsdGVkLWNkcy5jcWxvdWQuY29tL0NvbnRlbnQvQ2hhbm5lbC9TUE9QUjNIRC9kc2MzL21hbmlmZXN0Lm1wZA=='),
+            "drm": {
+                "clearkey": {
+                    "keyId": atob('ZTdkMWE3YWQ4OTdiY2U4NGY2YzRjZjg0YTlhNzJlYmM='),
+                    "key": atob('YWY2ZWM1NjM5YzkyYWIzZGU5MTMxMjEyYmJhOWQ0ODE=')
+                }
+            },
+                "label": "0"
+            }]
+        }],
+        width: "100%",
+        height: "100%",
+        aspectratio: "16:9",
+        autostart: false,
+        cast: {},
+        sharing: {}
+    });
+}	
+
+
+
+else if (getURL == "PREMIERE4") 
+{
+    var playerInstance = jwplayer("player");
+    playerInstance.setup({
+        playlist: [{
+            "sources": [{
+                "default": false,
+                "type": "dash",
+             "file": atob('aHR0cHM6Ly9jdHItMDEyNzctY2xhcm8tYnIuY2xhcm8tdHYtbGl2ZS5xd2lsdGVkLWNkcy5jcWxvdWQuY29tL0NvbnRlbnQvQ2hhbm5lbC9TUE9QUjRIRC9kc2MzL21hbmlmZXN0Lm1wZA=='),
+            "drm": {
+                "clearkey": {
+                    "keyId": atob('MjFjNDg4NjgwMjc1YzA3MjgyYmFjYjMzZjk3YmQ3ZjU='),
+                    "key": atob('NjE4N2ZhODY1MmQxZDI2OTU2ZTIyY2I2ZjZkMjJhZDY=')
+                }
+            },
+                "label": "0"
+            }]
+        }],
+        width: "100%",
+        height: "100%",
+        aspectratio: "16:9",
+        autostart: false,
+        cast: {},
+        sharing: {}
+    });
+}	
+
+
+else if (getURL == "SPORTV2") 
+{
+    var playerInstance = jwplayer("player");
+    playerInstance.setup({
+        playlist: [{
+            "sources": [{
+                "default": false,
+                "type": "dash",
+               "file": atob('aHR0cHM6Ly9jdHItMDEyNzctY2xhcm8tYnIuY2xhcm8tdHYtbGl2ZS5xd2lsdGVkLWNkcy5jcWxvdWQuY29tL0NvbnRlbnQvQ2hhbm5lbC9TUE9TUFRIRC9kc2MyL21hbmlmZXN0Lm1wZA=='),
+            "drm": {
+                "clearkey": {
+                    "keyId": atob('MmJiODBlNmEyY2M5MzM2MDhhNmJhZjZjZTU1NTY1MjU='),
+                    "key": atob('YmYxYzRhZTg5ZTE1NzQ3MTJiOWYzMDFmZTZlZDU3ZjU=')
+                }
+            },
+                "label": "0"
+            }]
+        }],
+        width: "100%",
+        height: "100%",
+        aspectratio: "16:9",
+        autostart: false,
+        cast: {},
+        sharing: {}
+    });
+}	
+
+else if (getURL == "SPORTV3") 
+{
+    var playerInstance = jwplayer("player");
+    playerInstance.setup({
+        playlist: [{
+            "sources": [{
+                "default": false,
+                "type": "dash",
+               "file": atob('aHR0cHM6Ly9jdHItMDEyNzctY2xhcm8tYnIuY2xhcm8tdHYtbGl2ZS5xd2lsdGVkLWNkcy5jcWxvdWQuY29tL0NvbnRlbnQvQ2hhbm5lbC9TUE9TUFRIRC9kc2MyL21hbmlmZXN0Lm1wZA=='),
+            "drm": {
+                "clearkey": {
+                    "keyId": atob('MmJiODBlNmEyY2M5MzM2MDhhNmJhZjZjZTU1NTY1MjU='),
+                    "key": atob('YmYxYzRhZTg5ZTE1NzQ3MTJiOWYzMDFmZTZlZDU3ZjU=')
+                }
+            },
+                "label": "0"
+            }]
+        }],
+        width: "100%",
+        height: "100%",
+        aspectratio: "16:9",
+        autostart: false,
+        cast: {},
+        sharing: {}
+    });
+}	
+
+	
 </script>
 
