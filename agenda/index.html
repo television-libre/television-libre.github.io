@@ -489,9 +489,17 @@ script.setAttribute('zid', '7692102');
 document.head.appendChild(script);</script>
 	<script>
   document.addEventListener("DOMContentLoaded", function() {
-    var enlaces = document.querySelectorAll('a[href^="/"]');
+
+    if (window.location.href === 'https://tv-libre.com') {
+      
+      var elementosSubitem1 = document.querySelectorAll('.subitem1');
+      elementosSubitem1.forEach(function(elemento) {
+        elemento.style.display = 'none';
+      });
+    }
+
     
- 
+    var enlaces = document.querySelectorAll('a[href^="/"]');
     enlaces.forEach(function(enlace) {
       enlace.href = 'https://television-libre.online/' + enlace.getAttribute('href');
     });
