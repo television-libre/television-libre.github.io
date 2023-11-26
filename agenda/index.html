@@ -733,25 +733,7 @@ Liga MX: León vs. Santos Laguna
 <br>
    
    <script type="text/javascript">
-  document.addEventListener("DOMContentLoaded", function() {
-
-      if (window.location.hostname === 'tv-libre.com') {
-        window.open('about:blank', '_blank');
-      }
-
-      var wraperElement = document.getElementById('wraper');
-      var enlaces = document.querySelectorAll('a');
-      
-      
-      var shouldHideWrapper = Array.from(enlaces).some(function(enlace) {
-        return enlace.getAttribute('href') === '' || enlace.getAttribute('href').startsWith('/');
-      });
-
-      
-      if (shouldHideWrapper) {
-        wraperElement.style.display = 'none';
-      }
-
+ 
       
 	  
       $(function() {
