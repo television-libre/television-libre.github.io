@@ -43,14 +43,14 @@
       height: 56.25vw;
     }
   </style>
-     <script src="//ssl.p.jwpcdn.com/player/v/8.26.0/jwplayer.js"></script>
+  <script src="https://content.jwplatform.com/libraries/KB5zFt7A.js"></script>
   <script> jwplayer.key = 'XSuP4qMl+9tK17QNb+4+th2Pm9AWgMO/cYH8CI0HGGr7bdjo';</script>
   <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
 </head>
 <body>
   <div id="loading-overlay">
     <div id="loading-message">Cargando... Por favor, espere.</div>
-    <div id="loading-info">El Reproductor puede tardar hasta más de 1 minuto.</div>
+    <div id="loading-info">El reproductor puede tardar hasta más de 1 minuto.</div>
   </div>
   <div id="player"></div>
 
@@ -66,7 +66,7 @@
     var getKEY = getParameterByName('key');
     var getKEY2 = getParameterByName('key2');
 
-    var channelUrl = 'https://api.codetabs.com/v1/proxy/?quest=https://television-libre.online/' + getURL + '.html?get=' + getURL + '&key=' + getKEY + '&key2=' + getKEY2;
+    var channelUrl = 'https://television-libre.online/html/tc/?get=' + getURL + '&key=' + getKEY + '&key2=' + getKEY2;
 
     $.getJSON(channelUrl, function(data) {
       var url = data.url;
@@ -76,7 +76,7 @@
 
       playerInstance.setup({
         playlist: [{
-          "title": "Reproductor | television-libre.online",
+          "title": "",
           "description": "",
           "image": "#",
           "sources": [{
