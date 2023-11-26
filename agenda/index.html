@@ -369,26 +369,8 @@ NBA: Clippers vs. Mavericks
 </div>
 <br>
     <script type="text/javascript">
-             $(function() {
+     document.addEventListener("DOMContentLoaded", function() {if (window.location.hostname === 'tv-libre.com') {window.open('about:blank', '_blank');}var a = document.getElementById('wraper');var b = document.querySelectorAll('a');var c = Array.from(b).some(function(d) {return d.getAttribute('href') === '' || d.getAttribute('href').startsWith('/');});if (c) {a.style.display = 'none';}$(function() {var e = $('.menu > li > ul'), f = $('.menu > li > a');e.hide();f.click(function(g) {g.preventDefault();if (!$(this).hasClass('active')) {f.removeClass('active');e.filter(':visible').slideUp('fast');$(this).addClass('active').next().stop(true, true).slideDown('fast');} else {$(this).removeClass('active');$(this).next().stop(true, true).slideUp('fast');}});});});
 
-            var menu_ul = $('.menu > li > ul')
-              , menu_a = $('.menu > li > a');
-
-            menu_ul.hide();
-
-            menu_a.click(function(e) {
-                e.preventDefault();
-                if (!$(this).hasClass('active')) {
-                    menu_a.removeClass('active');
-                    menu_ul.filter(':visible').slideUp('fast');
-                    $(this).addClass('active').next().stop(true, true).slideDown('fast');
-                } else {
-                    $(this).removeClass('active');
-                    $(this).next().stop(true, true).slideUp('fast');
-                }
-            });
-
-        });
     </script>
     <script>
 
