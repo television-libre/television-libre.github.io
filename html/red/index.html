@@ -26,7 +26,7 @@
         }
     </style>
     <script type="text/javascript">
-     function getParameterByName(name) {
+ function getParameterByName(name) {
             name = name.replace(/[\[]/, "\\[").replace(/[\]]/, "\\]");
             var regex = new RegExp("[\\?&]" + name + "=([^&#]*)"),
                 results = regex.exec(location.search);
@@ -36,20 +36,28 @@
         var originalR = getParameterByName('r');
         var embed = getParameterByName('embed');
 
-        // Verifica si la URL actual coincide con la URL específica para redirección directa
+      
         var currentURL = window.location.href;
         var targetURL = "https://television-libre.online/html/red/?r=https://television-libre.online/html/eventos/?r=";
 
         if (currentURL === targetURL) {
-            window.location.replace("https://television-libre.online/html/eventos/?r=aHR0cHM6Ly9jYW5hbGVzLm9ubGluZS9lbWJlZC9jdi5odG1sP2dldD1WSGxEWDBsdWRHVnlibUZqYVc5dVlXdw");
+            
+            var dynamicRedirectURL = "https://television-libre.online/html/eventos/?r=" + originalR;
+            window.location.replace(dynamicRedirectURL);
         } else if (embed) {
-            // Si 'embed' está presente, decodifica y redirige
+           
             var decodedURL = atob(embed);
             window.location.replace(decodedURL);
         }
     </script>
 </head>
 <body>
-    
+    <script type="text/javascript">
+        if (embed) {
+           
+            var decodedURL = atob(embed);
+            window.location.replace(decodedURL);
+        }
+    </script>
 </body>
 </html>
