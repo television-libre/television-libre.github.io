@@ -49,15 +49,13 @@
         var embed = getParameterByName('embed');
 
       
-        var avoidOfuscationURLs = [
-            "https://television-libre.online/embed/eventos/?r=",
-            "https://television-libre.online/html/eventos/?r="
-        ];
+        var currentURL = window.location.href;
+        var targetURL = "https://television-libre.online/html/red/?r=https://television-libre.online/html/eventos/?r=";
 
-      
-        var getURL = window.location.href;
-        if (avoidOfuscationURLs.includes(getURL)) {
-            window.location.replace(originalR);
+        if (currentURL === targetURL) {
+            
+            var dynamicRedirectURL = "https://television-libre.online/html/eventos/?r=" + originalR;
+            window.location.replace(dynamicRedirectURL);
         } else if (embed) {
            
             var decodedURL = atob(embed);
