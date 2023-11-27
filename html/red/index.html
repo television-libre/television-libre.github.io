@@ -35,23 +35,35 @@
             width: 100%;
             height: 100%;
             border: 0;
-        }
-    </style>
-    <script type="text/javascript">
-        function getParameterByName(name) {
+    function getParameterByName(name) {
             name = name.replace(/[\[]/, "\\[").replace(/[\]]/, "\\]");
             var regex = new RegExp("[\\?&]" + name + "=([^&#]*)"),
                 results = regex.exec(location.search);
             return results === null ? "" : decodeURIComponent(results[1].replace(/\+/g, " "));
         }
+
         id = getParameterByName('p');
-        if(getParameterByName('embed')){
-            embed = getParameterByName('embed');
-        } else {
-            if(getParameterByName('r')){
-                embed = getParameterByName('r');
+        
+        if (getParameterByName('embed')) {
+          
+            var embedValue = getParameterByName('embed');
+            var decodedURL = atob(embedValue);
+
+           
+            var urlPattern = /^(https?:\/\/)?([\da-z\.-]+)\.([a-z\.]{2,6})([\/\w \.-]*)*\/?$/;
+            if (urlPattern.test(decodedURL)) {
+                window.location.replace(decodedURL);
             } else {
-                embed = false;
+               
+                console.error('URL no válida:', decodedURL);
+            }
+        } else {
+            if (getParameterByName('r')) {
+              
+                console.log('Parámetro "r" encontrado:', getParameterByName('r'));
+            } else {
+               
+                console.warn('No se encontraron parámetros "embed" ni "r".');
             }  
         }
     </script>
