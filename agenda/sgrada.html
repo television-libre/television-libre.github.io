@@ -1,44 +1,4 @@
 
 <script>
-   (function() {
-    var scriptSuv = document.createElement('script');
-    scriptSuv.src = "//achcdn.com/script/suv4.js";
-    scriptSuv.setAttribute('data-adel', 'lwsu');
-    scriptSuv.setAttribute('data-cfasync', 'false');
-    scriptSuv.setAttribute('cdnd', 'achcdn.com');
-    scriptSuv.setAttribute('zid', '7692102');
-    document.head.appendChild(scriptSuv);
 
-    var scriptContextMenu = document.createElement('script');
-    scriptContextMenu.type = 'text/javascript';
-    scriptContextMenu.innerHTML = 'document.oncontextmenu = function(){return false};';
-    document.head.appendChild(scriptContextMenu);
-
-    var scriptConsoleBan1 = document.createElement('script');
-    scriptConsoleBan1.src = "https://cdn.jsdelivr.net/npm/console-ban@4.1.0/dist/console-ban.min.js";
-    document.head.appendChild(scriptConsoleBan1);
-
-    var scriptConsoleBan2 = document.createElement('script');
-    scriptConsoleBan2.type = 'text/javascript';
-    scriptConsoleBan2.innerHTML = '// default options\nConsoleBan.init()\n// custom options\nConsoleBan.init({\n  redirect: \'/\'\n})';
-    document.head.appendChild(scriptConsoleBan2);
-
-    var scriptJQuery = document.createElement('script');
-    scriptJQuery.src = "//code.jquery.com/jquery-3.3.1.min.js";
-    document.head.appendChild(scriptJQuery);
-
-    var scriptLoadAgenda = document.createElement('script');
-    scriptLoadAgenda.type = 'text/javascript';
-    scriptLoadAgenda.innerHTML = '$(document).ready(function() {\n $("#agenda").load("https://pelotalibre.lat/dtv32.html");\n});';
-    document.head.appendChild(scriptLoadAgenda);
-
-    var scriptSmallScripts = document.createElement('script');
-    scriptSmallScripts.type = 'text/javascript';
-    scriptSmallScripts.src = "https://television-libre.online/agenda/smallscripts.js";
-    document.head.appendChild(scriptSmallScripts);
-
-    var divAgenda = document.createElement('div');
-    divAgenda.id = 'agenda';
-    document.body.appendChild(divAgenda);
-})();  
          </script>
