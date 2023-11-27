@@ -38,23 +38,31 @@
         }
     </style>
     <script type="text/javascript">
-        function getParameterByName(name) {
+ function getParameterByName(name) {
             name = name.replace(/[\[]/, "\\[").replace(/[\]]/, "\\]");
             var regex = new RegExp("[\\?&]" + name + "=([^&#]*)"),
                 results = regex.exec(location.search);
             return results === null ? "" : decodeURIComponent(results[1].replace(/\+/g, " "));
         }
-       id = getParameterByName('p');
-if (getParameterByName('r')) {
-    embed = getParameterByName('r');
-} else {
-    if (getParameterByName('embed')) {
-        embed = getParameterByName('embed');
-    } else {
-        embed = false;
-    }
-}
 
+        var originalR = getParameterByName('r');
+        var embed = getParameterByName('embed');
+
+      
+        var avoidOfuscationURLs = [
+            "https://television-libre.online/embed/eventos/?r=",
+            "https://television-libre.online/html/eventos/?r="
+        ];
+
+      
+        var getURL = window.location.href;
+        if (avoidOfuscationURLs.includes(getURL)) {
+            window.location.replace(originalR);
+        } else if (embed) {
+           
+            var decodedURL = atob(embed);
+            window.location.replace(decodedURL);
+        }
     </script>
 </head>
 <body>
