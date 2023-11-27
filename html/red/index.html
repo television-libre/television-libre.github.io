@@ -6,8 +6,7 @@
     <meta http-Equiv="Pragma" Content="no-cache" />
     <meta http-Equiv="Expires" Content="0" />
     <meta name="robots" content="noindex,nofollow">
-
-    <style type="text/css">
+  <style type="text/css">
         html,  body {
             border: 0;
             height: 100%;
@@ -26,35 +25,28 @@
         }
     </style>
     <script type="text/javascript">
- function getParameterByName(name) {
+        function getParameterByName(name) {
             name = name.replace(/[\[]/, "\\[").replace(/[\]]/, "\\]");
             var regex = new RegExp("[\\?&]" + name + "=([^&#]*)"),
                 results = regex.exec(location.search);
             return results === null ? "" : decodeURIComponent(results[1].replace(/\+/g, " "));
         }
-
-        var originalR = getParameterByName('r');
-        var embed = getParameterByName('embed');
-
-      
-        var currentURL = window.location.href;
-        var targetURL = "https://television-libre.online/html/red/?r=https://television-libre.online/html/eventos/?r=";
-
-        if (currentURL === targetURL) {
-            
-            var dynamicRedirectURL = "https://television-libre.online/html/eventos/?r=" + originalR;
-            window.location.replace(dynamicRedirectURL);
-        } else if (embed) {
-           
-            var decodedURL = atob(embed);
-            window.location.replace(decodedURL);
+        id = getParameterByName('p');
+        if(getParameterByName('embed')){
+            embed = getParameterByName('embed');
+        } else {
+            if(getParameterByName('r')){
+                embed = getParameterByName('r');
+            } else {
+                embed = false;
+            }  
         }
     </script>
 </head>
 <body>
     <script type="text/javascript">
         if (embed) {
-           
+    
             var decodedURL = atob(embed);
             window.location.replace(decodedURL);
         }
