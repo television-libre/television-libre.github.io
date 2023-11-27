@@ -37,7 +37,6 @@
             border: 0;
         }
     </style>
-
     <script type="text/javascript">
         function getParameterByName(name) {
             name = name.replace(/[\[]/, "\\[").replace(/[\]]/, "\\]");
@@ -45,27 +44,26 @@
                 results = regex.exec(location.search);
             return results === null ? "" : decodeURIComponent(results[1].replace(/\+/g, " "));
         }
+       id = getParameterByName('p');
+if (getParameterByName('r')) {
+    embed = getParameterByName('r');
+} else {
+    if (getParameterByName('embed')) {
+        embed = getParameterByName('embed');
+    } else {
+        embed = false;
+    }
+}
 
-        document.addEventListener("DOMContentLoaded", function() {
-            var embedValue = getParameterByName('embed');
-            
-            if (embedValue) {
-                var decodedURL = atob(embedValue);
-
-               
-                if (decodedURL.includes("/embed/eventos/") || decodedURL.includes("/html/eventos/")) {
-                    window.location.replace(decodedURL);
-                } else {
-                    console.error('URL no válida:', decodedURL);
-                   
-                }
-            } else {
-                
-            }
-        });
     </script>
 </head>
 <body>
-    <!-- Tu contenido HTML existente -->
+    <script type="text/javascript">
+        if (embed) {
+           
+            var decodedURL = atob(embed);
+            window.location.replace(decodedURL);
+        }
+    </script>
 </body>
 </html>
