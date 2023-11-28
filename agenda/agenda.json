@@ -531,135 +531,137 @@
       ]
    },
    {
-      "category":"CHA",
-      "match":"UEFA Champions League: Feyenoord vs. Atlético de Madrid",
-      "time":"21:00",
-      "channels":[
-         {
-            "channel":"FOX Sports 2",
-            "link":"/en-vivo/fox-sports-2/",
-            "quality":"Calidad 720p"
-         },
-         {
-            "channel":"Star+",
-            "link":"/star-plus/",
-            "quality":"Calidad 720p"
-         },
-         {
-            "channel":"VIX+",
-            "link":"/vix-plus/",
-            "quality":"Calidad 1080p"
-         },
-         {
-            "channel":"Eleven Sports 5 PT",
-            "link":"https://television-libre.online//html/eventos/?r=aHR0cHM6Ly9jYW5hbGVzLm9ubGluZS9lbWJlZC9tcGRrLmh0bWw/Z2V0PWFIUjBjSE02THk5a1kyVXRZV3N0YkdsMlpYZDNaR0Y2Ymk1aGEyRnRZV2w2WldRdWJtVjBMMlJoYzJoa2NtMHZaR0Y2Ymkxc2FXNWxZWEl0TURVNEwzTjBjbVZoYlM1dGNHUSZrZXk9T0RKbU9HVXlZVEUzWkdGak5EUmpNR0V4T0dZMk5qQTBOemt6TkRsak5UayZrZXkyPU1XSXhORFJtTnpObE5tWmxabVU1TVdOa01EVm1PRFV3WlRKaU5UZzVaREE",
-            "quality":"Calidad 1080p"
-         },
-         {
-            "channel":"Ziggo Sport Voetbal NL",
-            "link":"https://television-libre.online//html/eventos/?r=aHR0cHM6Ly9jYW5hbGVzLm9ubGluZS9lbWJlZC9tcGRrLmh0bWw/Z2V0PWFIUjBjSE02THk5a1lTMWtORE0yTWpNMFlUSXdNREV3WWpnNE1EQXdNVEF6TURJd01EQXdNREF3TURBd01EQXdNREJqTG1sa0xtTmtiaTUxY0dOaWNtOWhaR0poYm1RdVkyOXRMM2R3TDNkd0xXOWlZekV0YkdsMlpTMXViQzF3Y205a0xuQnliMlF1WTJSdUxtUnRaSE5rY0M1amIyMHZaR0Z6YUM5T1RGOHdNREF3T1RWZk1ERTVNemN4TDIxaGJtbG1aWE4wTG0xd1pBJmtleT1NalUxT0RaaE5XTmhNakE0TkRka05qZzBOVGM1WTJObE1HTXlaV05oWTJNJmtleTI9T1dNNU1qRTJNbUl5TXpjd09UWTFNelk0T0dFME56RmlaV013WTJZeE9XSQ",
-            "quality":"Calidad 720p"
-         }
-      ]
-   },
-   {
-      "category":"CHA",
-      "match":"UEFA Champions League: Young Boys vs. Estrella Roja",
-      "time":"21:00",
-      "channels":[
-         {
-            "channel":"FOX Sports 3",
-            "link":"/en-vivo/fox-sports-3/",
-            "quality":"Calidad 720p"
-         },
-         {
-            "channel":"Star+",
-            "link":"/star-plus/",
-            "quality":"Calidad 720p"
-         },
-         {
-            "channel":"VIX+",
-            "link":"/vix-plus/",
-            "quality":"Calidad 1080p"
-         },
-         {
-            "channel":"Eleven Sports 6 PT",
-            "link":"https://television-libre.online//html/eventos/?r=aHR0cHM6Ly9jYW5hbGVzLm9ubGluZS9lbWJlZC9tcGRrLmh0bWw/Z2V0PWFIUjBjSE02THk5a1kyVXRZV3N0YkdsMlpYZDNaR0Y2Ymk1aGEyRnRZV2w2WldRdWJtVjBMMlJoYzJoa2NtMHZaR0Y2Ymkxc2FXNWxZWEl0TURVNUwzTjBjbVZoYlM1dGNHUSZrZXk9T0RKbU9HVXlZVEUzWkdGak5EUmpNR0V4T0dZMk5qQTBOemt6TkRsak5UayZrZXkyPU1XSXhORFJtTnpObE5tWmxabVU1TVdOa01EVm1PRFV3WlRKaU5UZzVaREE",
-            "quality":"Calidad 1080p"
-         }
-      ]
-   },
-   {
-      "category":"AR",
-      "match":"Copa de la Liga Profesional: Barracas Central vs. Argentinos",
-      "time":"23:00",
-      "channels":[
-         {
-            "channel":"TNT Sports",
-            "link":"/en-vivo/tnt-sports/",
-            "quality":"Calidad 1080p"
-         },
-         {
-            "channel":"VIX+",
-            "link":"/vix-plus/",
-            "quality":"Calidad 1080p"
-         },
-         {
-            "channel":"TyC Sports Internacional",
-            "link":"https://television-libre.online//html/eventos/?r=aHR0cHM6Ly90ZWxldmlzaW9uLWxpYnJlLm9ubGluZS9odG1sL2ZsLz9nZXQ9VkhsRFgwbHVkR1Z5Ym1GamFXOXVZV3c=",
-            "quality":"Calidad 720p"
-         }
-      ]
-   },
-   {
-      "category":"URU",
-      "match":"Primera División: Plaza Colonia vs. Racing",
-      "time":"23:00",
-      "channels":[
-         {
-            "channel":"VTV +",
-            "link":"/en-vivo/vtv-plus/",
-            "quality":"Calidad 720p"
-         },
-         {
-            "channel":"Star+",
-            "link":"/star-plus/",
-            "quality":"Calidad 720p"
-         }
-      ]
-   },
-   {
-      "category":"URU",
-      "match":"Primera División: Montevideo City Torque vs. Maldonado",
-      "time":"01:15",
-      "channels":[
-         {
-            "channel":"VTV +",
-            "link":"/en-vivo/vtv-plus/",
-            "quality":"Calidad 720p"
-         },
-         {
-            "channel":"Star+",
-            "link":"/star-plus/",
-            "quality":"Calidad 720p"
-         }
-      ]
-   },
-   {
-      "category":"BRA",
-      "match":"Brasileirão: Vasco da Gama vs. Corinthians",
-      "time":"01:30",
-      "channels":[
-         {
-            "channel":"Star+",
-            "link":"/star-plus/",
-            "quality":"Calidad 720p"
-         },
-         {
-            "channel":"VIX+",
-            "link":"/vix-plus/",
-            "quality":"Calidad 1080p"
-         }
-      ]
-   }
+    "category":"CHA",
+    "match":"UEFA Champions League: Feyenoord vs. Atlético de Madrid",
+    "time":"21:00",
+    "channels":[
+       {
+          "name":"FOX Sports 2",
+          "link":"/en-vivo/fox-sports-2/",
+          "quality":"Calidad 720p"
+       },
+       {
+          "name":"Star+",
+          "link":"/star-plus/",
+          "quality":"Calidad 720p"
+       },
+       {
+          "name":"VIX+",
+          "link":"/vix-plus/",
+          "quality":"Calidad 1080p"
+       },
+       {
+          "name":"Eleven Sports 5 PT",
+          "link":"https://television-libre.online//html/eventos/?r=aHR0cHM6Ly9jYW5hbGVzLm9ubGluZS9lbWJlZC9tcGRrLmh0bWw/Z2V0PWFIUjBjSE02THk5a1kyVXRZV3N0YkdsMlpYZDNaR0Y2Ymk1aGEyRnRZV2w2WldRdWJtVjBMMlJoYzJoa2NtMHZaR0Y2Ymkxc2FXNWxZWEl0TURVNEwzTjBjbVZoYlM1dGNHUSZrZXk9T0RKbU9HVXlZVEUzWkdGak5EUmpNR0V4T0dZMk5qQTBOemt6TkRsak5UayZrZXkyPU1XSXhORFJtTnpObE5tWmxabVU1TVdOa01EVm1PRFV3WlRKaU5UZzVaREE",
+          "quality":"Calidad 1080p"
+       },
+       {
+          "name":"Ziggo Sport Voetbal NL",
+          "link":"https://television-libre.online//html/eventos/?r=aHR0cHM6Ly9jYW5hbGVzLm9ubGluZS9lbWJlZC9tcGRrLmh0bWw/Z2V0PWFIUjBjSE02THk5a1lTMWtORE0yTWpNMFlUSXdNREV3WWpnNE1EQXdNVEF6TURJd01EQXdNREF3TURBd01EQXdNREJqTG1sa0xtTmtiaTUxY0dOaWNtOWhaR0poYm1RdVkyOXRMM2R3TDNkd0xXOWlZekV0YkdsMlpTMXViQzF3Y205a0xuQnliMlF1WTJSdUxtUnRaSE5rY0M1amIyMHZaR0Z6YUM5T1RGOHdNREF3T1RWZk1ERTVNemN4TDIxaGJtbG1aWE4wTG0xd1pBJmtleT1NalUxT0RaaE5XTmhNakE0TkRka05qZzBOVGM1WTJObE1HTXlaV05oWTJNJmtleTI9T1dNNU1qRTJNbUl5TXpjd09UWTFNelk0T0dFME56RmlaV013WTJZeE9XSQ",
+          "quality":"Calidad 720p"
+       }
+    ]
+ },
+ {
+    "category":"CHA",
+    "match":"UEFA Champions League: Young Boys vs. Estrella Roja",
+    "time":"21:00",
+    "channels":[
+       {
+          "name":"FOX Sports 3",
+          "link":"/en-vivo/fox-sports-3/",
+          "quality":"Calidad 720p"
+       },
+       {
+          "name":"Star+",
+          "link":"/star-plus/",
+          "quality":"Calidad 720p"
+       },
+       {
+          "name":"VIX+",
+          "link":"/vix-plus/",
+          "quality":"Calidad 1080p"
+       },
+       {
+          "name":"Eleven Sports 6 PT",
+          "link":"https://television-libre.online//html/eventos/?r=aHR0cHM6Ly9jYW5hbGVzLm9ubGluZS9lbWJlZC9tcGRrLmh0bWw/Z2V0PWFIUjBjSE02THk5a1kyVXRZV3N0YkdsMlpYZDNaR0Y2Ymk1aGEyRnRZV2w2WldRdWJtVjBMMlJoYzJoa2NtMHZaR0Y2Ymkxc2FXNWxZWEl0TURVNUwzTjBjbVZoYlM1dGNHUSZrZXk9T0RKbU9HVXlZVEUzWkdGak5EUmpNR0V4T0dZMk5qQTBOemt6TkRsak5UayZrZXkyPU1XSXhORFJtTnpObE5tWmxabVU1TVdOa01EVm1PRFV3WlRKaU5UZzVaREE",
+          "quality":"Calidad 1080p"
+       }
+    ]
+ },
+ {
+    "category":"AR",
+    "match":"Copa de la Liga Profesional: Barracas Central vs. Argentinos",
+    "time":"23:00",
+    "channels":[
+       {
+          "name":"TNT Sports",
+          "link":"/en-vivo/tnt-sports/",
+          "quality":"Calidad 1080p"
+       },
+       {
+          "name":"VIX+",
+          "link":"/vix-plus/",
+          "quality":"Calidad 1080p"
+       },
+       {
+          "name":"TyC Sports Internacional",
+          "link":"https://television-libre.online//html/eventos/?r=aHR0cHM6Ly90ZWxldmlzaW9uLWxpYnJlLm9ubGluZS9odG1sL2ZsLz9nZXQ9VkhsRFgwbHVkR1Z5Ym1GamFXOXVZV3c=",
+          "quality":"Calidad 720p"
+       }
+    ]
+ },
+ {
+    "category":"URU",
+    "match":"Primera División: Plaza Colonia vs. Racing",
+    "time":"23:00",
+    "channels":[
+       {
+          "name":"VTV +",
+          "link":"/en-vivo/vtv-plus/",
+          "quality":"Calidad 720p"
+       },
+       {
+          "name":"Star+",
+          "link":"/star-plus/",
+          "quality":"Calidad 720p"
+       }
+    ]
+ },
+ {
+    "category":"URU",
+    "match":"Primera División: Montevideo City Torque vs. Maldonado",
+    "time":"01:15",
+    "channels":[
+       {
+          "name":"VTV +",
+          "link":"/en-vivo/vtv-plus/",
+          "quality":"Calidad 720p"
+       },
+       {
+          "name":"Star+",
+          "link":"/star-plus/",
+          "quality":"Calidad 720p"
+       }
+    ]
+ },
+ {
+    "category":"BRA",
+    "match":"Brasileirão: Vasco da Gama vs. Corinthians",
+    "time":"01:30",
+    "channels":[
+       {
+          "name":"Star+",
+          "link":"/star-plus/",
+          "quality":"Calidad 720p"
+       },
+       {
+          "name":"VIX+",
+          "link":"/vix-plus/",
+          "quality":"Calidad 1080p"
+       }
+    ]
+ }
+  
+  
 ]
