@@ -531,6 +531,7 @@
       ]
    },
    {
+      "category":"CHA",
       "match":"UEFA Champions League: Feyenoord vs. Atlético de Madrid",
       "time":"21:00",
       "channels":[
@@ -562,6 +563,7 @@
       ]
    },
    {
+      "category":"CHA",
       "match":"UEFA Champions League: Young Boys vs. Estrella Roja",
       "time":"21:00",
       "channels":[
@@ -588,6 +590,7 @@
       ]
    },
    {
+      "category":"AR",
       "match":"Copa de la Liga Profesional: Barracas Central vs. Argentinos",
       "time":"23:00",
       "channels":[
@@ -609,6 +612,7 @@
       ]
    },
    {
+      "category":"URU",
       "match":"Primera División: Plaza Colonia vs. Racing",
       "time":"23:00",
       "channels":[
@@ -625,6 +629,7 @@
       ]
    },
    {
+      "category":"URU",
       "match":"Primera División: Montevideo City Torque vs. Maldonado",
       "time":"01:15",
       "channels":[
@@ -641,6 +646,7 @@
       ]
    },
    {
+      "category":"BRA",
       "match":"Brasileirão: Vasco da Gama vs. Corinthians",
       "time":"01:30",
       "channels":[
