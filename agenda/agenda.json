@@ -628,6 +628,19 @@
        }
     ]
  },
+     {
+    "category":"NHL",
+    "match":"NHL: Philadelphia Flyers vs. Carolina Hurricanes",
+    "time":"01:00",
+    "channels":[
+       {
+          "name":"ESPN Extra",
+          "link":"/en-vivo/espn-extra/",
+          "quality":"Calidad 720p"
+       }
+      
+    ]
+ },
  {
     "category":"URU",
     "match":"Primera División: Montevideo City Torque vs. Maldonado",
