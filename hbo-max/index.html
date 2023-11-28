@@ -1827,12 +1827,15 @@ a {
  
 <div id="eventos"></div>
 <br>
-<script type="text/javascript">
+
+
+
+       <script>
 function eventos() {
       var x = Math.random().toString(36).substring(7);
 
       $.ajax({
-        url: "https://corsproxy.io/?url=https://todopelotatv.com/live/hbomx.json?" + x,
+        url: "https://corsproxy.io/?url=https://todopelotatv.com/live/hbomx.json?" + x ,
         type: "get",
         success: function (arr) {
           var content = '';
@@ -1866,19 +1869,26 @@ function eventos() {
 
          
             if (urlValue && urlValue !== "#") {
-              var encodedUrl = urlValue.replace(/\/embed\/eventos\/\?r=/, '');
-              decodedUrl = atob(encodedUrl);
+   
+    var encodedPart = urlValue.split("/embed/eventos/?r=")[1];
 
-              var decodedUrlParts = decodedUrl.split("https://fulldeportes.live/hbomx.html?get=");
-              var secondPart = decodedUrlParts[1];
+  
+    var decodedPart = atob(encodedPart);
 
-              var modifiedUrl = "https://flow2.majorleague.makeup/fifa_jwp.html?get=" + secondPart;
-              var encodedModifiedUrl = btoa(modifiedUrl);
+   
+    var modifiedPart = decodedPart.replace("https://fulldeportes.live/hbomx.html?get=", "");
 
-              var finalEncodedUrl = "/html/eventos/?r=" + encodedModifiedUrl;
-            } else {
-              finalEncodedUrl = "#"; 
-            }
+  
+    var newUrl = "//pelotalibre.lat/hbo_jwp.html?get=" + modifiedPart;
+
+
+    var encodedNewUrl = btoa(newUrl);
+
+    
+    var finalEncodedUrl = "/html/eventos/?r=" + encodedNewUrl;
+} else {
+    finalEncodedUrl = "#"; 
+}
 
         
             content += '<div class="w3-quarter">';
@@ -1908,13 +1918,7 @@ function eventos() {
       eventos();
     }, 60000);
 
-
   </script>
-
-
-
-  </script>
-
 
 
 
