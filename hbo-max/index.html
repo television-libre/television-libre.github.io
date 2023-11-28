@@ -1854,7 +1854,7 @@ function eventos() {
             if (obj['status'] == "FINALIZADO" || obj['status'] == "EN VIVO")
               status = obj['status'];
             else
-              status = 'HOY | <span class="t">' + obj['status'] + '</span> hs';
+              status = 'HOY | <span class="t">' + obj[' + fechaEvento.toLocaleString() + '] + '</span> hs';
 
             if (status == "EN VIVO") {
               colorClass = "btn-custom-red"; 
