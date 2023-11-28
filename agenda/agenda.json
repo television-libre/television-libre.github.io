@@ -1,0 +1,50 @@
+[
+  {
+    "category": "WWE",
+    "match": "WWE: RAW",
+    "time": "02:00",
+    "channels": [
+      {
+        "name": "Star+",
+        "link": "https://television-libre.online/star-plus/",
+        "quality": "Calidad 720p"
+      },
+        {
+        "name": "FOX Sports 3",
+        "link": "https://television-libre.online/en-vivo/fox-sports-3/",
+        "quality": "Calidad 720p"
+      }
+    ]
+  },
+  {
+    "category": "NFL",
+    "match": "Vikings vs. Bears",
+    "time": "02:15",
+    "channels": [
+      {
+        "name": "Star+",
+        "link": "https://television-libre.online/star-plus/",
+        "quality": "Calidad 720p"
+      },
+     {
+        "name": "ESPN 2",
+        "link": "https://television-libre.online/en-vivo/espn-2/",
+        "quality": "Calidad 720p"
+      }
+    ]
+  }
+
+  {
+    "category": "MEX",
+    "match": "Liga MX Femenil: Tigres UANL vs. América",
+    "time": "03:00",
+    "channels": [
+      {
+        "name": "VIX+",
+        "link": "https://television-libre.online/vix-plus/",
+        "quality": "Calidad 1080p"
+      },
+    
+    ]
+  }
+]
