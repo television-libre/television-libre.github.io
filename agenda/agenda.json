@@ -1,18 +1,7 @@
 [
    
    
-   {
-      "category":"AFC",
-      "match":"AFC Champions League: Shandong Taishan vs. Kaya",
-      "time":"13:00",
-      "channels":[
-         {
-            "name":"Star+",
-            "link":"https://television-libre.online/star-plus/",
-            "quality":"Calidad 720p"
-         }
-      ]
-   },
+   
    {
       "category":"TE",
       "match":"ATP Finals: Fils vs. Nardi",
@@ -25,50 +14,8 @@
          }
       ]
    },
-   {
-      "category":"FIFA",
-      "match":"Mundial Sub-17: Francia vs. Malí",
-      "time":"13:00",
-      "channels":[
-         {
-            "name":"DSports",
-            "link":"https://television-libre.online/en-vivo/dsports/",
-            "quality":"Calidad 720p"
-         },
-         {
-            "name":"VIX+",
-            "link":"https://television-libre.online/vix-plus/",
-            "quality":"Calidad 720p"
-         },
-         {
-            "name":"GolPlay ES",
-            "link":"https://television-libre.online/html/eventos/?r=aHR0cHM6Ly9lbWJlZC5saWJyZWZ1dGJvbHR2LmNvbS9nb2xwbGF5Lmh0bWw=",
-            "quality":"Calidad SD"
-         },
-         {
-            "name":"SporTV BR",
-            "link":"https://television-libre.online/clarobr/",
-            "quality":"Calidad 1080p"
-         }
-      ]
-   },
-   {
-      "category":"UYL",
-      "match":"UEFA Youth League: Feyenoord vs. Atlético Madrid",
-      "time":"14:00",
-      "channels":[
-         {
-            "name":"Star+",
-            "link":"https://television-libre.online/star-plus/",
-            "quality":"Calidad 720p"
-         },
-         {
-            "name":"VIX+",
-            "link":"https://television-libre.online/vix-plus/",
-            "quality":"Calidad 720p"
-         }
-      ]
-   },
+ 
+
    {
       "category":"UYL",
       "match":"UEFA Youth League: Milan  vs. Borussia Dortmund",
