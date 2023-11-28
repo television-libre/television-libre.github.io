@@ -130,6 +130,12 @@
         "name": "GolPlay ES",
         "link": "https://television-libre.online/html/eventos/?r=aHR0cHM6Ly9lbWJlZC5saWJyZWZ1dGJvbHR2LmNvbS9nb2xwbGF5Lmh0bWw=",
         "quality": "Calidad SD"
+      },
+
+       {
+        "name": "SporTV BR",
+        "link": "https://television-libre.online/clarobr/",
+        "quality": "Calidad 1080p"
       }
       
       
@@ -207,6 +213,89 @@
       }
       
     ]
+  },
+
+    {
+    "category": "AFC",
+    "match": "AFC Champions League: Al Ain vs. Pakhtakor",
+    "time": "17:00",
+    "channels": [
+      {
+        "name": "Star+",
+        "link": "https://television-libre.online/star-plus/",
+        "quality": "Calidad 720p"
+      }
+      
+      
+      
+    ]
+  },
+
+
+   {
+    "category": "AFC",
+    "match": "AFC Champions League: Al Feiha vs. Ahal",
+    "time": "17:00",
+    "channels": [
+      {
+        "name": "Star+",
+        "link": "https://television-libre.online/star-plus/",
+        "quality": "Calidad 720p"
+      }
+      
+      
+      
+    ]
+  },
+
+  {
+    "category": "AFC",
+    "match": "AFC Champions League: Navbahor vs. Al Hilal",
+    "time": "17:00",
+    "channels": [
+      {
+        "name": "Star+",
+        "link": "https://television-libre.online/star-plus/",
+        "quality": "Calidad 720p"
+      }
+      
+      
+      
+    ]
+  },
+
+
+ {
+    "category": "AFC",
+    "match": "AFC Champions League: Nassaji Mazandaran vs. Mumbai City",
+    "time": "17:00",
+    "channels": [
+      {
+        "name": "Star+",
+        "link": "https://television-libre.online/star-plus/",
+        "quality": "Calidad 720p"
+      }
+      
+      
+      
+    ]
+  },
+
+   {
+    "category": "TE",
+    "match": "ATP Finals: Assche vs. Shelbayh",
+    "time": "18:00",
+    "channels": [
+      {
+        "name": "Star+",
+        "link": "https://television-libre.online/star-plus/",
+        "quality": "Calidad 720p"
+      }
+      
+      
+      
+    ]
   }
+
   
 ]
