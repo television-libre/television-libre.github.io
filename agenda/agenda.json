@@ -6,34 +6,35 @@
     "channels": [
       {
         "name": "Star+",
-        "link": "https://television-libre.online/star-plus/",
+        "link": "https://television-libre.online/html/red/?r=aHR0cHM6Ly90ZWxldmlzaW9uLWxpYnJlLm9ubGluZS9zdGFyLXBsdXMv",
         "quality": "Calidad 720p"
       },
-        {
+      {
         "name": "FOX Sports 3",
-        "link": "https://television-libre.online/en-vivo/fox-sports-3/",
+        "link": "https://television-libre.online/html/red/?r=aHR0cHM6Ly90ZWxldmlzaW9uLWxpYnJlLm9ubGluZS9lbi12aXZvL2ZveC1zcG9ydHMtMy8=",
         "quality": "Calidad 720p"
       }
     ]
   },
+  
   {
     "category": "NFL",
-    "match": "Vikings vs. Bears",
+    "match": "NFL: Vikings vs. Bears",
     "time": "02:15",
     "channels": [
       {
         "name": "Star+",
-        "link": "https://television-libre.online/star-plus/",
+        "link": "https://television-libre.online/html/red/?r=aHR0cHM6Ly90ZWxldmlzaW9uLWxpYnJlLm9ubGluZS9zdGFyLXBsdXMv",
         "quality": "Calidad 720p"
       },
-     {
+      {
         "name": "ESPN 2",
-        "link": "https://television-libre.online/en-vivo/espn-2/",
-        "quality": "Calidad 720p"
+        "link": "https://television-libre.online/html/red/?r=aHR0cHM6Ly90ZWxldmlzaW9uLWxpYnJlLm9ubGluZS9lbi12aXZvL2VzcG4tMi8=",
+        "quality": "Calidad 1080p"
       }
     ]
   },
-
+  
   {
     "category": "MEX",
     "match": "Liga MX Femenil: Tigres UANL vs. América",
@@ -41,10 +42,10 @@
     "channels": [
       {
         "name": "VIX+",
-        "link": "https://television-libre.online/vix-plus/",
+        "link": "https://television-libre.online/html/red/?r=aHR0cHM6Ly90ZWxldmlzaW9uLWxpYnJlLm9ubGluZS92aXgtcGx1cy8=",
         "quality": "Calidad 1080p"
-      },
-    
+      }
     ]
   }
+  
 ]
