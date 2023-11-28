@@ -393,5 +393,267 @@
             "quality":"Calidad 720p"
          }
       ]
+   },
+   {
+      "category":"CHA",
+      "match":"UEFA Champions League: Manchester City vs. RB Leipzig",
+      "time":"21:00",
+      "channels":[
+         {
+            "name":"FOX Sports",
+            "link":"/en-vivo/fox-sports/",
+            "quality":"Calidad 720p"
+         },
+         {
+            "name":"Star+",
+            "link":"/star-plus/",
+            "quality":"Calidad 720p"
+         },
+         {
+            "name":"VIX+",
+            "link":"/vix-plus/",
+            "quality":"Calidad 1080p"
+         },
+         {
+            "name":"TNT Sports 1 UK",
+            "link":"https://television-libre.online//html/eventos/?r=aHR0cHM6Ly9lbWJlZC5saWJyZWZ1dGJvbHR2LmNvbS9nb2xwbGF5Lmh0bWw=",
+            "quality":"Calidad 1080p"
+         },
+         {
+            "name":"DAZN 1 DE",
+            "link":"https://television-libre.online//html/eventos/?r=aHR0cHM6Ly9lbWJlZC5saWJyZWZ1dGJvbHR2LmNvbS9tcGRrLmh0bWw/Z2V0PWFIUjBjSE02THk5a1kyVXRZV3N0YkdsMlpYZDNaR0Y2Ymk1aGEyRnRZV2w2WldRdWJtVjBMMlJoYzJoa2NtMHZaR0Y2Ymkxc2FXNWxZWEl0TURVMkwzTjBjbVZoYlM1dGNHUSZrZXk9T0RKbU9HVXlZVEUzWkdGak5EUmpNR0V4T0dZMk5qQTBOemt6TkRsak5UayZrZXkyPU1XSXhORFJtTnpObE5tWmxabVU1TVdOa01EVm1PRFV3WlRKaU5UZzVaREE",
+            "quality":"Calidad 1080p"
+         },
+         {
+            "name":"Eleven Sports 4 PT",
+            "link":"https://television-libre.online//html/eventos/?r=aHR0cHM6Ly9lbWJlZC5saWJyZWZ1dGJvbHR2LmNvbS9tcGRrLmh0bWw/Z2V0PWFIUjBjSE02THk5a1kyVXRZV3N0YkdsMlpYZDNaR0Y2Ymk1aGEyRnRZV2w2WldRdWJtVjBMMlJoYzJoa2NtMHZaR0Y2Ymkxc2FXNWxZWEl0TURVMUwzTjBjbVZoYlM1dGNHUSZrZXk9T0RKbU9HVXlZVEUzWkdGak5EUmpNR0V4T0dZMk5qQTBOemt6TkRsak5UayZrZXkyPU1XSXhORFJtTnpObE5tWmxabVU1TVdOa01EVm1PRFV3WlRKaU5UZzVaREE",
+            "quality":"Calidad 1080p"
+         },
+         {
+            "name":"MTV Urheilu 2 FI",
+            "link":"https://television-libre.online//html/eventos/?r=aHR0cHM6Ly9lbWJlZC5saWJyZWZ1dGJvbHR2LmNvbS9tcGRrLmh0bWw/Z2V0PWFIUjBjSE02THk5dGRIWXRZeTFzYVhabGRYTndMV0l1WVd0aGJXRnBlbVZrTG01bGRDOXNhWFpsTDFSRlRFbEJYMDFCV0ZOUVQxSlVNaTlVUlV4SlFWOU5RVmhUVUU5U1ZERXVhWE50YkM5TlFWaFRVRTlTVkRFdWJYQmsma2V5PU5XTm1OekkxWldRM1l6SmhOR0ZqWWprNVpEa3dNamcxTmpRMk1EaGlNemMma2V5Mj1NR0k0TVRRM01tWTBNemsyTWpoak1tWXlNMk0yTXprM01qVmtNMlJpTTJV",
+            "quality":"Calidad 720p"
+         }
+      ]
+   },
+   {
+      "category":"CHA",
+      "match":"UEFA Champions League: PSG vs. Newcastle",
+      "time":"21:00",
+      "channels":[
+         {
+            "name":"ESPN 2",
+            "link":"/en-vivo/espn-2/",
+            "quality":"Calidad 720p"
+         },
+         {
+            "name":"Star+",
+            "link":"/star-plus/",
+            "quality":"Calidad 720p"
+         },
+         {
+            "name":"VIX+",
+            "link":"/vix-plus/",
+            "quality":"Calidad 1080p"
+         },
+         {
+            "name":"TNT Sports 2 UK",
+            "link":"https://television-libre.online//html/eventos/?r=aHR0cHM6Ly9lbWJlZC5saWJyZWZ1dGJvbHR2LmNvbS9nb2xwbGF5Lmh0bWw=",
+            "quality":"Calidad 1080p"
+         },
+         {
+            "name":"Eleven Sports 2 PT",
+            "link":"https://television-libre.online//html/eventos/?r=aHR0cHM6Ly9lbWJlZC5saWJyZWZ1dGJvbHR2LmNvbS9tcGRrLmh0bWw/Z2V0PWFIUjBjSE02THk5a1kyVXRZV3N0YkdsMlpYZDNaR0Y2Ymk1aGEyRnRZV2w2WldRdWJtVjBMMlJoYzJoa2NtMHZaR0Y2Ymkxc2FXNWxZWEl0TURVMUwzTjBjbVZoYlM1dGNHUSZrZXk9T0RKbU9HVXlZVEUzWkdGak5EUmpNR0V4T0dZMk5qQTBOemt6TkRsak5UayZrZXkyPU1XSXhORFJtTnpObE5tWmxabVU1TVdOa01EVm1PRFV3WlRKaU5UZzVaREE",
+            "quality":"Calidad 1080p"
+         },
+         {
+            "name":"MTV Urheilu 1 FI",
+            "link":"https://television-libre.online//html/eventos/?r=aHR0cHM6Ly9lbWJlZC5saWJyZWZ1dGJvbHR2LmNvbS9tcGRrLmh0bWw/Z2V0PWFIUjBjSE02THk5dGRIWXRZeTFzYVhabGRYTndMV0l1WVd0aGJXRnBlbVZrTG01bGRDOXNhWFpsTDFSRlRFbEJYMDFCV0ZOUVQxSlVNUzlVUlV4SlFWOU5RVmhUVUU5U1ZERXVhWE50YkM5TlFWaFRVRTlTVkRFdWJYQmsma2V5PU5XTm1OekkxWldRM1l6SmhOR0ZqWWprNVpEa3dNamcxTmpRMk1EaGlNemMma2V5Mj1NR0k0TVRRM01tWTBNemsyTWpoak1tWXlNMk0yTXprM01qVmtNMlJpTTJV",
+            "quality":"Calidad 720p"
+         },
+         {
+            "name":"TV2 Sport 1 NO",
+            "link":"https://television-libre.online//html/eventos/?r=aHR0cHM6Ly9jYW5hbGVzLm9ubGluZS9lbWJlZC9tcGRrLmh0bWw/Z2V0PWFIUjBjSE02THk5aGQzTXRZWEJ3WldGeWRIWXRZMlJ1TG5KcGEzTjBkaTV1Ynk5eWFXdHpkSFl2TVRRMk9DOHlMMlJoYzJndlZGWXlYMU53YjNKMFh6RXZiV0Z1YVdabGMzUXViWEJrJmtleT1PR013TWpCalkyUTFaVGxrWXpkaU1HUTBNR1V3WkdFNU9UWmxNMlE1WXpjJmtleTI9WmpreFlXWTBaR0ZpTlRSbE9XTXdNamRrTWpGbU5HUTNPR0ZpWWpkaE56VQ",
+            "quality":"Calidad 720p"
+         },
+         {
+            "name":"Polsat Sport Premium 2 PL",
+            "link":"https://television-libre.online//html/eventos/?r=aHR0cHM6Ly9jYW5hbGVzLm9ubGluZS9lbWJlZC9wb2xzYXRwcmUyLmh0bWw",
+            "quality":"Calidad 720p"
+         }
+      ]
+   },
+   {
+      "category":"CHA",
+      "match":"UEFA Champions League: Milan vs. Borussia Dortmund",
+      "time":"21:00",
+      "channels":[
+         {
+            "name":"ESPN 3",
+            "link":"/en-vivo/espn-3/",
+            "quality":"Calidad 720p"
+         },
+         {
+            "name":"Star+",
+            "link":"/star-plus/",
+            "quality":"Calidad 720p"
+         },
+         {
+            "name":"VIX+",
+            "link":"/vix-plus/",
+            "quality":"Calidad 1080p"
+         },
+         {
+            "name":"Sky Sport Uno IT",
+            "link":"https://television-libre.online//html/eventos/?r=aHR0cHM6Ly9jYW5hbGVzLm9ubGluZS9lbWJlZC9tcGRrLmh0bWw/Z2V0PWFIUjBjSE02THk5c2FXNWxZWEl6TURFdGFYUXRaR0Z6YURFdGNISmtMV3hzTG1Oa2JqRXpMbk5yZVdOa2NDNWpiMjB2TURFMllTOHpNVEF5TXk5R1NFUXZjMnQ1YzNCdmNuUjFibTh2YldGemRHVnlYM04wWlhKbGJ5NXRjR1Ema2V5PU1EQXpOakkwTlRKbFpERXdNakF3TUdOalpXRTJOR016TVRFNU1qRmtZekkma2V5Mj1NREptTWpkaVpEWmpZV0ZpTnpZek0yUXpNRGd6WWprMFpETTVOVGhpTVdN",
+            "quality":"Calidad 1080p"
+         },
+         {
+            "name":"Eleven Sports 3 PT",
+            "link":"https://television-libre.online//html/eventos/?r=aHR0cHM6Ly9jYW5hbGVzLm9ubGluZS9lbWJlZC9tcGRrLmh0bWw/Z2V0PWFIUjBjSE02THk5a1kyVXRZV3N0YkdsMlpYZDNaR0Y2Ymk1aGEyRnRZV2w2WldRdWJtVjBMMlJoYzJoa2NtMHZaR0Y2Ymkxc2FXNWxZWEl0TURVMkwzTjBjbVZoYlM1dGNHUSZrZXk9T0RKbU9HVXlZVEUzWkdGak5EUmpNR0V4T0dZMk5qQTBOemt6TkRsak5UayZrZXkyPU1XSXhORFJtTnpObE5tWmxabVU1TVdOa01EVm1PRFV3WlRKaU5UZzVaREE",
+            "quality":"Calidad 1080p"
+         },
+         {
+            "name":"MTV Urheilu 2 FI",
+            "link":"https://television-libre.online//html/eventos/?r=aHR0cHM6Ly9jYW5hbGVzLm9ubGluZS9lbWJlZC9tcGRrLmh0bWw/Z2V0PWFIUjBjSE02THk5dGRIWXRZeTFzYVhabGRYTndMV0l1WVd0aGJXRnBlbVZrTG01bGRDOXNhWFpsTDFSRlRFbEJYMDFCV0ZOUVQxSlVNUzlVUlV4SlFWOU5RVmhUVUU5U1ZERXVhWE50YkM5TlFWaFRVRTlTVkRFdWJYQmsma2V5PU5XTm1OekkxWldRM1l6SmhOR0ZqWWprNVpEa3dNamcxTmpRMk1EaGlNemMma2V5Mj1NR0k0TVRRM01tWTBNemsyTWpoak1tWXlNMk0yTXprM01qVmtNMlJpTTJV",
+            "quality":"Calidad 720p"
+         },
+         {
+            "name":"TV2 Sport 1 NO",
+            "link":"https://television-libre.online//html/eventos/?r=aHR0cHM6Ly9jYW5hbGVzLm9ubGluZS9lbWJlZC9tcGRrLmh0bWw/Z2V0PWFIUjBjSE02THk5aGQzTXRZWEJ3WldGeWRIWXRZMlJ1TG5KcGEzTjBkaTV1Ynk5eWFXdHpkSFl2TVRRMk9DOHlMMlJoYzJndlZGWXlYMU53YjNKMFh6RXZiV0Z1YVdabGMzUXViWEJrJmtleT1PR013TWpCalkyUTFaVGxrWXpkaU1HUTBNR1V3WkdFNU9UWmxNMlE1WXpjJmtleTI9WmpreFlXWTBaR0ZpTlRSbE9XTXdNamRrTWpGbU5HUTNPR0ZpWWpkaE56VQ",
+            "quality":"Calidad 720p"
+         },
+         {
+            "name":"Ziggo Sport Docu NL",
+            "link":"https://television-libre.online//html/eventos/?r=aHR0cHM6Ly9jYW5hbGVzLm9ubGluZS9lbWJlZC9tcGRrLmh0bWw/Z2V0PWFIUjBjSE02THk5a1lTMWtORE0yTWpNMk56SXdNREV3WWpnNE1EQXdNVEF6TURNd01EQXdNREF3TURBd01EQXdNREE1TG1sa0xtTmtiaTUxY0dOaWNtOWhaR0poYm1RdVkyOXRMM2R3TDNkd0xXOWlZelV0YkdsMlpTMXViQzF3Y205a0xuQnliMlF1WTJSdUxtUnRaSE5rY0M1amIyMHZaR0Z6YUM5T1RGOHdNREF3T1RoZk1ERTVNalUxTDIxaGJtbG1aWE4wTG0xd1pBJmtleT1NalUxT0RaaE5XTmhNakE0TkRka05qZzBOVGM1WTJObE1HTXlaV05oWTJNJmtleTI9T1dNNU1qRTJNbUl5TXpjd09UWTFNelk0T0dFME56RmlaV013WTJZeE9XSQ",
+            "quality":"Calidad 720p"
+         }
+      ]
+   },
+   {
+      "match":"UEFA Champions League: Feyenoord vs. Atlético de Madrid",
+      "time":"21:00",
+      "channels":[
+         {
+            "channel":"FOX Sports 2",
+            "link":"/en-vivo/fox-sports-2/",
+            "quality":"Calidad 720p"
+         },
+         {
+            "channel":"Star+",
+            "link":"/star-plus/",
+            "quality":"Calidad 720p"
+         },
+         {
+            "channel":"VIX+",
+            "link":"/vix-plus/",
+            "quality":"Calidad 1080p"
+         },
+         {
+            "channel":"Eleven Sports 5 PT",
+            "link":"https://television-libre.online//html/eventos/?r=aHR0cHM6Ly9jYW5hbGVzLm9ubGluZS9lbWJlZC9tcGRrLmh0bWw/Z2V0PWFIUjBjSE02THk5a1kyVXRZV3N0YkdsMlpYZDNaR0Y2Ymk1aGEyRnRZV2w2WldRdWJtVjBMMlJoYzJoa2NtMHZaR0Y2Ymkxc2FXNWxZWEl0TURVNEwzTjBjbVZoYlM1dGNHUSZrZXk9T0RKbU9HVXlZVEUzWkdGak5EUmpNR0V4T0dZMk5qQTBOemt6TkRsak5UayZrZXkyPU1XSXhORFJtTnpObE5tWmxabVU1TVdOa01EVm1PRFV3WlRKaU5UZzVaREE",
+            "quality":"Calidad 1080p"
+         },
+         {
+            "channel":"Ziggo Sport Voetbal NL",
+            "link":"https://television-libre.online//html/eventos/?r=aHR0cHM6Ly9jYW5hbGVzLm9ubGluZS9lbWJlZC9tcGRrLmh0bWw/Z2V0PWFIUjBjSE02THk5a1lTMWtORE0yTWpNMFlUSXdNREV3WWpnNE1EQXdNVEF6TURJd01EQXdNREF3TURBd01EQXdNREJqTG1sa0xtTmtiaTUxY0dOaWNtOWhaR0poYm1RdVkyOXRMM2R3TDNkd0xXOWlZekV0YkdsMlpTMXViQzF3Y205a0xuQnliMlF1WTJSdUxtUnRaSE5rY0M1amIyMHZaR0Z6YUM5T1RGOHdNREF3T1RWZk1ERTVNemN4TDIxaGJtbG1aWE4wTG0xd1pBJmtleT1NalUxT0RaaE5XTmhNakE0TkRka05qZzBOVGM1WTJObE1HTXlaV05oWTJNJmtleTI9T1dNNU1qRTJNbUl5TXpjd09UWTFNelk0T0dFME56RmlaV013WTJZeE9XSQ",
+            "quality":"Calidad 720p"
+         }
+      ]
+   },
+   {
+      "match":"UEFA Champions League: Young Boys vs. Estrella Roja",
+      "time":"21:00",
+      "channels":[
+         {
+            "channel":"FOX Sports 3",
+            "link":"/en-vivo/fox-sports-3/",
+            "quality":"Calidad 720p"
+         },
+         {
+            "channel":"Star+",
+            "link":"/star-plus/",
+            "quality":"Calidad 720p"
+         },
+         {
+            "channel":"VIX+",
+            "link":"/vix-plus/",
+            "quality":"Calidad 1080p"
+         },
+         {
+            "channel":"Eleven Sports 6 PT",
+            "link":"https://television-libre.online//html/eventos/?r=aHR0cHM6Ly9jYW5hbGVzLm9ubGluZS9lbWJlZC9tcGRrLmh0bWw/Z2V0PWFIUjBjSE02THk5a1kyVXRZV3N0YkdsMlpYZDNaR0Y2Ymk1aGEyRnRZV2w2WldRdWJtVjBMMlJoYzJoa2NtMHZaR0Y2Ymkxc2FXNWxZWEl0TURVNUwzTjBjbVZoYlM1dGNHUSZrZXk9T0RKbU9HVXlZVEUzWkdGak5EUmpNR0V4T0dZMk5qQTBOemt6TkRsak5UayZrZXkyPU1XSXhORFJtTnpObE5tWmxabVU1TVdOa01EVm1PRFV3WlRKaU5UZzVaREE",
+            "quality":"Calidad 1080p"
+         }
+      ]
+   },
+   {
+      "match":"Copa de la Liga Profesional: Barracas Central vs. Argentinos",
+      "time":"23:00",
+      "channels":[
+         {
+            "channel":"TNT Sports",
+            "link":"/en-vivo/tnt-sports/",
+            "quality":"Calidad 1080p"
+         },
+         {
+            "channel":"VIX+",
+            "link":"/vix-plus/",
+            "quality":"Calidad 1080p"
+         },
+         {
+            "channel":"TyC Sports Internacional",
+            "link":"https://television-libre.online//html/eventos/?r=aHR0cHM6Ly90ZWxldmlzaW9uLWxpYnJlLm9ubGluZS9odG1sL2ZsLz9nZXQ9VkhsRFgwbHVkR1Z5Ym1GamFXOXVZV3c=",
+            "quality":"Calidad 720p"
+         }
+      ]
+   },
+   {
+      "match":"Primera División: Plaza Colonia vs. Racing",
+      "time":"23:00",
+      "channels":[
+         {
+            "channel":"VTV +",
+            "link":"/en-vivo/vtv-plus/",
+            "quality":"Calidad 720p"
+         },
+         {
+            "channel":"Star+",
+            "link":"/star-plus/",
+            "quality":"Calidad 720p"
+         }
+      ]
+   },
+   {
+      "match":"Primera División: Montevideo City Torque vs. Maldonado",
+      "time":"01:15",
+      "channels":[
+         {
+            "channel":"VTV +",
+            "link":"/en-vivo/vtv-plus/",
+            "quality":"Calidad 720p"
+         },
+         {
+            "channel":"Star+",
+            "link":"/star-plus/",
+            "quality":"Calidad 720p"
+         }
+      ]
+   },
+   {
+      "match":"Brasileirão: Vasco da Gama vs. Corinthians",
+      "time":"01:30",
+      "channels":[
+         {
+            "channel":"Star+",
+            "link":"/star-plus/",
+            "quality":"Calidad 720p"
+         },
+         {
+            "channel":"VIX+",
+            "link":"/vix-plus/",
+            "quality":"Calidad 1080p"
+         }
+      ]
    }
 ]
