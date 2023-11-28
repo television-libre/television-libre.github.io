@@ -1851,10 +1851,10 @@ function eventos() {
             var obj = arr[i];
             var status, colorClass, additionalClass, decodedUrl, finalUrl;
 
-            if (obj['status'] == "FINALIZADO" || obj['status'] == "EN VIVO")
-              status = obj['status'];
+            if (obj['fecha-evento'] == "FINALIZADO" || obj['fecha-evento'] == "EN VIVO")
+              status = obj['fecha-evento'];
             else
-              status = 'HOY | <span class="">' + obj[' + fechaEvento.toLocaleString() + '] + '</span> hs';
+              status = 'HOY | <span class="">' + obj[' + fecha-evento + '] + '</span> hs';
 
             if (status == "EN VIVO") {
               colorClass = "btn-custom-red"; 
