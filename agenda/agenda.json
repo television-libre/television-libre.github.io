@@ -247,6 +247,11 @@
             "link":"/star-plus/",
             "quality":"Calidad 720p"
          },
+          {
+            "name":"HBO Max: TNT Sports",
+            "link":"/hbo-max/",
+            "quality":"Calidad 1080p"
+         },
          {
             "name":"VIX+",
             "link":"/vix-plus/",
@@ -302,6 +307,11 @@
             "name":"Star+",
             "link":"/star-plus/",
             "quality":"Calidad 720p"
+         },
+           {
+            "name":"HBO Max: TNT Sports",
+            "link":"/hbo-max/",
+            "quality":"Calidad 1080p"
          },
          {
             "name":"VIX+",
@@ -372,6 +382,11 @@
             "link":"/star-plus/",
             "quality":"Calidad 720p"
          },
+           {
+            "name":"HBO Max: TNT Sports",
+            "link":"/hbo-max/",
+            "quality":"Calidad 1080p"
+         },
          {
             "name":"VIX+",
             "link":"/vix-plus/",
@@ -414,10 +429,16 @@
             "link":"/html/eventos/?r=aHR0cHM6Ly90ZWxldmlzaW9uLWxpYnJlLm9ubGluZS9odG1sL2ZsMy8/Z2V0PUVTUE40SEQ=",
             "quality":"Calidad 1080p"
          },
+          
          {
             "name":"Star+",
             "link":"/star-plus/",
             "quality":"Calidad 720p"
+         },
+           {
+            "name":"HBO Max: TNT Sports",
+            "link":"/hbo-max/",
+            "quality":"Calidad 1080p"
          },
          {
             "name":"VIX+",
@@ -460,6 +481,11 @@
             "name":"Star+",
             "link":"/star-plus/",
             "quality":"Calidad 720p"
+         },
+           {
+            "name":"HBO Max: TNT Sports",
+            "link":"/hbo-max/",
+            "quality":"Calidad 1080p"
          },
          {
             "name":"VIX+",
@@ -508,6 +534,11 @@
             "link":"/star-plus/",
             "quality":"Calidad 720p"
          },
+           {
+            "name":"HBO Max: TNT Sports",
+            "link":"/hbo-max/",
+            "quality":"Calidad 1080p"
+         },
          {
             "name":"VIX+",
             "link":"/vix-plus/",
@@ -555,6 +586,11 @@
           "link":"/star-plus/",
           "quality":"Calidad 720p"
        },
+         {
+            "name":"HBO Max: TNT Sports",
+            "link":"/hbo-max/",
+            "quality":"Calidad 1080p"
+         },
        {
           "name":"VIX+",
           "link":"/vix-plus/",
@@ -587,6 +623,11 @@
           "link":"/star-plus/",
           "quality":"Calidad 720p"
        },
+         {
+            "name":"HBO Max: TNT Sports",
+            "link":"/hbo-max/",
+            "quality":"Calidad 1080p"
+         },
        {
           "name":"VIX+",
           "link":"/vix-plus/",
