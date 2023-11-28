@@ -1,46 +1,5 @@
 [
-   {
-      "category":"FIFA",
-      "match":"Mundial Sub-17: Argentina vs. Alemania",
-      "time":"09:30",
-      "channels":[
-         {
-            "name":"TV Pública",
-            "link":"https://television-libre.online/en-vivo/tv-publica/",
-            "quality":"Calidad 720p"
-         },
-         {
-            "name":"TyC Sports",
-            "link":"https://television-libre.online/en-vivo/tyc-sports/",
-            "quality":"Calidad 720p"
-         },
-         {
-            "name":"DSports",
-            "link":"https://television-libre.online/en-vivo/dsports/",
-            "quality":"Calidad 720p"
-         },
-         {
-            "name":"VIX+",
-            "link":"https://television-libre.online/vix-plus/",
-            "quality":"Calidad 720p"
-         },
-         {
-            "name":"GolPlay ES",
-            "link":"https://television-libre.online/html/eventos/?r=aHR0cHM6Ly9lbWJlZC5saWJyZWZ1dGJvbHR2LmNvbS9nb2xwbGF5Lmh0bWw=",
-            "quality":"Calidad SD"
-         },
-         {
-            "name":"SporTV BR",
-            "link":"https://television-libre.online/clarobr/",
-            "quality":"Calidad 1080p"
-         },
-         {
-            "name":"FIFA+",
-            "link":"https://television-libre.online/html/eventos/?r=aHR0cHM6Ly9mbG93Mi5tYWpvcmxlYWd1ZS5tYWtldXAvZmlmYV9qd3AuaHRtbD9nZXQ9aHR0cHM6Ly9kMTZ2YTJqanExZzJ5di5jbG91ZGZyb250Lm5ldC9vdXQvdjEvY2EwNWQ5MDljMjcyNDE1ZWFmZjRmNzAwYjI5MDEwNzYvaW5kZXgubXBkJmltZz1odHRwczovL2Nkbi5wbHVzLmZpZmEuY29tL2ltYWdlcy9wdWJsaWMvY21zL2IzLzk3L2QzLzBjL2IzOTdkMzBjLWIwMTAtNGYwYS05MTU4LWMxZTE0MWMyNWZjZS5qcGc/d2lkdGg9MTA4MCZrZXk9MDBhZTYyNmUyN2NkNDk4MjhhNzBlNjExOWFjNmFkMWIma2V5Mj0xNDA2OWY0MTllN2QwYmY1N2E0ZjExNTM2NWM0M2IyNw==",
-            "quality":"Calidad 720p"
-         }
-      ]
-   },
+   
    {
       "category":"AFC",
       "match":"AFC Champions League: Incheon United vs. Yokohama F. Marinos",
