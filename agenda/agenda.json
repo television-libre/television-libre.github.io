@@ -1,29 +1,6 @@
 [
    
-   {
-      "category":"AFC",
-      "match":"AFC Champions League: Incheon United vs. Yokohama F. Marinos",
-      "time":"11:00",
-      "channels":[
-         {
-            "name":"Star+",
-            "link":"https://television-libre.online/star-plus/",
-            "quality":"Calidad 720p"
-         }
-      ]
-   },
-   {
-      "category":"AFC",
-      "match":"AFC Champions League: Kawasaki Frontale vs. Johor Darul Tazim",
-      "time":"11:00",
-      "channels":[
-         {
-            "name":"Star+",
-            "link":"https://television-libre.online/star-plus/",
-            "quality":"Calidad 720p"
-         }
-      ]
-   },
+   
    {
       "category":"AFC",
       "match":"AFC Champions League: Shandong Taishan vs. Kaya",
