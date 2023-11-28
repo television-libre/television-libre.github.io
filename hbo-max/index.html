@@ -1856,7 +1856,7 @@ function eventos() {
                     status = obj['fecha-evento'];
                 } else {
                     var fechaEvento = new Date(obj['fecha-evento']);
-                    status = '' + formatDayAndDate(fechaEvento) + ' | ' + formatTimeDifference(fechaEvento) + '';
+                    status = '' + formatTimeDifference(fechaEvento) + '';
                 }
 
                 if (status == "EN VIVO") {
@@ -1871,7 +1871,7 @@ function eventos() {
                 var urlValue = obj['url'];
 
                 if (urlValue && urlValue !== "#") {
-                   var encodedPart = urlValue.split("\/embed\/embed02.html?r=")[1];
+                 var encodedPart = urlValue.split("\/embed\/embed02.html?r=")[1];
 
   
     var decodedPart = atob(encodedPart);
@@ -1887,6 +1887,7 @@ function eventos() {
 
     
     var finalEncodedUrl = "/html/eventos/?r=" + encodedNewUrl;
+
                 } else {
                     finalEncodedUrl = "#";
                 }
@@ -1912,11 +1913,6 @@ function eventos() {
     });
 }
 
-function formatDayAndDate(date) {
-    var options = {  };
-    return date.toLocaleDateString('es-ES', options);
-}
-
 function formatTimeDifference(date) {
     var now = new Date();
     var difference = date - now;
@@ -1933,6 +1929,7 @@ window.setInterval(function () {
     eventos();
 }, 60000);
 </script>
+
 
 
 
