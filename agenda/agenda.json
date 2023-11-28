@@ -1,51 +1,49 @@
 [
   {
-    "category": "WWE",
-    "match": "WWE: RAW",
-    "time": "02:00",
+    "category": "FIFA",
+    "match": "Mundial Sub-17: Argentina vs. Alemania",
+    "time": "09:00",
     "channels": [
       {
-        "name": "Star+",
-        "link": "https://television-libre.online/html/red/?r=aHR0cHM6Ly90ZWxldmlzaW9uLWxpYnJlLm9ubGluZS9zdGFyLXBsdXMv",
+        "name": "TV Pública",
+        "link": "https://television-libre.online/en-vivo/tv-publica/",
         "quality": "Calidad 720p"
       },
       {
-        "name": "FOX Sports 3",
-        "link": "https://television-libre.online/html/red/?r=aHR0cHM6Ly90ZWxldmlzaW9uLWxpYnJlLm9ubGluZS9lbi12aXZvL2ZveC1zcG9ydHMtMy8=",
-        "quality": "Calidad 720p"
-      }
-    ]
-  },
-  
-  {
-    "category": "NFL",
-    "match": "NFL: Vikings vs. Bears",
-    "time": "02:15",
-    "channels": [
-      {
-        "name": "Star+",
-        "link": "https://television-libre.online/html/red/?r=aHR0cHM6Ly90ZWxldmlzaW9uLWxpYnJlLm9ubGluZS9zdGFyLXBsdXMv",
+        "name": "TyC Sports",
+        "link": "https://television-libre.online/en-vivo/tyc-sports/",
         "quality": "Calidad 720p"
       },
-      {
-        "name": "ESPN 2",
-        "link": "https://television-libre.online/html/red/?r=aHR0cHM6Ly90ZWxldmlzaW9uLWxpYnJlLm9ubGluZS9lbi12aXZvL2VzcG4tMi8=",
-        "quality": "Calidad 1080p"
-      }
-    ]
-  },
-  
-  {
-    "category": "MEX",
-    "match": "Liga MX Femenil: Tigres UANL vs. América",
-    "time": "03:00",
-    "channels": [
-      {
+       {
+        "name": "DSports",
+        "link": "https://television-libre.online/en-vivo/dsports/",
+        "quality": "Calidad 720p"
+      },
+       {
         "name": "VIX+",
-        "link": "https://television-libre.online/html/red/?r=aHR0cHM6Ly90ZWxldmlzaW9uLWxpYnJlLm9ubGluZS92aXgtcGx1cy8=",
-        "quality": "Calidad 1080p"
+        "link": "https://television-libre.online/vix-plus/",
+        "quality": "Calidad 720p"
+      },
+       {
+        "name": "GolPlay ES",
+        "link": "https://television-libre.online/html/eventos/?r=aHR0cHM6Ly9lbWJlZC5saWJyZWZ1dGJvbHR2LmNvbS9nb2xwbGF5Lmh0bWw=",
+        "quality": "Calidad 720p"
+      },
+       {
+        "name": "SporTV BR",
+        "link": "https://television-libre.online/clarobr/",
+        "quality": "Calidad 720p"
+      },
+       {
+        "name": "FIFA+",
+        "link": "https://television-libre.online/fifa-plus/",
+        "quality": "Calidad 720p"
       }
+      
+      
     ]
-  }
+  },
+  
+
   
 ]
