@@ -661,7 +661,81 @@
           "quality":"Calidad 1080p"
        }
     ]
+ },
+   {
+    "category":"NBA",
+    "match":"NBA: Miami Heat vs. Milwaukee Bucks",
+    "time":"01:30",
+    "channels":[
+       {
+          "name":"Star+",
+          "link":"/star-plus/",
+          "quality":"Calidad 720p"
+       }
+      
+    ]
+ },
+  
+    {
+    "category":"LMB",
+    "match":"LMB: Pericos de Puebla vs. Diablos Rojos de México",
+    "time":"02:00",
+    "channels":[
+       {
+          "name":"Star+",
+          "link":"/star-plus/",
+          "quality":"Calidad 720p"
+       }
+      
+    ]
+ },
+
+  {
+    "category":"NBA",
+    "match":"NBA: Oklahoma City Thunder vs. Minnesota Timberwolves",
+    "time":"02:00",
+    "channels":[
+       {
+          "name":"Star+",
+          "link":"/star-plus/",
+          "quality":"Calidad 720p"
+       }
+      
+    ]
+ },
+
+  {
+    "category":"FUT",
+    "match":"Copa Centroamericana: Real Esteli (NCA) vs. Alajuelense (CRC)",
+    "time":"04:00",
+    "channels":[
+       {
+          "name":"Star+",
+          "link":"/star-plus/",
+          "quality":"Calidad 720p"
+       },
+         {
+             "name":"VIX+",
+          "link":"/vix-plus/",
+          "quality":"Calidad 1080p"
+       }
+      
+      
+    ]
+ },
+
+ {
+    "category":"NBA",
+    "match":"NBA: Sacramento Kings vs. Golden State Warriors",
+    "time":"04:00",
+    "channels":[
+       {
+          "name":"Star+",
+          "link":"/star-plus/",
+          "quality":"Calidad 720p"
+       }
+      
+    ]
  }
-  
-  
+   
 ]
