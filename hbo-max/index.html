@@ -1856,7 +1856,7 @@ function eventos() {
                     status = obj['fecha-evento'];
                 } else {
                     var fechaEvento = new Date(obj['fecha-evento']);
-                    status = '' + formatDayAndDate(fechaEvento) + ' | ' + formatTimeDifference(fechaEvento) + ' hs';
+                    status = '' + formatDayAndDate(fechaEvento) + ' | ' + formatTimeDifference(fechaEvento) + '';
                 }
 
                 if (status == "EN VIVO") {
