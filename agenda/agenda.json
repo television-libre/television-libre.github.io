@@ -675,9 +675,23 @@
       
     ]
  },
+
+   {
+    "category":"BAS",
+    "match":"Liga Nacional: Oberá vs. Boca",
+    "time":"02:00",
+    "channels":[
+       {
+          "name":"TyC Sports",
+          "link":"/en-vivo/tyc-sports/",
+          "quality":"Calidad 720p"
+       }
+      
+    ]
+ },
   
     {
-    "category":"LMB",
+    "category":"MLB",
     "match":"LMB: Pericos de Puebla vs. Diablos Rojos de México",
     "time":"02:00",
     "channels":[
