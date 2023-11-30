@@ -1,232 +1,214 @@
 [
-   
-   
-   
-
- 
 
 
-
+  
    {
-      "category":"TE",
-      "match":"ATP Finals: Assche vs. Shelbayh",
-      "time":"18:00",
+      "category":"BRA",
+      "match":"Brasileirão: Flamengo vs. Atlético Mineiro",
+      "time":"23:30",
       "channels":[
          {
             "name":"Star+",
-            "link":"https://television-libre.online/star-plus/",
+            "link":"https://television-libre.online/html/red27/?r=aHR0cHM6Ly90ZWxldmlzaW9uLWxpYnJlLm9ubGluZS9zdGFyLXBsdXMv",
+            "quality":"Calidad 720p"
+         },
+         {
+            "name":"VIX+",
+            "link":"https://television-libre.online/html/red31/?r=aHR0cHM6Ly90ZWxldmlzaW9uLWxpYnJlLm9ubGluZS92aXgtcGx1cy8=",
+            "quality":"Calidad 1080p"
+         }
+      ]
+   },
+   {
+      "category":"BRA",
+      "match":"Brasileirão: Bahia vs. São Paulo",
+      "time":"00:00",
+      "channels":[
+         {
+            "name":"Star+",
+            "link":"https://television-libre.online/html/red43/?r=aHR0cHM6Ly90ZWxldmlzaW9uLWxpYnJlLm9ubGluZS9zdGFyLXBsdXMv",
+            "quality":"Calidad 720p"
+         },
+         {
+            "name":"VIX+",
+            "link":"https://television-libre.online/html/red12/?r=aHR0cHM6Ly90ZWxldmlzaW9uLWxpYnJlLm9ubGluZS92aXgtcGx1cy8=",
+            "quality":"Calidad 1080p"
+         }
+      ]
+   },
+   {
+      "category":"BRA",
+      "match":"Brasileirão: Cuiabá vs. Internacional",
+      "time":"00:00",
+      "channels":[
+         {
+            "name":"Star+",
+            "link":"https://television-libre.online/html/red25/?r=aHR0cHM6Ly90ZWxldmlzaW9uLWxpYnJlLm9ubGluZS9zdGFyLXBsdXMv",
+            "quality":"Calidad 720p"
+         },
+         {
+            "name":"VIX+",
+            "link":"https://television-libre.online/html/red31/?r=aHR0cHM6Ly90ZWxldmlzaW9uLWxpYnJlLm9ubGluZS92aXgtcGx1cy8=",
+            "quality":"Calidad 1080p"
+         }
+      ]
+   },
+   {
+      "category":"COL",
+      "match":"Liga Betplay: Águilas Doradas vs. Junior",
+      "time":"00:15",
+      "channels":[
+         {
+            "name":"Win Sports +",
+            "link":"https://television-libre.online/html/red17/?r=aHR0cHM6Ly90ZWxldmlzaW9uLWxpYnJlLm9ubGluZS9lbi12aXZvL3dpbi1zcG9ydHMtcHJlbWl1bS8=",
+            "quality":"Calidad 1080p"
+         },
+         {
+            "name":"VIX+",
+            "link":"https://television-libre.online/html/red32/?r=aHR0cHM6Ly90ZWxldmlzaW9uLWxpYnJlLm9ubGluZS92aXgtcGx1cy8=",
+            "quality":"Calidad 1080p"
+         }
+         
+      ]
+   },
+   {
+      "category":"URU",
+      "match":"Primera División: Defensor Sporting vs. River Plate",
+      "time":"01:15",
+      "channels":[
+         {
+            "name":"Star+",
+            "link":"https://television-libre.online/html/red24/?r=aHR0cHM6Ly90ZWxldmlzaW9uLWxpYnJlLm9ubGluZS9zdGFyLXBsdXMv",
             "quality":"Calidad 720p"
          }
       ]
    },
+  {
+      "category":"BRA",
+      "match":"Brasileirão: Coritiba vs. Botafogo",
+      "time":"01:30",
+      "channels":[
+         {
+            "name":"Star+",
+            "link":"https://television-libre.online/html/red25/?r=aHR0cHM6Ly90ZWxldmlzaW9uLWxpYnJlLm9ubGluZS9zdGFyLXBsdXMv",
+            "quality":"Calidad 720p"
+         },
+         {
+            "name":"VIX+",
+            "link":"https://television-libre.online/html/red31/?r=aHR0cHM6Ly90ZWxldmlzaW9uLWxpYnJlLm9ubGluZS92aXgtcGx1cy8=",
+            "quality":"Calidad 1080p"
+         }
+      ]
+   },
 
-
-
-
- {
-    "category":"AR",
-    "match":"Copa de la Liga Profesional: Barracas Central vs. Argentinos",
-    "time":"23:00",
-    "channels":[
-       {
-          "name":"TNT Sports",
-          "link":"https://television-libre.online/en-vivo/tnt-sports/",
-          "quality":"Calidad 1080p"
-       },
-       {
-          "name":"VIX+",
-          "link":"https://television-libre.online/vix-plus/",
-          "quality":"Calidad 1080p"
-       },
-       {
-          "name":"TyC Sports Internacional",
-          "link":"https://television-libre.online//html/eventos/?r=aHR0cHM6Ly90ZWxldmlzaW9uLWxpYnJlLm9ubGluZS9odG1sL2ZsLz9nZXQ9VkhsRFgwbHVkR1Z5Ym1GamFXOXVZV3c=",
-          "quality":"Calidad 720p"
-       }
-    ]
- },
- {
-    "category":"URU",
-    "match":"Primera División: Plaza Colonia vs. Racing",
-    "time":"23:00",
-    "channels":[
-     
-       {
-          "name":"Star+",
-          "link":"https://television-libre.online/star-plus/",
-          "quality":"Calidad 720p"
-       }
-    ]
- },
-     {
-    "category":"NHL",
-    "match":"NHL: Philadelphia Flyers vs. Carolina Hurricanes",
-    "time":"01:00",
-    "channels":[
-       {
-          "name":"ESPN Extra",
-          "link":"https://television-libre.online/en-vivo/espn-extra/",
-          "quality":"Calidad 720p"
-       }
-      
-    ]
- },
-
-      {
-    "category":"CONGOLD",
-    "match":"Copa Oro Femenil: Jamaica vs. Panamá",
-    "time":"01:00",
-    "channels":[
-       {
-          "name":"ESPN 2 MX",
-          "link":"https://television-libre.online/html/eventos/?r=aHR0cHM6Ly90ZWxldmlzaW9uLWxpYnJlLm9ubGluZS9odG1sL2ZsMy8/Z2V0PUVTUE4ySEQ=",
-          "quality":"Calidad 1080p"
-       }
-      
-    ]
- },
-
-     {
-    "category":"CONGOLD",
-    "match":"Copa Oro Femenil: Nicaragua vs. Honduras",
-    "time":"01:00",
-    "channels":[
-       {
-          "name":"ESPN MX",
-          "link":"https://television-libre.online/html/eventos/?r=aHR0cHM6Ly90ZWxldmlzaW9uLWxpYnJlLm9ubGluZS9odG1sL2ZsMy8/Z2V0PUVTUE5IRA==",
-          "quality":"Calidad 1080p"
-       }
-      
-    ]
- },
- {
-    "category":"URU",
-    "match":"Primera División: Montevideo City Torque vs. Maldonado",
-    "time":"01:15",
-    "channels":[
-       
-       {
-          "name":"Star+",
-          "link":"https://television-libre.online/star-plus/",
-          "quality":"Calidad 720p"
-       }
-    ]
- },
- {
-    "category":"BRA",
-    "match":"Brasileirão: Vasco da Gama vs. Corinthians",
-    "time":"01:30",
-    "channels":[
-       {
-          "name":"Star+",
-          "link":"https://television-libre.online/star-plus/",
-          "quality":"Calidad 720p"
-       },
-       {
-          "name":"VIX+",
-          "link":"https://television-libre.online/vix-plus/",
-          "quality":"Calidad 1080p"
-       }
-    ]
- },
-   {
-    "category":"NBA",
-    "match":"NBA: Miami Heat vs. Milwaukee Bucks",
-    "time":"01:30",
-    "channels":[
-       {
-          "name":"Star+",
-          "link":"https://television-libre.online/star-plus/",
-          "quality":"Calidad 720p"
-       }
-      
-    ]
- },
-
-   {
-    "category":"BAS",
-    "match":"Liga Nacional: Oberá vs. Boca",
-    "time":"02:00",
-    "channels":[
-       {
-          "name":"TyC Sports",
-          "link":"https://television-libre.online/en-vivo/tyc-sports/",
-          "quality":"Calidad 720p"
-       }
-      
-    ]
- },
-  
     {
-    "category":"MLB",
-    "match":"LMB: Pericos de Puebla vs. Diablos Rojos de México",
-    "time":"02:00",
-    "channels":[
-       {
-          "name":"Star+",
-          "link":"https://television-libre.online/star-plus/",
-          "quality":"Calidad 720p"
-       }
-      
-    ]
- },
+      "category":"BRA",
+      "match":"Brasileirão: Palmeiras vs. América Mineiro",
+      "time":"01:30",
+      "channels":[
 
-  {
-    "category":"NBA",
-    "match":"NBA: Oklahoma City Thunder vs. Minnesota Timberwolves",
-    "time":"02:00",
-    "channels":[
-       {
-          "name":"Star+",
-          "link":"https://television-libre.online/star-plus/",
-          "quality":"Calidad 720p"
-       }
-      
-    ]
- },
-
-  {
-    "category":"FUT",
-    "match":"Copa Centroamericana: Real Esteli (NCA) vs. Alajuelense (CRC)",
-    "time":"04:00",
-    "channels":[
-       {
-          "name":"Star+",
-          "link":"https://television-libre.online/star-plus/",
-          "quality":"Calidad 720p"
-       },
-        {
-          "name":"ESPN MX",
-          "link":"https://television-libre.online/html/eventos/?r=aHR0cHM6Ly90ZWxldmlzaW9uLWxpYnJlLm9ubGluZS9odG1sL2ZsMy8/Z2V0PUVTUE5IRA==",
-          "quality":"Calidad 1080p"
-       },
+           {
+            "name":"ESPN 2",
+            "link":"https://television-libre.online/html/red45/?r=aHR0cHM6Ly90ZWxldmlzaW9uLWxpYnJlLm9ubGluZS9lbi12aXZvL2VzcG4tMi8=",
+            "quality":"Calidad 720p"
+         },
          {
-          "name":"FOX Sports 2 MX",
-          "link":"https://television-libre.online/html/eventos/?r=aHR0cHM6Ly90ZWxldmlzaW9uLWxpYnJlLm9ubGluZS9odG1sL3IvP3I9YUhSMGNITTZMeTlqYkdGeWIzWnBaR1Z2TG14cFluSmxablYwWW05c2RIWXVZMjl0TDIxd1pHc3lMbWgwYld3L1oyVjBQV0ZJVWpCalNFMDJUSGs1YzFsWVVtaGlXRnAyWXpKNGNHUnRWbXBpUjBaNVlqTmFjRnBIVm5aTWJVWnlXVmN4YUdGWWNHeGFRelYxV2xoUmRsRXlPWFZrUjFaMVpFTTVSVkZXVGtsWU1GSkNWVEJvWmxKcmMzWlVSMnd5V2xNNVJHRkhSblZpYlZaelMwVmFVRmRHVGxGTmF6RlpVMFZSY0V3eU1XaGliV3h0V2xoT01FeHRNWGRhUVQwOUptdGxlVDFaYWxacVdYcG9hVTVVVVRGWmVrcHFUVlJaTTFwcVFUQlpWRVpyVDFSbk1FOVVVbXhOVkVwcVRXcEZQU1pyWlhreVBWbFhVbTFaZW14cVdrUkJlbGw2Um1sWmJVWnRXVEpWZUU1cVdUUk5SRlpzVDBkU2FFOUVVWGROVjAwOQ==",
-          "quality":"Calidad 1080p"
-       },
+            "name":"Star+",
+            "link":"https://television-libre.online/html/red25/?r=aHR0cHM6Ly90ZWxldmlzaW9uLWxpYnJlLm9ubGluZS9zdGFyLXBsdXMv",
+            "quality":"Calidad 720p"
+         },
          {
-             "name":"VIX+",
-          "link":"https://television-libre.online/vix-plus/",
-          "quality":"Calidad 1080p"
-       }
-      
-      
-    ]
- },
+            "name":"VIX+",
+            "link":"https://television-libre.online/html/red31/?r=aHR0cHM6Ly90ZWxldmlzaW9uLWxpYnJlLm9ubGluZS92aXgtcGx1cy8=",
+            "quality":"Calidad 1080p"
+         }
+      ]
+   },
 
- {
-    "category":"NBA",
-    "match":"NBA: Sacramento Kings vs. Golden State Warriors",
-    "time":"04:00",
-    "channels":[
-       {
-          "name":"Star+",
-          "link":"https://television-libre.online/star-plus/",
-          "quality":"Calidad 720p"
-       }
-      
-    ]
- }
-   
+     {
+      "category":"MLB",
+      "match":"LMB: Pericos de Puebla vs. Diablos Rojos de México (Juego #2)",
+      "time":"02:00",
+      "channels":[
+         {
+            "name":"Star+",
+            "link":"https://television-libre.online/html/red25/?r=aHR0cHM6Ly90ZWxldmlzaW9uLWxpYnJlLm9ubGluZS9zdGFyLXBsdXMv",
+            "quality":"Calidad 720p"
+         } ]
+   },
+
+    {
+      "category":"MEX",
+      "match":"Liga MX: León vs. América",
+      "time":"02:06",
+      "channels":[
+          {
+            "name":"Claro Sports",
+            "link":"https://television-libre.online/html/eventos/?r=aHR0cHM6Ly9jbGFyb3ZpZGVvLmNhbmFsZXMub25saW5lL21wZGsyLmh0bWw/Z2V0PUx5OXNZWFJoYlhadmMyeHBkbVZqYkdGeWIzWnBaR1Z2TG1GcllXMWhhWHBsWkM1dVpYUXZRMjl1ZEdWdWRDOUVRVk5JWDBSQlUwaGZSa3N2VEdsMlpTOURhR0Z1Ym1Wc0tFTk1RVkpQWDFOUVQxSlVVMTlNUVZSQlRWOUlSQ2t2YldGdWFXWmxjM1F1YlhCayZrZXk9TnpSalpHTmlOak5tWmpObE5HWXpZMlUwWkdFME1qUXpZalprTVdVeFpEZyZrZXkyPU9XSTRNelkyWm1FNFpUbGxZbU5rWmpSaU16UTVaRFpqT1dRMU1qZ3hNVFU",
+            "quality":"Calidad 1080p"
+         },
+          {
+            "name":"FOX Sports 2 MX",
+            "link":"https://television-libre.online/html/eventos/?r=aHR0cHM6Ly90ZWxldmlzaW9uLWxpYnJlLm9ubGluZS9odG1sL3IvP3I9YUhSMGNITTZMeTlqYkdGeWIzWnBaR1Z2TG14cFluSmxablYwWW05c2RIWXVZMjl0TDIxd1pHc3lMbWgwYld3L1oyVjBQV0ZJVWpCalNFMDJUSGs1YzFsWVVtaGlXRnAyWXpKNGNHUnRWbXBpUjBaNVlqTmFjRnBIVm5aTWJVWnlXVmN4YUdGWWNHeGFRelYxV2xoUmRsRXlPWFZrUjFaMVpFTTVSVkZXVGtsWU1GSkNWVEJvWmxKcmMzWlVSMnd5V2xNNVJHRkhSblZpYlZaelMwVmFVRmRHVGxGTmF6RlpVMFZSY0V3eU1XaGliV3h0V2xoT01FeHRNWGRhUVQwOUptdGxlVDFaYWxacVdYcG9hVTVVVVRGWmVrcHFUVlJaTTFwcVFUQlpWRVpyVDFSbk1FOVVVbXhOVkVwcVRXcEZQU1pyWlhreVBWbFhVbTFaZW14cVdrUkJlbGw2Um1sWmJVWnRXVEpWZUU1cVdUUk5SRlpzVDBkU2FFOUVVWGROVjAwOQ==",
+            "quality":"Calidad 1080p"
+         },
+          {
+            "name":"VIX+",
+            "link":"https://television-libre.online/html/red36/?r=aHR0cHM6Ly90ZWxldmlzaW9uLWxpYnJlLm9ubGluZS92aXgtcGx1cy8=",
+            "quality":"Calidad 1080p"
+         }  ]
+   },
+
+    {
+      "category":"COL",
+      "match":"Liga Betplay: Deportivo Cali vs. Deportes Tolima",
+      "time":"02:30",
+      "channels":[
+                  {
+            "name":"Win Sports +",
+            "link":"https://television-libre.online/html/red17/?r=aHR0cHM6Ly90ZWxldmlzaW9uLWxpYnJlLm9ubGluZS9lbi12aXZvL3dpbi1zcG9ydHMtcHJlbWl1bS8=",
+            "quality":"Calidad 1080p"
+                  },
+         {
+            "name":"VIX+",
+            "link":"https://television-libre.online/html/red37/?r=aHR0cHM6Ly90ZWxldmlzaW9uLWxpYnJlLm9ubGluZS92aXgtcGx1cy8=",
+            "quality":"Calidad 1080p"
+         }
+
+      ]
+   },
+
+    {
+      "category":"NBA",
+      "match":"NBA: Kings vs. Clippers",
+      "time":"04:00",
+      "channels":[
+         {
+            "name":"Star+",
+            "link":"https://television-libre.online/html/red15/?r=aHR0cHM6Ly90ZWxldmlzaW9uLWxpYnJlLm9ubGluZS9zdGFyLXBsdXMv",
+            "quality":"Calidad 720p"
+         } 
+      ]
+   },
+
+     {
+      "category":"MEX",
+      "match":"Liga MX: Atlético San Luis vs. Monterrey",
+      "time":"04:10",
+      "channels":[
+          
+           {
+            "name":"Star+",
+            "link":"https://television-libre.online/html/red12/?r=aHR0cHM6Ly90ZWxldmlzaW9uLWxpYnJlLm9ubGluZS9zdGFyLXBsdXMv",
+            "quality":"Calidad 720p"
+         },
+           {
+            "name":"ESPN MX",
+            "link":"https://television-libre.online/html/eventos/?r=aHR0cHM6Ly90ZWxldmlzaW9uLWxpYnJlLm9ubGluZS9odG1sL2ZsMy8/Z2V0PUVTUE5IRA==",
+            "quality":"Calidad 1080p"
+         } 
+         
+          ]
+   }
+  
 ]
