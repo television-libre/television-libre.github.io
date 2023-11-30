@@ -186,7 +186,7 @@ scrollbar-width: thin;
 scrollbar-color: #141d26 #eef8fc ; 
 
 </style> 
- <style type="text/css">@media screen and (min-width:0px) and (max-width:767px){iframe-container{height:266px}}</style>
+<style type="text/css">@media screen and (min-width:0px) and (max-width:767px){.iframe-container iframe{height:266px}}</style>
 <body class="flex flex-col h-screen justify-between dark:bg-slate-800 dark:text-slate-300 font-sans">
 <nav class="bg-slate-100 shadow dark:bg-slate-700">
 <div class="mx-auto max-w-7xl px-2 sm:px-6 lg:px-8">
@@ -214,13 +214,9 @@ scrollbar-color: #141d26 #eef8fc ;
  <br>
 <h1 class="text-3xl my-3 text-center">Agenda Deportiva</h1>
 <div class="iframe-container" style="padding:0;">
-<div id="agenda"></div>
 
-<script>
-            $(document).ready(function() {
-                $("#agenda").load("/agenda/agenda.html");
-            });
-         </script>
+<iframe allowfullscreen="true" scrolling="auto" src="/agenda/" frameborder="0" width="100%" height="700"></iframe>
+
       
 </div>
 <br>
