@@ -2,75 +2,7 @@
 
 
   
-   {
-      "category":"BRA",
-      "match":"Brasileirão: Flamengo vs. Atlético Mineiro",
-      "time":"23:30",
-      "channels":[
-         {
-            "name":"Star+",
-            "link":"https://television-libre.online/html/red27/?r=aHR0cHM6Ly90ZWxldmlzaW9uLWxpYnJlLm9ubGluZS9zdGFyLXBsdXMv",
-            "quality":"Calidad 720p"
-         },
-         {
-            "name":"VIX+",
-            "link":"https://television-libre.online/html/red31/?r=aHR0cHM6Ly90ZWxldmlzaW9uLWxpYnJlLm9ubGluZS92aXgtcGx1cy8=",
-            "quality":"Calidad 1080p"
-         }
-      ]
-   },
-   {
-      "category":"BRA",
-      "match":"Brasileirão: Bahia vs. São Paulo",
-      "time":"00:00",
-      "channels":[
-         {
-            "name":"Star+",
-            "link":"https://television-libre.online/html/red43/?r=aHR0cHM6Ly90ZWxldmlzaW9uLWxpYnJlLm9ubGluZS9zdGFyLXBsdXMv",
-            "quality":"Calidad 720p"
-         },
-         {
-            "name":"VIX+",
-            "link":"https://television-libre.online/html/red12/?r=aHR0cHM6Ly90ZWxldmlzaW9uLWxpYnJlLm9ubGluZS92aXgtcGx1cy8=",
-            "quality":"Calidad 1080p"
-         }
-      ]
-   },
-   {
-      "category":"BRA",
-      "match":"Brasileirão: Cuiabá vs. Internacional",
-      "time":"00:00",
-      "channels":[
-         {
-            "name":"Star+",
-            "link":"https://television-libre.online/html/red25/?r=aHR0cHM6Ly90ZWxldmlzaW9uLWxpYnJlLm9ubGluZS9zdGFyLXBsdXMv",
-            "quality":"Calidad 720p"
-         },
-         {
-            "name":"VIX+",
-            "link":"https://television-libre.online/html/red31/?r=aHR0cHM6Ly90ZWxldmlzaW9uLWxpYnJlLm9ubGluZS92aXgtcGx1cy8=",
-            "quality":"Calidad 1080p"
-         }
-      ]
-   },
-   {
-      "category":"COL",
-      "match":"Liga Betplay: Águilas Doradas vs. Junior",
-      "time":"00:15",
-      "channels":[
-         {
-            "name":"Win Sports +",
-            "link":"https://television-libre.online/html/red17/?r=aHR0cHM6Ly90ZWxldmlzaW9uLWxpYnJlLm9ubGluZS9lbi12aXZvL3dpbi1zcG9ydHMtcHJlbWl1bS8=",
-            "quality":"Calidad 1080p"
-         },
-         {
-            "name":"VIX+",
-            "link":"https://television-libre.online/html/red32/?r=aHR0cHM6Ly90ZWxldmlzaW9uLWxpYnJlLm9ubGluZS92aXgtcGx1cy8=",
-            "quality":"Calidad 1080p"
-         }
-         
-      ]
-   },
+   
    {
       "category":"URU",
       "match":"Primera División: Defensor Sporting vs. River Plate",
