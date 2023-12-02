@@ -1827,6 +1827,7 @@ a {
 <div id="eventos"></div>
 <br>
         <script>
+
 function cargarDatos() {
     var x = Math.random().toString(36).substring(7);
     var url = "https://corsproxy.io/?url=https://futbolplaytvhd.com/famustv.com.json?" + x;
@@ -1900,16 +1901,15 @@ function cargarDatos() {
 
             guardaHorario();
             dT();
+
+            // Después de actualizar los eventos, también actualiza el enlace
+            actualizarEnlace(activeEvents);
         }
     });
 }
 
-cargarDatos();
+		
 
-// Actualizar cada minuto
-window.setInterval(function () {
-    cargarDatos();
-}, 60000);
 
 
 
