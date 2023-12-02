@@ -1908,13 +1908,33 @@ function cargarDatos() {
     });
 }
 
+function actualizarEnlace(data) {
+    var starPlusLink = document.getElementById("starPlusLink");
+
+    var url = obtenerUrlCorrecta(data);
+    starPlusLink.href = url;
+}
+
+function obtenerUrlCorrecta(data) {
+    return data.length > 0 ? data[0].url : "#";
+}
+
+// Llama a cargarDatos al cargar la página y cada minuto
+$(document).ready(function () {
+    cargarDatos();
+    setInterval(cargarDatos, 60000);
+});
+
 		
 
 
 
 
 
-document.addEventListener('DOMContentLoaded', function () {
+
+</script>
+
+<script>document.addEventListener('DOMContentLoaded', function () {
     var starPlusData = localStorage.getItem('starPlusData');
     if (starPlusData) {
         var data = JSON.parse(starPlusData);
@@ -1931,10 +1951,7 @@ function actualizarEnlace(data) {
 
 function obtenerUrlCorrecta(data) {
     return data.length > 0 ? data[0].url : "#";
-}
-</script>
-
-
+}</script>
 
 </section>
 <body>
