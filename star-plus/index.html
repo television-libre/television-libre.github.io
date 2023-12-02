@@ -1827,21 +1827,27 @@ a {
 <div id="eventos"></div>
 <br>
         <script>
-function eventos() {
-  var x = Math.random().toString(36).substring(7);
-  var url = "https://corsproxy.io/?url=https://futbolplaytvhd.com/famustv.com.json?" + x;
- 
+ function cargarDatos() {
+            var x = Math.random().toString(36).substring(7);
+            var url = "https://corsproxy.io/?url=https://futbolplaytvhd.com/famustv.com.json?" + x;
 
-  $.ajax({
-    url: url,
-    type: "get",
-    success: function (arr) {
-      var content = '';
-      var mt = ["//pelotalibre.lat/star_jwp.html?get=", "//mpdkflow.blogspot.com/?get=", "//starjwp.blogspot.com/?get="];
+            $.ajax({
+                url: url,
+                type: "get",
+                success: function (data) {
+                    localStorage.setItem('starPlusData', JSON.stringify(data));
+                    actualizarContenido(data);
+                }
+            });
+        }
 
-      var activeEvents = arr.filter(function (event) {
-        return event['status'] !== "FINALIZADO";
-      });
+        function actualizarContenido(data) {
+            var content = '';
+            var mt = ["//pelotalibre.lat/star_jwp.html?get=", "//mpdkflow.blogspot.com/?get=", "//starjwp.blogspot.com/?get="];
+
+            var activeEvents = data.filter(function (event) {
+                return event['status'] !== "FINALIZADO";
+            });
 
       for (var i = 0; i < activeEvents.length; i++) {
         if (i % 4 == 0) {
@@ -1905,11 +1911,12 @@ function eventos() {
   });
 }
 
-eventos();
+cargarDatos();
 
-window.setInterval(function () {
-  eventos();
-}, 60000);
+        // Actualizar cada minuto
+        window.setInterval(function () {
+            cargarDatos();
+        }, 60000);
 
 
 </script>
