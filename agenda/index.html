@@ -981,13 +981,13 @@ document.head.appendChild(script);</script>
 
         function actualizarEnlace(data) {
             var starPlusLink = document.getElementById("starPlusLink");
-           
+
             var url = obtenerUrlCorrecta(data);
             starPlusLink.href = url;
         }
 
         function obtenerUrlCorrecta(data) {
-            return data[0].url;
+            return data.length > 0 ? data[0].url : "#";
         }
     </script>
 
