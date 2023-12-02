@@ -1911,6 +1911,27 @@ window.setInterval(function () {
     cargarDatos();
 }, 60000);
 
+
+
+
+document.addEventListener('DOMContentLoaded', function () {
+    var starPlusData = localStorage.getItem('starPlusData');
+    if (starPlusData) {
+        var data = JSON.parse(starPlusData);
+        actualizarEnlace(data);
+    }
+});
+
+function actualizarEnlace(data) {
+    var starPlusLink = document.getElementById("starPlusLink");
+
+    var url = obtenerUrlCorrecta(data);
+    starPlusLink.href = url;
+}
+
+function obtenerUrlCorrecta(data) {
+    return data.length > 0 ? data[0].url : "#";
+}
 </script>
 
 
