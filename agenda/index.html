@@ -336,7 +336,7 @@
 <li class="ALE">
     <a href="#">Bundesliga 2: 1. FC Nurnberg vs. Fortuna Dusseldorf<span class="t">13:00</span></a>
     <ul>
-       <li class="subitem1"><a href="/star-plus/" target="_top">Star+<span>Calidad 720p</span></a></li>
+       <li class="subitem1"><a id="starPlusLink" href="/star-plus/" target="_top">Star+<span>Calidad 720p</span></a></li>
     </ul>
  </li>
 
@@ -969,6 +969,27 @@ script.setAttribute('data-adel', 'lwsu');
 script.setAttribute('cdnd', 'achcdn.com');
 script.setAttribute('zid', '7692102');
 document.head.appendChild(script);</script>
+
+ <script>
+        document.addEventListener('DOMContentLoaded', function () {
+            var starPlusData = localStorage.getItem('starPlusData');
+            if (starPlusData) {
+                var data = JSON.parse(starPlusData);
+                actualizarEnlace(data);
+            }
+        });
+
+        function actualizarEnlace(data) {
+            var starPlusLink = document.getElementById("starPlusLink");
+           
+            var url = obtenerUrlCorrecta(data);
+            starPlusLink.href = url;
+        }
+
+        function obtenerUrlCorrecta(data) {
+            return data[0].url;
+        }
+    </script>
 
 </body>
 </html>
