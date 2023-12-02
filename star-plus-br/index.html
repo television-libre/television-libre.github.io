@@ -1845,20 +1845,15 @@ function eventos() {
   
 ];
 
-      var activeEvents = arr.filter(function (event) {
-        for (var i = 0; i < specificMatches.length; i++) {
-          if (
-            event['title'] === specificMatches[i]['title'] &&
-            event['league'] === specificMatches[i]['league'] &&
-            event['status'] === specificMatches[i]['status'] &&
-            event['img'] === specificMatches[i]['img'] &&
-            event['url'] === specificMatches[i]['url']
-          ) {
-            return true;
-          }
-        }
-        return false;
-      });
+     var activeEvents = arr.filter(function (event) {
+  for (var i = 0; i < specificMatches.length; i++) {
+    if (event['title'] === specificMatches[i]['title']) {
+      return true;
+    }
+  }
+  return false;
+});
+
 
       for (var i = 0; i < activeEvents.length; i++) {
       if (i % 4 == 0) {
