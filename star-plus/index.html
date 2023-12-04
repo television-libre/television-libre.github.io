@@ -1874,9 +1874,9 @@ function eventos() {
         var urlValue = obj['url'];
 
         if (urlValue && urlValue !== "#") {
-          var encodedPart = urlValue.split("\/embed\/eventos.html?r=")[1];
+              var encodedPart = urlValue.split("\/embed\/eventos\/?r=")[1];
           var decodedPart = atob(encodedPart);
-          var modifiedPart = decodedPart.replace("https://todopelotatv.live/star.html?get=", "");
+           var modifiedPart = decodedPart.replace("/star.html?get=", "");
 
           var randomURL = mt[Math.floor(Math.random() * mt.length)];
 
