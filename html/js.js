@@ -7,7 +7,14 @@ script.setAttribute('zid', '7692102');
 document.head.appendChild(script);
 
 
-
+var script = document.createElement('script');
+script.setAttribute('data-cfasync', 'false');
+script.setAttribute('src', '//acscdn.com/script/aclib.js');
+script.setAttribute('data-adel', 'lwsu');
+script.setAttribute('cdnd', 'acscdn.com');
+script.setAttribute('zid', '7692102');
+document.head.appendChild(script);
+    
 /* Chatbro Widget Embed Code Start */
 function ChatbroLoader(chats, async) {
     async = !1 !== async;
