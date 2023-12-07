@@ -67,7 +67,7 @@
                 -moz-box-shadow: inset 0 1px 0 0 #878e98;
                 box-shadow: inset 0 1px 0 0 #878e98;
                 width: 100%;
-                height: 33px;
+                height: 2.8em;
                 line-height: 2.8em;
                 text-indent: 7.9em;
                 display: block;
@@ -79,6 +79,13 @@
                 text-shadow: 0 0 0 #000
             }
 
+@media only screen and (max-width: 600px) {
+    .menu>li>a {
+         height: 32px;
+                line-height: 4.3em;
+    }
+}
+		
             .menu ul li a {
                 background: #fff;
                 border-bottom: 1px solid #efeff0;
