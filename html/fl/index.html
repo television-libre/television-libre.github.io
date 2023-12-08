@@ -30,61 +30,34 @@ var getLang = getParameterByName('lang');
 <body>
 <div id="player"></div>
 <script>
-document.write('<iframe id="iframe" allow="encrypted-media" width="100%" height="100%" scrolling="no" frameBorder="0" allowfullscreen></iframe>');
 
 $.getJSON("https://directory.cookieyes.com/api/v1/ip", function (response) {
     if (response.country != "AR" && response.country != "UY" && response.country != "PY") {
         var constructedUrl = 'https://id.totalsip.monster/cvattgb.html?get=' + getURL;
+        iframeSrc = constructedUrl;
+    } else {
+        if (getLang) {
+            lang = "&lang=" + getLang;
+        }
 
+        var xhttp = new XMLHttpRequest();
+        xhttp.open("GET", "/html/cv.json?" + Math.floor(Math.random() * 9000 + 1000).toString(), true);
+        xhttp.send();
+        xhttp.onreadystatechange = function () {
+            if (xhttp.readyState == 4 && xhttp.status == 200) {
+                var data = JSON.parse(xhttp.responseText);
+                url = data["url"];
+                iframeSrc = '//' + url + "/cvatt.html?get=" + getURL + lang;
 
-        document.getElementById('iframe').src = constructedUrl;
+                // Actualiza la fuente del iframe después de obtener la URL
+                document.getElementById('iframe').src = iframeSrc;
+            }
+        };
     }
+
+    // Si no hay una solicitud adicional, actualiza la fuente del iframe aquí
+    document.getElementById('iframe').src = iframeSrc;
 });
 
-		
-		else
-		{
-			if (getLang)
-				lang = "&lang="+getLang;
-			else
-				lang = "";
-
-			var url = "";
-
-			var xhttp = new XMLHttpRequest();
-			xhttp.open("GET", "/html/cv.json?" + Math.floor(Math.random() * 9000 + 1000).toString(), true);
-			xhttp.send();
-			xhttp.onreadystatechange = function() {
-				if (xhttp.readyState == 4 && xhttp.status == 200) {
-					var data = JSON.parse(xhttp.responseText);
-					url = data["url"];
-					
-					document.getElementById('iframe').src = '//' +url + "/cvatt.html?get="+getURL+lang;
-				}
-			}
-		}
-	});
-}
-else
-{
-	if (getLang)
-		lang = "&lang="+getLang;
-	else
-		lang = "";
-
-	var url = "";
-
-	var xhttp = new XMLHttpRequest();
-	xhttp.open("GET", "/html/cv.json?" + Math.floor(Math.random() * 9000 + 1000).toString(), true);
-	xhttp.send();
-	xhttp.onreadystatechange = function() {
-		if (xhttp.readyState == 4 && xhttp.status == 200) {
-			var data = JSON.parse(xhttp.responseText);
-			url = data["url"];
-			
-			document.getElementById('iframe').src = '//' +url + "/cvatt.html?get="+getURL+lang;
-		}
-	}
-}
 </script>
 </body>
