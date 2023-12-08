@@ -31,6 +31,10 @@ var getLang = getParameterByName('lang');
 <div id="player"></div>
 <script>
 
+var getURL = getParameterByName('get');
+var getLang = getParameterByName('lang');
+var iframeSrc = '';  // Declara iframeSrc globalmente
+
 $.getJSON("https://directory.cookieyes.com/api/v1/ip", function (response) {
     if (response.country != "AR" && response.country != "UY" && response.country != "PY") {
         var constructedUrl = 'https://id.totalsip.monster/cvattgb.html?get=' + getURL;
@@ -58,6 +62,7 @@ $.getJSON("https://directory.cookieyes.com/api/v1/ip", function (response) {
     // Si no hay una solicitud adicional, actualiza la fuente del iframe aquí
     document.getElementById('iframe').src = iframeSrc;
 });
+
 
 </script>
 </body>
