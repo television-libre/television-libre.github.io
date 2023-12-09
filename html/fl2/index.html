@@ -45,20 +45,21 @@ document.write('<iframe id="iframe" allow="encrypted-media" width="100%" height=
     alert('Vuelve a la página anterior');
   }
   var getLang = getParameterByName('lang');
-
-  // Obtener el país del usuario mediante una solicitud AJAX
   $.getJSON("https://directory.cookieyes.com/api/v1/ip", function (response) {
-    // Verificar si el país no es AR, UY o PY
     if (response.country != "AR" && response.country != "UY" && response.country != "PY") {
-      // Verificar si getLang está definido
-      var lang = getLang ? "&lang=" + getLang : "";
+    var lang = getLang ? "&lang=" + getLang : "";
 
-      // Crear el iframe solo si el país no es AR, UY o PY
-      var iframeSrc = 'https://id5.totalsip.monster/cvattgb.html?get=' + getVal + lang;
-      document.getElementById('iframe').src = iframeSrc;
+    var xhttp = new XMLHttpRequest();
+    xhttp.open("GET", "/html/cv.json?" + Math.floor(Math.random() * 9000 + 1000).toString(), true);
+    xhttp.send();
+    xhttp.onreadystatechange = function () {
+      if (xhttp.readyState == 4 && xhttp.status == 200) {
+        var data = JSON.parse(xhttp.responseText);
+        var url = data["url2"];
+        var iframeSrc = '//' + url2 + "/cvattgb.html?get=" + getVal + lang;
+        document.getElementById('iframe').src = iframeSrc;
+      }
     } else {
-      // País no permitido, realizar otra acción si es necesario
-      // Por ejemplo, cargar una URL diferente a partir de un archivo JSON
       loadUrlFromJson();
     }
   });
