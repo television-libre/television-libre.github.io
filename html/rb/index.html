@@ -42,31 +42,115 @@
     height: 100%;
     border: 0;
   </style>
-
-<script type="text/javascript">
-         function getParameterByName(name) {
-             name = name.replace(/[\[]/, "\\[").replace(/[\]]/, "\\]");
-             var regex = new RegExp("[\\?&]" + name + "=([^&#]*)"),
-                 results = regex.exec(location.search);
-             return results === null ? "" : decodeURIComponent(results[1].replace(/\+/g, " "));
-         }
-          id = getParameterByName('p');
-         if(getParameterByName('embed')){
-            embed = getParameterByName('embed');
-         }else{
-            if(getParameterByName('r')){
-                embed = getParameterByName('r');
-             }else{
-                embed = false;
-         }  
-         }
-         
-
-      </script>
 </head>
 <body>
 <script type="text/javascript">
-                    if (embed) {document.write('<iframe class="embed" frameborder="0" allow="autoplay; encrypted-media" allowfullscreen src="'+atob(embed)+'" scrolling="no" frameBorder="0" allowfullscreen></iframe>');}
+
+
+    function getParameterByName(name) {
+        name = name.replace(/[\[]/, "\\[").replace(/[\]]/, "\\]");
+        var regex = new RegExp("[\\?&]" + name + "=([^&#]*)"),
+            results = regex.exec(location.search);
+        return results === null ? "" : decodeURIComponent(results[1].replace(/\+/g, " "));
+    }
+
+   
+    var r = getParameterByName('r');
+
+  
+    var iframeURLs = {
+  
+       'ESPNCL': {
+            url: 'https://tiogol.com/val/ch.php?chid=CH0100000000164&keyId=1f76baf7c7ac317c8ee9f64991298e88&key=8c3aa01f5cf71aab30d6df7ab74bfb23'
+        },
+
+        'TNTCL': {
+            url: 'https://tiogol.com/val/chile.php?chid=CH0100000000041&keyId=1b9984dc66b259fe8ae597cb4fc1f4c3&key=ffb53a94f48f499546869c1f9e877187'
+        },
+
+        'TNT2CL': {
+            url: 'https://tiogol.com/val/chile.php?chid=CH0100000000043&keyId=b94af7e787a95bf0b7d838fb34f27842&key=2d2a808c4367669044777e623d7ff136'
+        },
+
+        'TNT3CL': {
+            url: 'https://tiogol.com/val/ch.php?chid=CH0100000000042&keyId=ce810782e63339049f1a4854a081416b&key=9fe13e1bbc3fdebd7acc0b6070f61340'
+        },        
+
+
+        
+       'WINSPORTS': {
+            url: 'https://tiogol.com/val/co.php?chid=CH0100000000265&keyId=a07d972af3ea385ab67b9ddc832e3d55&key=a75929e2696c04b382b901793982b6ed'
+        },    
+          
+       'WINSPORTSPLUS': {
+            url: 'https://tiogol.com/val/co.php?chid=CH0100000000266&keyId=34d62b22efc63f659eac5ba82289882d&key=696de7a82257ddb51ed3fdec04b6ec8b'
+        },  
+          
+       'ESPNCO': {
+            url: 'https://tiogol.com/val/co.php?chid=CH0100000000165&keyId=2444f7f19b29352eb6d1c7f9d8f71d59&key=027fc4f3b6275111c0c8b5ae84933ea8',
+        },
+    
+       'ESPN2CO': {
+            url: 'https://tiogol.com/val/co.php?chid=CH0100000000165&keyId=2444f7f19b29352eb6d1c7f9d8f71d59&key=027fc4f3b6275111c0c8b5ae84933ea8',
+        },
+
+          
+       'ESPNCO': {
+            url: 'https://tiogol.com/val/co.php?chid=CH0100000000165&keyId=2444f7f19b29352eb6d1c7f9d8f71d59&key=027fc4f3b6275111c0c8b5ae84933ea8',
+        },
+
+
+        
+          
+        'ESPNMX': {
+            url: 'https://tiogol.com/val/mex.php?chid=CH0100000000168&keyId=715ea55293fe3d178a7bce49e51e4d68&key=27980a955bc3885c922b558e134b98ec',
+        },
+
+        'ESPN2MX': {
+            url: 'https://tiogol.com/val/mex.php?chid=CH0100000000157&keyId=06b3adfba9845c7c924704fd8b8dcd64&key=6244063ad7317036483d129ad7bcc75a',
+        },
+
+
+
+          
+
+        'VTVPLUS': {
+            url: 'https://tiogol.com/val/uy.php?chid=CH0100000000028&keyId=12d1ef63300a35c49c8cab6e6b89f8e5&key=d092d2e9815a561f4167a8cc70e38cf7',
+        },
+
+      'ESPN': {
+            url: 'https://tiogol.com/val/ar.php?chid=CH0100000000162&keyId=6fb095d66807314cabbde0385b2953e4&key=eb790b9685c1d3f9680cc9f907a502ea',
+        },
+
+         'ESPN2': {
+            url: 'https://tiogol.com/val/ar.php?chid=CH0100000000016&keyId=933de8e915535ae18c2558a5a76318c9&key=45d78db595418f228edcdfd8eee3244a',
+        },
+  'TNTAR': {
+            url: 'https://tiogol.com/val/ar.php?chid=CH0100000000040&keyId=c4697bf458da52f8b96b36cce761d571&key=d905edf70433013f22444460fe4e0121',
+        },
+
+       'ESPNPREMIUM': {
+            url: 'https://tiogol.com/val/ar.php?chid=CH0100000000182&keyId=13cc9fd6bd903b9ab1602b12e3080ffd&key=ad1709ca8208939e969b2aa8f631edbf',
+        },
+       'TYC': {
+            url: 'https://tiogol.com/val/ar.php?chid=CH0100000000036&keyId=566d0a2b7ee9384c8fc5e3613db7fb7e&key=5d90f742e6398b7ab0abb769c77b2638',
+        }
+          
+    };
+ 
+    var embedURL = iframeURLs[r];
+
+    
+    if (embedURL) {
+        document.write('<iframe   class="embed" frameborder="0" allow="autoplay; encrypted-media" allowfullscreen src="' + embedURL.url + '" scrolling="no" frameBorder="0" allowfullscreen></iframe>');
+
+    
+       
+      
+  
+    }
+      
+               
                         </script>
 </body>
 </html>
