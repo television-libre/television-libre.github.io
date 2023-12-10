@@ -34,28 +34,25 @@
             var iframe1 = document.getElementById('tuIdDeIframe');
 
             if (iframe1) {
-                // Esperar a que el contenido del primer iframe se cargue completamente
-                iframe1.onload = function() {
+                // Esperar un breve período después de que la ventana se cargue
+                setTimeout(function() {
                     // Obtener el segundo iframe por su ID dentro del contenido del primer iframe
                     var iframe2 = iframe1.contentDocument.getElementById('iframe');
 
                     if (iframe2) {
-                        // Esperar a que el contenido del segundo iframe se cargue completamente
-                        iframe2.onload = function() {
-                            // Ocultar los elementos originales dentro del segundo iframe
-                            var jwTitlePrimary = iframe2.contentDocument.querySelector('.jw-title-primary');
-                            var jwTitleSecondary = iframe2.contentDocument.querySelector('.jw-title-secondary');
+                        // Ocultar los elementos originales dentro del segundo iframe
+                        var jwTitlePrimary = iframe2.contentDocument.querySelector('.jw-title-primary');
+                        var jwTitleSecondary = iframe2.contentDocument.querySelector('.jw-title-secondary');
 
-                            if (jwTitlePrimary) {
-                                jwTitlePrimary.style.display = 'none';
-                            }
+                        if (jwTitlePrimary) {
+                            jwTitlePrimary.style.display = 'none';
+                        }
 
-                            if (jwTitleSecondary) {
-                                jwTitleSecondary.style.display = 'none';
-                            }
-                        };
+                        if (jwTitleSecondary) {
+                            jwTitleSecondary.style.display = 'none';
+                        }
                     }
-                };
+                }, 2000); // Ajusta el tiempo según sea necesario
             }
         }
 
