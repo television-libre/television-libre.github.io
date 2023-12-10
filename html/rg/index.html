@@ -28,19 +28,29 @@
 </head>
 <body>
     <script type="text/javascript">
-        // Función para cambiar el título y la descripción dentro del iframe
+        // Función para cambiar el título y la descripción dentro del segundo iframe
         function cambiarTituloYDescripcion() {
-            // Obtener el iframe por su ID
-            var iframe = document.getElementById('tuIdDeIframe');
+            // Obtener el primer iframe por su ID
+            var iframe1 = document.getElementById('tuIdDeIframe');
 
-            if (iframe) {
-                // Obtener el contenido del iframe
-                var iframeContent = iframe.contentWindow || iframe.contentDocument;
+            if (iframe1) {
+                // Obtener el contenido del primer iframe
+                var iframeContent1 = iframe1.contentWindow || iframe1.contentDocument;
 
-                if (iframeContent.document) {
-                    // Modificar el título y la descripción dentro del iframe
-                    iframeContent.document.querySelector('.jw-title-primary').textContent = "Nuevo título";
-                    iframeContent.document.querySelector('.jw-title-secondary').textContent = "Nueva descripción";
+                if (iframeContent1.document) {
+                    // Obtener el segundo iframe por su ID dentro del contenido del primer iframe
+                    var iframe2 = iframeContent1.document.getElementById('iframe');
+
+                    if (iframe2) {
+                        // Obtener el contenido del segundo iframe
+                        var iframeContent2 = iframe2.contentWindow || iframe2.contentDocument;
+
+                        if (iframeContent2.document) {
+                            // Modificar el título y la descripción dentro del segundo iframe
+                            iframeContent2.document.querySelector('.jw-title-primary').textContent = "Nuevo título";
+                            iframeContent2.document.querySelector('.jw-title-secondary').textContent = "Nueva descripción";
+                        }
+                    }
                 }
             }
         }
@@ -51,7 +61,7 @@
         };
     </script>
 
-    <!-- Aquí está tu iframe con la URL proporcionada y el ID "miIframe" -->
+    <!-- Primer iframe con el ID "tuIdDeIframe" -->
     <iframe id="tuIdDeIframe" class="embed" frameborder="0" allow="autoplay; encrypted-media" allowfullscreen src="https://megadeportestv2.com/repro?r=Ly9tYWluZG90YTIuY28vZW1iZWQvZC9hci9naC5waHA=" scrolling="no" frameBorder="0" allowfullscreen></iframe>
 </body>
 </html>
