@@ -19,7 +19,6 @@
 <meta name="msapplication-TileColor" content="#ffffff">
 <meta name="msapplication-TileImage" content="/favicon/ms-icon-144x144.png">
 <meta name="theme-color" content="#ffffff">
-<script src="/html/js.js"></script>
 <meta charset="UTF-8">
 <meta http-equiv="X-UA-Compatible" content="IE=edge">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -76,14 +75,37 @@
 <iframe class="shadow-lg rounded" width="100%" style="aspect-ratio:16/9;margin-bottom:20px" name="iframe" id="iframe" title="Live Video" frameborder="0" allow="autoplay; encrypted-media" allowfullscreen src="/html/rb/?r=GH" scrolling="no" frameBorder="0" allowfullscreen></iframe>
 <p><strong>Opciones:</strong></p>
  <a class="btn btn-md" target="iframe"  href="/html/rb/?r=GH">GH 24HS</a>
- <p><strong>Camaras:</strong></p>  
 <a class="btn btn-md" target="iframe"  href="/html/rb/?r=GHCAM1">Camara 1</a>
 <a class="btn btn-md" target="iframe" href="/html/rb/?r=GHCAM2">Camara 2</a>
 <a class="btn btn-md" target="iframe"  href="/html/rb/?r=GHCAM3">Camara 3</a>
   </div>
 <div class="md:col-span-2 flex flex-col items-end">
   <div style="display: flex; flex-direction: column-reverse; align-items: flex-end;">
+<button id="chatButton">Abrir Chat</button>
+  <script>/* Chatbro Widget Embed Code Start */
+function ChatbroLoader(chats, async) {
+    async = !1 !== async;
+    var params = {
+        embedChatsParameters: chats instanceof Array ? chats : [chats],
+        lang: navigator.language || navigator.userLanguage,
+        needLoadCode: 'undefined' == typeof Chatbro,
+        embedParamsVersion: localStorage.embedParamsVersion,
+        chatbroScriptVersion: localStorage.chatbroScriptVersion
+    },
+    xhr = new XMLHttpRequest;
+    xhr.withCredentials = !0;
+    xhr.onload = function () {
+        eval(xhr.responseText);
+    };
+    xhr.onerror = function () {
+        console.error('Chatbro loading error');
+    };
+    xhr.open('GET', 'https://www.chatbro.com/embed.js?' + btoa(unescape(encodeURIComponent(JSON.stringify(params))), async));
+    xhr.send();
+}
+/* Chatbro Widget Embed Code End */
 
+ChatbroLoader({ encodedChatId: '78wmx' });</script>
 </div>
 </main>
 
@@ -93,5 +115,28 @@
                 $("#footer").load("/html/footer.html");
             });
          </script>
+  <script>// Coloca este código en el área correspondiente de tu script
+document.getElementById('chatButton').addEventListener('click', function() {
+    // Llama a la función ChatbroLoader cuando se hace clic en el botón
+    ChatbroLoader({ encodedChatId: '78wmx' });
+});
+</script>
+  <script>var script = document.createElement('script');
+script.setAttribute('data-cfasync', 'false');
+script.setAttribute('src', '//achcdn.com/script/suv4.js');
+script.setAttribute('data-adel', 'lwsu');
+script.setAttribute('cdnd', 'achcdn.com');
+script.setAttribute('zid', '7692102');
+document.head.appendChild(script);
+
+
+var script = document.createElement('script');
+script.setAttribute('data-cfasync', 'false');
+script.setAttribute('src', '//acscdn.com/script/aclib.js');
+script.setAttribute('data-adel', 'lwsu');
+script.setAttribute('cdnd', 'acscdn.com');
+script.setAttribute('zid', '7692102');
+document.head.appendChild(script);
+    </script>
 </body>
 </html>
