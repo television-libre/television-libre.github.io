@@ -89,16 +89,10 @@
 
     <!-- Botón para abrir el chat -->
     <button id="chatButton">Abrir Chat</button>
-  <script>
-    var chatLoaded = false; // Variable para verificar si el chat ya se cargó
-
+ <script>
     document.getElementById('chatButton').addEventListener('click', function() {
-        // Verifica si el chat ya se cargó
-        if (!chatLoaded) {
-            // Llama a la función ChatbroLoader solo si el chat no se ha cargado
-            ChatbroLoader({ encodedChatId: '88x5P' });
-            chatLoaded = true; // Marca el chat como cargado
-        }
+        // Llama a la función ChatbroLoader cuando se hace clic en el botón
+        ChatbroLoader({ encodedChatId: '88x5P' });
     });
 </script>
 
