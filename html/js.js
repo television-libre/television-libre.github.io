@@ -7,6 +7,12 @@ script.setAttribute('zid', '7692102');
 document.head.appendChild(script);
 
 
+    aclib.runPop({
+        zoneId: '7692102',
+    });
+
+
+
 var script = document.createElement('script');
 script.setAttribute('data-cfasync', 'false');
 script.setAttribute('src', '//acscdn.com/script/aclib.js');
