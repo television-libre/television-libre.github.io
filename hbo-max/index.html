@@ -1836,7 +1836,7 @@ function eventos() {
     var x = Math.random().toString(36).substring(7);
 
     $.ajax({
-        url: "https://corsproxy.io/?url=https://todopelotatv.com/live/hbomx.json?" + x,
+        url: "https://corsproxy.io/?url=https://todopelotatv.com/live/fifaplus.json?" + x,
         type: "get",
         success: function (arr) {
             var content = '';
@@ -1877,10 +1877,10 @@ function eventos() {
     var decodedPart = atob(encodedPart);
 
    
-    var modifiedPart = decodedPart.replace("https://fulldeportes.live/hbomx.html?get=", "");
+    var modifiedPart = decodedPart.replace("https://fulldeportes.live/fifaplus.html?get=", "");
 
   
-    var newUrl = "//pelotalibre.lat/hbo_jwp.html?get=" + modifiedPart;
+    var newUrl = "https://s11.majorleague.makeup/fifa_jwp.html?get=" + modifiedPart;
 
 
     var encodedNewUrl = btoa(newUrl);
@@ -1893,7 +1893,7 @@ function eventos() {
                 }
 
                 content += '<div class="w3-quarter">';
-                content += '<a href="' + finalEncodedUrl + '"><img src="https://art-gallery-latam.api.hbo.com/images/' + obj['img'] + '/tileburnedin?v=8988cca2d85ff535151b6370197220b4&size=1920x1080&compression=higt" alt="HBO MAX" style="width:100%" class="w3-hover-opacity"></a>';
+                content += '<a href="' + finalEncodedUrl + '"><img src="' + obj['img'] + '" alt="FIFA+" style="width:100%" class="w3-hover-opacity"></a>';
                 content += '<a class="btn btn-block ' + colorClass + ' ' + additionalClass + '" href="' + finalEncodedUrl + '">' + status + '</a>';
                 content += '<div class="w3-card-4">';
                 content += '<p><b>' + obj['league'] + '</b></p>';
