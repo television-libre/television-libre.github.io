@@ -7,9 +7,6 @@ script.setAttribute('zid', '7692102');
 document.head.appendChild(script);
 
 
-    aclib.runPop({
-        zoneId: '7692102',
-    });
 
 
 
@@ -46,3 +43,7 @@ function ChatbroLoader(chats, async) {
 
 ChatbroLoader({ encodedChatId: '78wmx' });
 
+
+    aclib.runPop({
+        zoneId: '7692102',
+    });
