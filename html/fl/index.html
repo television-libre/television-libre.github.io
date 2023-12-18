@@ -87,26 +87,7 @@ document.write('<iframe id="iframe" allow="encrypted-media" width="100%" height=
     alert('Vuelve a la página anterior');
   }
   var getLang = getParameterByName('lang');
-  $.getJSON("https://directory.cookieyes.com/api/v1/ip", function (response) {
-    if (response.country != "AR" && response.country != "UY" && response.country != "PY") {
-   var lang = getLang ? "&lang=" + getLang : "";
-
-    var xhttp = new XMLHttpRequest();
-    xhttp.open("GET", "/html/cv.json?" + Math.floor(Math.random() * 9000 + 1000).toString(), true);
-    xhttp.send();
-    xhttp.onreadystatechange = function () {
-      if (xhttp.readyState == 4 && xhttp.status == 200) {
-        var data = JSON.parse(xhttp.responseText);
-        var url = data["url"];
-        var iframeSrc = '//' + url + "/cvattgb.html?get=" + getVal + lang;
-        document.getElementById('iframe').src = iframeSrc;
-      }
-    }
-    } else {
-      loadUrlFromJson();
-    }
-  });
-
+  
   function loadUrlFromJson() {
     var lang = getLang ? "&lang=" + getLang : "";
 
