@@ -1,3 +1,5 @@
+
+
 <html lang="es">
 <head>
 <meta name="robots" content="noindex, nofollow" />
@@ -19,55 +21,59 @@ body {
 <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
 <script type="text/javascript">
 function getParameterByName(name) {
-    name = name.replace(/[\[]/, "\[").replace(/[\]]/, "\]");
-    var regex = new RegExp("[\?&]" + name + "=([^&#]*)"),
-    results = regex.exec(location.search);
-    return results === null ? "" : decodeURIComponent(results[1].replace(/\+/g, " "));
+	name = name.replace(/[\[]/, "\[").replace(/[\]]/, "\]");
+	var regex = new RegExp("[\?&]" + name + "=([^&#]*)"),
+	results = regex.exec(location.search);
+	return results === null ? "" : decodeURIComponent(results[1].replace(/\+/g, " "));
 }
 
 var getURL = getParameterByName('get');
-if (getURL == "#") {alert('Vuelve a la página anterior');}
+if (getURL == "#") {alert('Vuelve a la pÃ¡gina anterior');}
 var getLang = getParameterByName('lang');
 </script>
-<style type="text/css">
-#loading-overlay {
-  position: fixed;
-  top: 0;
-  left: 0;
-  width: 100%;
-  height: 100%;
-  background: rgb(0 0 0);
-  display: flex;
-  flex-direction: column;
-  justify-content: center;
-  align-items: center;
-  z-index: 9999;
-  font-family: math;
-}
+  <style type="text/css">
 
-#loading-message {
-  font-size: 36px;
-  color: #fff;
-  text-align: center;
-  margin-bottom: 20px;
-}
+    #loading-overlay {
+      position: fixed;
+      top: 0;
+      left: 0;
+      width: 100%;
+      height: 100%;
+      background: rgb(0 0 0);
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      align-items: center;
+      z-index: 9999;
+      font-family: math;
+    }
 
-#loading-info {
-  font-size: 24px;
-  color: #fff;
-  text-align: center;
-}
-</style>
+    #loading-message {
+      font-size: 36px;
+      color: #fff;
+      text-align: center;
+      margin-bottom: 20px;
+    }
+
+    #loading-info {
+      font-size: 24px;
+      color: #fff;
+      text-align: center;
+    }
+
+  </style>
 </head>
 <body>
-<div id="loading-overlay">
+ <div id="loading-overlay">
     <div id="loading-message">Cargando... Por favor, espere.</div>
     <div id="loading-info">El reproductor puede tardar hasta más de 1 minuto.</div>
-</div>
+  </div>
 <div id="player"></div>
 <script>
 document.write('<iframe id="iframe" allow="encrypted-media" width="100%" height="100%" scrolling="no" frameBorder="0" allowfullscreen></iframe>');
 </script>
+
+	
 <script type="text/javascript">
   function getParameterByName(name) {
     name = name.replace(/[\[]/, "\[").replace(/[\]]/, "\]");
@@ -81,7 +87,25 @@ document.write('<iframe id="iframe" allow="encrypted-media" width="100%" height=
     alert('Vuelve a la página anterior');
   }
   var getLang = getParameterByName('lang');
-  loadUrlFromJson();
+  $.getJSON("https://directory.cookieyes.com/api/v1/ip", function (response) {
+    if (response.country != "AR" && response.country != "UY" && response.country != "PY") {
+   var lang = getLang ? "&lang=" + getLang : "";
+
+    var xhttp = new XMLHttpRequest();
+    xhttp.open("GET", "/html/cv.json?" + Math.floor(Math.random() * 9000 + 1000).toString(), true);
+    xhttp.send();
+    xhttp.onreadystatechange = function () {
+      if (xhttp.readyState == 4 && xhttp.status == 200) {
+        var data = JSON.parse(xhttp.responseText);
+        var url = data["url"];
+        var iframeSrc = '//' + url + "/cvattgb.html?get=" + getVal + lang;
+        document.getElementById('iframe').src = iframeSrc;
+      }
+    }
+    } else {
+      loadUrlFromJson();
+    }
+  });
 
   function loadUrlFromJson() {
     var lang = getLang ? "&lang=" + getLang : "";
@@ -103,5 +127,5 @@ document.write('<iframe id="iframe" allow="encrypted-media" width="100%" height=
       document.getElementById('loading-overlay').style.display = 'none';
     };
 </script>
+
 </body>
-</html>
