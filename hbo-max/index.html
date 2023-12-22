@@ -1806,10 +1806,15 @@ a {
     display: block;
     width: 100%;
 }
+	  .btn-black {
+    background:#000
+}
 	 p {
     margin-top: 0;
     margin-bottom: 1rem;
 }
+
+		
  </style>
 <body class="flex flex-col h-screen justify-between dark:bg-slate-800 dark:text-slate-300 font-sans">
 <div id="navbar"></div>
@@ -1863,6 +1868,8 @@ function eventos() {
                     colorClass = "btn-custom-red";
                     additionalClass = "live-indicator-block";
                     status = '<i class="fa fa-circle blink" aria-hidden="true"></i> ' + status;
+                } else if (status == "FINALIZADO") {
+                    colorClass = "btn-black";
                 } else {
                     colorClass = "btn-dark";
                     additionalClass = "";
