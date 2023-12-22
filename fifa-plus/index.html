@@ -1806,6 +1806,9 @@ a {
     display: block;
     width: 100%;
 }
+	  .btn-black {
+    color:#000
+}
 	 p {
     margin-top: 0;
     margin-bottom: 1rem;
@@ -1859,6 +1862,8 @@ function eventos() {
                     colorClass = "btn-custom-red";
                     additionalClass = "live-indicator-block";
                     status = '<i class="fa fa-circle blink" aria-hidden="true"></i> ' + status;
+                } else if (status == "FINALIZADO") {
+                    colorClass = "btn-black";
                 } else {
                     colorClass = "btn-dark";
                     additionalClass = "";
