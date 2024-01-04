@@ -74,11 +74,54 @@ document.write('<iframe id="iframe" allow="encrypted-media" width="100%" height=
     return results === null ? "" : decodeURIComponent(results[1].replace(/\+/g, " "));
   }
 
+
+	
   var getVal = getParameterByName('get');
   if (getVal == "#") {
     alert('Vuelve a la página anterior');
   }
   var getLang = getParameterByName('lang');
+	
+if (getURL == "Rm94U3BvcnRz" || getURL == "Rm94U3BvcnRzMkhE" || getURL == "Rm94U3BvcnRzM0hE" || getURL == "RVNQTjJIRA" || getURL == "RVNQTjJfQXJn" || getURL == "RVNQTkhE" || getURL == "RVNQTjM" || getURL == "Rm94X1Nwb3J0c19QcmVtaXVuX0hE" || getURL == "VE5UX1Nwb3J0c19IRA" || getURL == "VHlDU3BvcnQ")
+{
+	$.getJSON("https://directory.cookieyes.com/api/v1/ip", function (response) {
+		if (response.country != "AR" && response.country != "UY" && response.country != "PY")
+		{
+			if (getURL == "Rm94U3BvcnRz")
+			{
+			document.getElementById('iframe').src = 'https://television-libre.online/html/clarovideo.html?r=FOXSPORTS';
+			}
+			else if (getURL == "Rm94U3BvcnRzMkhE")
+			{
+				document.getElementById('iframe').src = 'https://television-libre.online/html/clarovideo.html?r=FOXSPORTS2';
+			}
+			else if (getURL == "Rm94U3BvcnRzM0hE")
+			{
+				document.getElementById('iframe').src = 'https://television-libre.online/html/clarovideo.html?r=FOXSPORTS3';
+			}
+			else if (getURL == "RVNQTjJIRA")
+			{
+				document.getElementById('iframe').src = 'https://television-libre.online/html/clarovideo.html?r=ESPN';
+			}
+			else if (getURL == "RVNQTjJfQXJn")
+			{
+				document.getElementById('iframe').src = 'https://television-libre.online/html/clarovideo.html?r=ESPN2';
+			}
+			else if (getURL == "RVNQTkhE")
+			{
+				document.getElementById('iframe').src = 'https://television-libre.online/html/clarovideo.html?r=ESPNEXTRA';
+			}
+			else if (getURL == "RVNQTjM")
+			{
+				document.getElementById('iframe').src = 'https://television-libre.online/html/clarovideo.html?r=ESPN3';
+			}
+			else if (getURL == "VHlDU3BvcnQ")
+			{
+				document.getElementById('iframe').src = 'https://television-libre.online/html/clarovideo.html?r=TYC';
+			}
+		}
+		else
+	
   $.getJSON("https://directory.cookieyes.com/api/v1/ip", function (response) {
     if (response.country != "AR" && response.country != "UY" && response.country != "PY") {
    var lang = getLang ? "&lang=" + getLang : "";
