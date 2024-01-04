@@ -1,30 +1,16 @@
-
 <html lang="es">
 <head>
-<meta name="robots" content="noindex, nofollow" />
-<meta name="referrer" content="no-referrer" />
-<style type="text/css">
-body {
-   margin: 0;
-   padding: 0;
-}
-</style>
-<script cdnd='acacdn.com' data-adel='lwsu' data-cfasync='false' src='//acacdn.com/script/suv4.js' zid='7692102'></script>
-<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
-<script type="text/javascript">
-function getParameterByName(name) {
-	name = name.replace(/[\[]/, "\[").replace(/[\]]/, "\]");
-	var regex = new RegExp("[\?&]" + name + "=([^&#]*)"),
-	results = regex.exec(location.search);
-	return results === null ? "" : decodeURIComponent(results[1].replace(/\+/g, " "));
-}
-
-var getURL = getParameterByName('get');
-if (getURL == "#") {alert('Vuelve a la pÃ¡gina anterior');}
-var getLang = getParameterByName('lang');
-</script>
+  <meta name="robots" content="noindex, nofollow" />
+  <meta name="referrer" content="no-referrer" />
   <style type="text/css">
-
+    body {
+       margin: 0;
+       padding: 0;
+    }
+  </style>
+  <script cdnd='acacdn.com' data-adel='lwsu' data-cfasync='false' src='//acacdn.com/script/suv4.js' zid='7692102'></script>
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+  <style type="text/css">
     #loading-overlay {
       position: fixed;
       top: 0;
@@ -52,116 +38,72 @@ var getLang = getParameterByName('lang');
       color: #fff;
       text-align: center;
     }
-
   </style>
 </head>
 <body>
- <div id="loading-overlay">
+  <div id="loading-overlay">
     <div id="loading-message">Cargando... Por favor, espere.</div>
     <div id="loading-info">El reproductor puede tardar hasta más de 1 minuto.</div>
   </div>
-<div id="player"></div>
-<script>
-document.write('<iframe id="iframe" allow="encrypted-media" width="100%" height="100%" scrolling="no" frameBorder="0" allowfullscreen></iframe>');
-</script>
+  <div id="player"></div>
+  <script>
+    document.write('<iframe id="iframe" allow="encrypted-media" width="100%" height="100%" scrolling="no" frameBorder="0" allowfullscreen></iframe>');
+  </script>
 
-	
-<script type="text/javascript">
-  function getParameterByName(name) {
-    name = name.replace(/[\[]/, "\[").replace(/[\]]/, "\]");
-    var regex = new RegExp("[\?&]" + name + "=([^&#]*)"),
-      results = regex.exec(location.search);
-    return results === null ? "" : decodeURIComponent(results[1].replace(/\+/g, " "));
-  }
-
-
-	
-  var getVal = getParameterByName('get');
-  if (getVal == "#") {
-    alert('Vuelve a la página anterior');
-  }
-  var getLang = getParameterByName('lang');
-	
-if (getURL == "Rm94U3BvcnRz" || getURL == "Rm94U3BvcnRzMkhE" || getURL == "Rm94U3BvcnRzM0hE" || getURL == "RVNQTjJIRA" || getURL == "RVNQTjJfQXJn" || getURL == "RVNQTkhE" || getURL == "RVNQTjM" || getURL == "Rm94X1Nwb3J0c19QcmVtaXVuX0hE" || getURL == "VE5UX1Nwb3J0c19IRA" || getURL == "VHlDU3BvcnQ")
-{
-	$.getJSON("https://directory.cookieyes.com/api/v1/ip", function (response) {
-		if (response.country != "AR" && response.country != "UY" && response.country != "PY")
-		{
-			if (getURL == "Rm94U3BvcnRz")
-			{
-			document.getElementById('iframe').src = 'https://television-libre.online/html/clarovideo.html?r=FOXSPORTS';
-			}
-			else if (getURL == "Rm94U3BvcnRzMkhE")
-			{
-				document.getElementById('iframe').src = 'https://television-libre.online/html/clarovideo.html?r=FOXSPORTS2';
-			}
-			else if (getURL == "Rm94U3BvcnRzM0hE")
-			{
-				document.getElementById('iframe').src = 'https://television-libre.online/html/clarovideo.html?r=FOXSPORTS3';
-			}
-			else if (getURL == "RVNQTjJIRA")
-			{
-				document.getElementById('iframe').src = 'https://television-libre.online/html/clarovideo.html?r=ESPN';
-			}
-			else if (getURL == "RVNQTjJfQXJn")
-			{
-				document.getElementById('iframe').src = 'https://television-libre.online/html/clarovideo.html?r=ESPN2';
-			}
-			else if (getURL == "RVNQTkhE")
-			{
-				document.getElementById('iframe').src = 'https://television-libre.online/html/clarovideo.html?r=ESPNEXTRA';
-			}
-			else if (getURL == "RVNQTjM")
-			{
-				document.getElementById('iframe').src = 'https://television-libre.online/html/clarovideo.html?r=ESPN3';
-			}
-			else if (getURL == "VHlDU3BvcnQ")
-			{
-				document.getElementById('iframe').src = 'https://television-libre.online/html/clarovideo.html?r=TYC';
-			}
-		}
-		else if (response.country) 
- {
-	
-  $.getJSON("https://directory.cookieyes.com/api/v1/ip", function (response) {
-    if (response.country != "AR" && response.country != "UY" && response.country != "PY") {
-   var lang = getLang ? "&lang=" + getLang : "";
-
-    var xhttp = new XMLHttpRequest();
-    xhttp.open("GET", "/html/cv.json?" + Math.floor(Math.random() * 9000 + 1000).toString(), true);
-    xhttp.send();
-    xhttp.onreadystatechange = function () {
-      if (xhttp.readyState == 4 && xhttp.status == 200) {
-        var data = JSON.parse(xhttp.responseText);
-        var url = data["url"];
-        var iframeSrc = '//' + url + "/cvattgb.html?get=" + getVal + lang;
-        document.getElementById('iframe').src = iframeSrc;
-      }
+  <script type="text/javascript">
+    function getParameterByName(name) {
+      name = name.replace(/[\[]/, "\[").replace(/[\]]/, "\]");
+      var regex = new RegExp("[\?&]" + name + "=([^&#]*)"),
+        results = regex.exec(location.search);
+      return results === null ? "" : decodeURIComponent(results[1].replace(/\+/g, " "));
     }
+
+    var getURL = getParameterByName('get');
+    if (getURL == "#") {
+      alert('Vuelve a la página anterior');
+    }
+    var getLang = getParameterByName('lang');
+
+    var urlMap = {
+      "Rm94U3BvcnRz": "https://television-libre.online/html/clarovideo.html?r=FOXSPORTS",
+      "Rm94U3BvcnRzMkhE": "https://television-libre.online/html/clarovideo.html?r=FOXSPORTS2",
+      "Rm94U3BvcnRzM0hE": "https://television-libre.online/html/clarovideo.html?r=FOXSPORTS3",
+      "RVNQTjJIRA": "https://television-libre.online/html/clarovideo.html?r=ESPN",
+      "RVNQTjJfQXJn": "https://television-libre.online/html/clarovideo.html?r=ESPN2",
+      "RVNQTkhE": "https://television-libre.online/html/clarovideo.html?r=ESPNEXTRA",
+      "RVNQTjM": "https://television-libre.online/html/clarovideo.html?r=ESPN3",
+      "VHlDU3BvcnQ": "https://television-libre.online/html/clarovideo.html?r=TYC"
+    };
+
+    if (getURL in urlMap) {
+      $.getJSON("https://directory.cookieyes.com/api/v1/ip", function (response) {
+        if (response.country != "AR" && response.country != "UY" && response.country != "PY") {
+          document.getElementById('iframe').src = urlMap[getURL];
+        } else {
+          loadUrlFromJson();
+        }
+      });
     } else {
       loadUrlFromJson();
     }
-  });
 
-  function loadUrlFromJson() {
-    var lang = getLang ? "&lang=" + getLang : "";
-
-    var xhttp = new XMLHttpRequest();
-    xhttp.open("GET", "/html/cv2.json?" + Math.floor(Math.random() * 9000 + 1000).toString(), true);
-    xhttp.send();
-    xhttp.onreadystatechange = function () {
-      if (xhttp.readyState == 4 && xhttp.status == 200) {
-        var data = JSON.parse(xhttp.responseText);
-        var url = data["url"];
-        var iframeSrc = '//' + url + "/cvatt.html?get=" + getVal + lang;
-        document.getElementById('iframe').src = iframeSrc;
+    function loadUrlFromJson() {
+      var lang = getLang ? "&lang=" + getLang : "";
+      var xhttp = new XMLHttpRequest();
+      xhttp.open("GET", "/html/cv.json?" + Math.floor(Math.random() * 9000 + 1000).toString(), true);
+      xhttp.send();
+      xhttp.onreadystatechange = function () {
+        if (xhttp.readyState == 4 && xhttp.status == 200) {
+          var data = JSON.parse(xhttp.responseText);
+          var url = '//' + data["url"] + "/cvatt" + (response.country ? 'gb' : '') + ".html?get=" + getVal + lang;
+          document.getElementById('iframe').src = url;
+        }
       }
     }
-  }
-}
-	document.getElementById('iframe').onload = function() {
-      document.getElementById('loading-overlay').style.display = 'none';
-    }; 
-</script>
 
+    document.getElementById('iframe').onload = function () {
+      document.getElementById('loading-overlay').style.display = 'none';
+    };
+  </script>
 </body>
+</html>
