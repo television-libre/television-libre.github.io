@@ -88,28 +88,7 @@
   
     }  
   
-// Definir los valores
-var jwplayerLocalId = "18nr5pa13gyu";
-var jwplayerMute = true;
-var jwplayerBandwidthEstimate = 798342.8783540844;
 
-// Crear un objeto con los pares clave-valor
-var cookieValues = {
-  "jwplayerLocalId": jwplayerLocalId,
-  "jwplayer.mute": jwplayerMute,
-  "jwplayer.bandwidthEstimate": jwplayerBandwidthEstimate
-};
-
-// Convertir el objeto a una cadena de cookies
-var cookieString = Object.entries(cookieValues)
-  .map(([key, value]) => `${encodeURIComponent(key)}=${encodeURIComponent(value)}`)
-  .join("; ");
-
-// Crear la cookie
-document.cookie = cookieString;
-
-// Verificar si la cookie se ha creado correctamente
-console.log("Cookie creada con éxito");
 
 
   </script>
