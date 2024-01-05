@@ -82,8 +82,41 @@
 					<div id="boxcomentarios" class="rounded"></div>
 				</div>
 			</div>
-      
-  <div class="modal fade" id="optionsLocked" tabindex="-1" aria-hidden="true">
+     <form action="" id="urlCodeForm"><input type="hidden" id="urlCode"></form>
+		<div class="modal fade" id="infoGHARMM" tabindex="-1" aria-hidden="true">
+			<div class="modal-dialog modal-lg modal-dialog-centered">
+				<div class="modal-content"></div>
+			</div>
+		</div>
+		<div class="modal fade" id="modalColabora" tabindex="-1" aria-hidden="true">
+			<div class="modal-dialog modal-lg modal-dialog-centered">
+				<div class="modal-content">
+					<div class="modal-header">
+						<h1 class="modal-title fs-5">¡Colabora con nosotros!</h1>
+						<button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+					</div>
+					<div class="modal-body fs-5">
+						<p>La sección <i>Gran Hermano</i> se creó para que usuarios como vos puedan debatir sobre el reality con otras personas.</p>
+						<p>Adicionalmente se agregaron <b>opciones extras</b>. Estas opciones se mantienen <b>gracias a las inversiones de la administración de Playsito</b>.</p>
+						<p>Si querés agradecer el esfuerzo que hace la administración para mantenerlas, podés hacerlo <b>haciendo una pequeña donación</b> o compartiendo la web con tus familiares y amigos.</p>
+						<p class="text-center">¡Muchas Gracias!</p>
+					</div>
+					<div class="modal-footer">
+						<div class="w-100">
+							<button type="button" onclick="sharePp('https://www.facebook.com/sharer/sharer.php?u=https%3A%2F%2Fplaysito.com/realities/ghar&quote=%C2%BFTe+gustar%C3%ADa+vivir+Gran+Hermano+de+otra+forma%3F+%0D%0AEntr%C3%A1+a+https%3A%2F%2Fplaysito.com%2Fgh+y+prueba+ver+%23GH2023+con+todas+las+c%C3%A1maras+y+un+chat+en+tiempo+real.')" class="btn btn-primary fs-5 p-0 px-2"><i class="bi bi-facebook"></i></button>
+							<button type="button" onclick="sharePp('https://twitter.com/intent/tweet?url=%C2%BFTe+gustar%C3%ADa+vivir+Gran+Hermano+de+otra+forma%3F+%0D%0AEntr%C3%A1+a+https%3A%2F%2Fplaysito.com%2Fgh+y+prueba+ver+%23GH2023+con+todas+las+c%C3%A1maras+y+un+chat+en+tiempo+real.')" class="btn btn-dark fs-5 p-0 px-2"><i class="bi bi-twitter-x"></i></button>
+							<button type="button" onclick="sharePp('https://api.whatsapp.com/send?text=%C2%BFTe+gustar%C3%ADa+vivir+Gran+Hermano+de+otra+forma%3F+%0D%0AEntr%C3%A1+a+https%3A%2F%2Fplaysito.com%2Fgh+y+prueba+ver+%23GH2023+con+todas+las+c%C3%A1maras+y+un+chat+en+tiempo+real.')" class="btn btn-success fs-5 p-0 px-2"><i class="bi bi-whatsapp"></i></button>
+							<button type="button" onclick="sharePp('https://telegram.me/share/?url=https%3A%2F%2Fplaysito.com&text=%C2%BFTe+gustar%C3%ADa+vivir+Gran+Hermano+de+otra+forma%3F+%0D%0AEntr%C3%A1+a+https%3A%2F%2Fplaysito.com%2Fgh+y+prueba+ver+%23GH2023+con+todas+las+c%C3%A1maras+y+un+chat+en+tiempo+real.')" class="btn btn-info fs-5 p-0 px-2"><i class="bi bi-telegram"></i></button>
+							<div class="float-end">
+								<button type="button" onclick="sharePp('https://cafecito.app/playsito')" class="btn btn-light fs-5 p-0 px-2" data-section="ghar"><i class="bi bi-cup-hot-fill"></i> Donar</button>
+								<button type="button" class="btn btn-danger fs-5 p-0 px-2 ms-1" data-bs-dismiss="modal"><i class="bi bi-x-lg"></i></button>
+							</div>
+						</div>
+					</div>
+				</div>
+			</div>
+		</div>
+		<div class="modal fade" id="optionsLocked" tabindex="-1" aria-hidden="true">
 			<div class="modal-dialog modal-dialog-centered">
 				<div class="modal-content">
 					<div class="modal-header">
@@ -119,7 +152,8 @@
 				<strong role="status">Obteniendo más información ...</strong>
 				<div class="spinner-border ms-auto" aria-hidden="true"></div>
 			</div>
-		</div>
+		</div> 
+
 		<script type="text/javascript">
 			history.pushState(null, "", "https://television-libre.online/en-vivo/gran-hermano/cam/24hs.html");
 		</script>
