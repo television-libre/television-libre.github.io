@@ -86,24 +86,33 @@
       
       
   
-    }     // Supongamos que tienes un token llamado "miToken"
+    }     
 var miToken = "BQOyAAAAAAAACZUAAlnE6lLqeFz3WE4kuBJFqRhrXHzOSzJ2o4Zwy-lFQw3UMMwPj4HAU9JFkyXdwuqRNRJ3r-nTYMDYw2PtTiZ3XrxdZrEKUgVhWkSKzhX4mtNApIoarX2AktG3KEmNsGPMTQvjwLoJULW-CK-xj6cl8ABkJ8Xt0Vw2U7CiFF42jVN3RkcEdewiFT1V164yvWQUXjzb2ug6MEbAOWGX5fDyP2iR4hoYeej_qpIpebxDCGWs0uc5JwFxTAEupvWrCm0RIfGtGOSzQF_o60OLdMxnW7tFhoQ7Jv8R4mNpSyIU32pbPz45yCAD8WDNoit4xPwQ5F5hzzVNgKzTOFs2gp287y5AStF0xnXontPMP8AumbaJcuyE-ncLkh9oDRdegLkz0RtT_RDaKuLZUcIuxPiYhM5TASIyNr2-YzYLJHcHdODoz2adWk5nstZvW_lD8ackUrovrtci0ik7s5Ls3qxCYXv4GDh3RXsWcJk55T-0Q3aQABRKgaswH6S8e0FNsvoaVGH0IyfFv7JYlywhnnBjlf1iRynmPkyPGqObi6SN6QbsIIe1SXvsQ2oJRBAFX9QMsw3g0nK3hU-lTavXr0uZJTklhrIjME-QuHO_Tjk1b6cLTtz8YlTOiQnXw6OJtiObCn4mZibRIvrO23Ji4jZzv9sm6C5jAbdyIrrdhUYJgxtzdW_ErgnzTuLfqYrqkLhx4HJOBYesI9RNIUCyGKo2VzADuC0mkNLS4af4tXuWTRA5qrB19ch2dBfYqPN85fLO0RGglf8Cxjapyhw-T96OoNgoBxLjxYCET-k15tJ9Tb-pPKGTPseY9Bzsu6fLxAgA5iMNHB2vAVw_NhlcfUpj56FupZcw_B9EfP0BREa8sl8-8wjFmK4lkZn_6RueQGeMA-A_-JQjjEzlPMkXk9y2x4kKTN5pFZASti0SO17XNdkpLOxdtpd9u8GReEc-zy3l8I5AVYQURVPtsXXITD7YbAAPWJd_fNiF5tkTroZ1km7-cLbq6MNoVUsjHqbzzkoWTsO8MMBNaHTsMVR7-MVF_hq7GmEjWt9GLUIDFOr13gP79CK7U033KUKwD3xGPiTjlXadxpjLKy7weFqZCGrHuha8N7Ieiso6zdQ9qg4JY5-QCvHfUclWps7B63uYjHAFYg24MI0XAyNC-LQe4sj43P7kao06iDCyzW3wwlLJm_Q_KqjsRev0Zp0MvmRu-gVvcP1zLcTFuzgSnUNyx8SorgsCe0mOArbTqQABJ6bNkeCG";
 
-// Define la duración de la cookie en días (por ejemplo, 1 día)
+
 var duracionCookie = 1;
 
-// Obtén la fecha actual y agrega la duración para establecer la expiración de la cookie
 var fechaExpiracion = new Date();
 fechaExpiracion.setTime(fechaExpiracion.getTime() + (duracionCookie * 24 * 60 * 60 * 1000));
 
-// Formatea la fecha de expiración para el formato de cookie
+
 var expiracionCookie = "expires=" + fechaExpiracion.toUTCString();
 
-// Crea la cookie
-document.cookie = "miCookie=" + miToken + "; " + expiracionCookie;
+document.cookie = "v_token_QpUJAAAAAAAAGu98Hdz1l_lcSZ2rY60Ajjk9U1c" + miToken + "; " + expiracionCookie;
 
-// Verifica si la cookie se ha creado correctamente
+
 console.log("Cookie creada con éxito");
+
+
+
+var miToken = "BQOyAAAAAAAACZUAAlnE6lLqeFz3WE4kuBJFqRhrXHzOSzJ2o4Zwy-lFQw3UMMwPj4HAU9JFkyXdwuqRNRJ3r-nTYMDYw2PtTiZ3XrxdZrEKUgVhWkSKzhX4mtNApIoarX2AktG3KEmNsGPMTQvjwLoJULW-CK-xj6cl8ABkJ8Xt0Vw2U7CiFF42jVN3RkcEdewiFT1V164yvWQUXjzb2ug6MEbAOWGX5fDyP2iR4hoYeej_qpIpebxDCGWs0uc5JwFxTAEupvWrCm0RIfGtGOSzQF_o60OLdMxnW7tFhoQ7Jv8R4mNpSyIU32pbPz45yCAD8WDNoit4xPwQ5F5hzzVNgKzTOFs2gp287y5AStF0xnXontPMP8AumbaJcuyE-ncLkh9oDRdegLkz0RtT_RDaKuLZUcIuxPiYhM5TASIyNr2-YzYLJHcHdODoz2adWk5nstZvW_lD8ackUrovrtci0ik7s5Ls3qxCYXv4GDh3RXsWcJk55T-0Q3aQABRKgaswH6S8e0FNsvoaVGH0IyfFv7JYlywhnnBjlf1iRynmPkyPGqObi6SN6QbsIIe1SXvsQ2oJRBAFX9QMsw3g0nK3hU-lTavXr0uZJTklhrIjME-QuHO_Tjk1b6cLTtz8YlTOiQnXw6OJtiObCn4mZibRIvrO23Ji4jZzv9sm6C5jAbdyIrrdhUYJgxtzdW_ErgnzTuLfqYrqkLhx4HJOBYesI9RNIUCyGKo2VzADuC0mkNLS4af4tXuWTRA5qrB19ch2dBfYqPN85fLO0RGglf8Cxjapyhw-T96OoNgoBxLjxYCET-k15tJ9Tb-pPKGTPseY9Bzsu6fLxAgA5iMNHB2vAVw_NhlcfUpj56FupZcw_B9EfP0BREa8sl8-8wjFmK4lkZn_6RueQGeMA-A_-JQjjEzlPMkXk9y2x4kKTN5pFZASti0SO17XNdkpLOxdtpd9u8GReEc-zy3l8I5AVYQURVPtsXXITD7YbAAPWJd_fNiF5tkTroZ1km7-cLbq6MNoVUsjHqbzzkoWTsO8MMBNaHTsMVR7-MVF_hq7GmEjWt9GLUIDFOr13gP79CK7U033KUKwD3xGPiTjlXadxpjLKy7weFqZCGrHuha8N7Ieiso6zdQ9qg4JY5-QCvHfUclWps7B63uYjHAFYg24MI0XAyNC-LQe4sj43P7kao06iDCyzW3wwlLJm_Q_KqjsRev0Zp0MvmRu-gVvcP1zLcTFuzgSnUNyx8SorgsCe0mOArbTqQABJ6bNkeCG";
+
+
+localStorage.setItem("v_token_QpUJAAAAAAAAGu98Hdz1l_lcSZ2rY60Ajjk9U1c", miToken);
+
+
+console.log("Token almacenado en localStorage con éxito");
+
   </script>
 </body>
 </html>
