@@ -3,8 +3,8 @@
   <rect x="0" y="0" width="300" height="200" rx="15" ry="15" fill="#fff" stroke="#000" stroke-width="4"/>
 
   <!-- Cruz horizontal -->
-  <rect x="50" y="80" width="200" height="40" fill="#ce1126"/>
+  <rect x="40" y="90" width="220" height="20" fill="#ce1126"/>
 
   <!-- Cruz vertical -->
-  <rect x="130" y="20" width="40" height="160" fill="#ce1126"/>
+  <rect x="130" y="40" width="40" height="120" fill="#ce1126"/>
 </svg>
