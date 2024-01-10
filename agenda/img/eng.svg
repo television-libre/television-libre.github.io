@@ -1,0 +1,10 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="300" height="200" viewBox="0 0 300 200">
+  <!-- Fondo blanco con bordes redondeados -->
+  <rect x="0" y="0" width="300" height="200" rx="15" ry="15" fill="#fff" stroke="#000" stroke-width="4"/>
+
+  <!-- Cruz horizontal -->
+  <rect x="50" y="80" width="200" height="40" fill="#ce1126"/>
+
+  <!-- Cruz vertical -->
+  <rect x="130" y="20" width="40" height="160" fill="#ce1126"/>
+</svg>
