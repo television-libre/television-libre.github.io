@@ -29,38 +29,35 @@ $(document).ready(function() {
         var playerInstance = jwplayer("player");
 
         playerInstance.setup({
-          playlist : [{
-            title : "",
-            description : "",
-            image : eventImg, 
-            sources : [{
-              default : false,
-              file : atob(data.url), 
-              label : "0",
-              type : "hls"
+          playlist: [{
+            title: "",
+            description: "",
+            image: eventImg,
+            sources: [{
+              default: false,
+              file: atob(data.url),
+              label: "0",
+              type: "hls"
             }],
           }],
-          width : "100%",
-          height : "100%",
-          aspectratio : "16:9",
-          autostart : false,
-       sharing : {}
+          width: "100%",
+          height: "100%",
+          aspectratio: "16:9",
+          autostart: false,
+          sharing: {}
         });
-        
+
         playerInstance.on('error', function() {
-          if (function) {
-            location.reload();
-          }
+          location.reload();
         });
       }
-      
     };
     xhr.send();
   }
 
-  setupPlayer(); 
-
+  setupPlayer();
 });
+
   </script>
 
 
