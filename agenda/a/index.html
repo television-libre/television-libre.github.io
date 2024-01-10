@@ -13,13 +13,9 @@
 	<meta name="referrer" content="no-referrer">
         <meta name="googlebot" content="noindex">
         <title>Agenda Deportiva </title>
-        <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.0.6/css/all.css">
         <link href="https://fonts.googleapis.com/css?family=Roboto" rel="stylesheet">
-	<script data-cfasync="false" src="//acacdn.com/script/suv4.js" data-adel="lwsu" cdnd="acacdn.com" zid="7692102"></script>   
-	  
-	
-        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css" integrity="sha512-3Z6dRsfEmxnUBom0tcX67d1jF5jPK/kPVIgY/jzTk7eRSjkcKD5GwCWYxz2NupR9CezF3UjfZslk4Q83gzBZQ==" crossorigin="anonymous" referrerpolicy="no-referrer"https://///television-libre.online////>
-
+	<script data-cfasync="false" src="//acacdn.com/script/suv4.js" data-adel="lwsu" cdnd="acacdn.com" zid="7692102"></script>   	  
+	<script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
        <style type:"text/css">
         .live-indicator {
             color: #fff;
@@ -242,26 +238,39 @@
 
 
 
-       .menu>li>a:before {
-                content: '';
-                background-repeat: no-repeat;
-                font-size: 36px;
-                height: 1em;
-                width: 1em;
-                position: absolute;
-                left: 55px;
-                top: 50%;
-                margin: -.5em 0 0
-            }
-            @media only screen and (max-width: 600px) {
-                .menu>li>a:before {
-                    left:30px
-                }
-            }
+    .menu>li>a:before {
+    content: '';
+    background-repeat: no-repeat;
+    font-size: 36px;
+    height: 1em;
+    width: 1em;
+    position: absolute;
+    left: 55px;
+    top: 50%;
+    margin: -.5em 0 0;
+}
 
-.VEN>a:before {
-    background-image: url(https://static.futbolenlatv.com/img/32/20140209123518-Mexico.png);
-}    
+.country-flag>a:before {
+    background-size: cover;
+}
+
+@media only screen and (max-width: 600px) {
+    .menu>li>a:before {
+        left: 30px;
+    }
+}
+
+.ARG>a:before {
+    background-image: url('https://static.futbolenlatv.com/img/32/20200515205331-guillermo-canas.png');
+}
+
+.ES>a:before {
+    background-image: url('https://static.futbolenlatv.com/img/32/20130727123206-espana.png');
+}
+
+
+
+
     </style>
    
 
@@ -278,8 +287,8 @@
 </div>
 </center>
 
-<li class="VEN"><a href="#">
-dxgf
+<li class="AR"><a href="#">
+Serie Río de la Plata:  River Plate vs.  Newell's
 <span class="t">18:00</span></a>
 <ul>
 <li class="subitem1"><a href="https:///television-libre.online///star-plus/" target="_top">Star+<span>Calidad 720p</span></a></li>
@@ -316,6 +325,15 @@ dxgf
 
     </script>
 
+
+<script>
+    $(document).ready(function () {
+        $('.menu>li').each(function () {
+            var countryClass = $(this).attr('class').split(' ').join('.');
+            $(this).addClass('country-flag ' + countryClass);
+        });
+    });
+</script>
 
 
 <script>
