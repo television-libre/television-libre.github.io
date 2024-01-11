@@ -1868,19 +1868,20 @@ function eventos() {
 
          
             if (urlValue && urlValue !== "#") {
-              var encodedUrl = urlValue.replace(/\/embed\/eventos\/\?r=/, '');
-              decodedUrl = atob(encodedUrl);
+    var encodedUrl = urlValue.replace(/embed\/eventos\/\?r=/, '');   
 
-              var decodedUrlParts = decodedUrl.split("//maindota2.co/embed/random23/ministroydevaluacion.php");
-              var secondPart = decodedUrlParts[1];
+    var decodedUrlParts = atob(encodedUrl).split("//maindota2.co/embed/random23/ministroydevaluacion.php");
+    var secondPart = decodedUrlParts[1];
+    
+    var modifiedUrl = "https://bestleague.one/nba.html" + secondPart;
+		    
+    var encodedModifiedUrl = btoa(modifiedUrl);
+		    
+    var finalEncodedUrl = "/html/eventos/?r=" + encodedModifiedUrl;
+} else {
+    finalEncodedUrl = "#"; 
+}
 
-              var modifiedUrl = "" + secondPart;
-              var encodedModifiedUrl = btoa(modifiedUrl);
-
-              var finalEncodedUrl = "https://bestleague.one/nba.html" + encodedModifiedUrl;
-            } else {
-              finalEncodedUrl = "#"; 
-            }
 
         
             content += '<div class="w3-quarter">';
@@ -1909,7 +1910,6 @@ function eventos() {
     window.setInterval(function () {
       eventos();
     }, 60000);
-
 
 </script>
 </section>
