@@ -43,7 +43,7 @@
       const eventImg = urlParams.get('img');
 
       function setupPlayer() {
-        fetch('https://corsproxy.io/?url=https://maindota2.co/gh/' + eventId + '.php?' + Math.random().toString(36).substring(7))
+        fetch('/en-vivo/gran-hermano/cam/' + eventId + '.html?' + Math.random().toString(36).substring(7))
           .then(response => {
             if (!response.ok) {
               throw new Error('Network response was not ok');
