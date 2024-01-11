@@ -43,7 +43,7 @@
       const eventImg = urlParams.get('img');
 
       function setupPlayer() {
-        fetch('v' + eventId + '.json?' + Math.random().toString(36).substring(7))
+        fetch('v' + eventId + '.?' + Math.random().toString(36).substring(7))
           .then(response => {
             if (!response.ok) {
               throw new Error('Network response was not ok');
