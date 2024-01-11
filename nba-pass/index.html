@@ -1824,7 +1824,6 @@ a {
                 <img src="/img/nba.png" alt="Star+" width="100" height="60">
                <h2 style="color: #fff;font-size: 25px;font-weight: 600;">Elige el evento:</h2>
             </center>
- 
 <div id="eventos"></div>
 <br>
 
@@ -1835,7 +1834,7 @@ function eventos() {
       var x = Math.random().toString(36).substring(7);
 
       $.ajax({
-        url: "https://megadeportestv2.com/json/nba.json?" + x ,
+        url: "https://corsproxy.io/?url=https://maindota2.co/json/nba.json?" + x ,
         type: "get",
         success: function (arr) {
           var content = '';
@@ -1872,13 +1871,13 @@ function eventos() {
               var encodedUrl = urlValue.replace(/\/embed\/eventos\/\?r=/, '');
               decodedUrl = atob(encodedUrl);
 
-              var decodedUrlParts = decodedUrl.split("https://techflower.bio/star_jwp.html?get=");
+              var decodedUrlParts = decodedUrl.split("//maindota2.co/embed/random23/ministroydevaluacion.php");
               var secondPart = decodedUrlParts[1];
 
-              var modifiedUrl = "https://flash669.github.io/star-plus/?get=" + secondPart;
+              var modifiedUrl = "" + secondPart;
               var encodedModifiedUrl = btoa(modifiedUrl);
 
-              var finalEncodedUrl = "/p/eventos.html?r=" + encodedModifiedUrl;
+              var finalEncodedUrl = "https://bestleague.one/nba.html" + encodedModifiedUrl;
             } else {
               finalEncodedUrl = "#"; 
             }
