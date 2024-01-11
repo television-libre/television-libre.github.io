@@ -1872,6 +1872,7 @@ function eventos() {
             if (urlValue && urlValue !== "#") {
     var encodedUrl = urlValue.replace(/embed\/eventos\/\?r=/, '');   
 
+try {
     var decodedUrlParts = atob(encodedUrl).split("//maindota2.co/embed/random23/ministroydevaluacion.php");
     var secondPart = decodedUrlParts[1];
     
@@ -1880,9 +1881,11 @@ function eventos() {
     var encodedModifiedUrl = btoa(modifiedUrl);
 		    
     var finalEncodedUrl = "/html/eventos/?r=" + encodedModifiedUrl;
-} else {
+} catch (error) {
+    console.error("Error decoding base64:", error);
     finalEncodedUrl = "#"; 
 }
+
 
 
         
