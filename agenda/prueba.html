@@ -15,16 +15,9 @@
         <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.0.6/css/all.css">
         <link href="https://fonts.googleapis.com/css?family=Roboto" rel="stylesheet">
 	<script data-cfasync="false" src="//acacdn.com/script/suv4.js" data-adel="lwsu" cdnd="acacdn.com" zid="7692102"></script>   
-	  <script id="chatBroEmbedCode">
-/* Chatbro Widget Embed Code Start */
-function ChatbroLoader(chats,async){async=!1!==async;var params={embedChatsParameters:chats instanceof Array?chats:[chats],lang:navigator.language||navigator.userLanguage,needLoadCode:'undefined'==typeof Chatbro,embedParamsVersion:localStorage.embedParamsVersion,chatbroScriptVersion:localStorage.chatbroScriptVersion},xhr=new XMLHttpRequest;xhr.withCredentials=!0,xhr.onload=function(){eval(xhr.responseText)},xhr.onerror=function(){console.error('Chatbro loading error')},xhr.open('GET','https://www.chatbro.com/embed.js?'+btoa(unescape(encodeURIComponent(JSON.stringify(params)))),async),xhr.send()}
-/* Chatbro Widget Embed Code End */
-ChatbroLoader({
-	parentEncodedChatId: '88x5P',
-	chatTitle: 'This is dynamic chat'
-});
-</script>
-	
+
+
+
         <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css" integrity="sha512-3Z6dRsfEmxnUBom0tcX67d1jF5jPK/kPVIgY/jzTk7eRSjkcKD5GwCWYxz2NupR9CezF3UjfZslk4Q83gzBZQ==" crossorigin="anonymous" referrerpolicy="no-referrer"https://///television-libre.online////>
         <style type="text/css">
             body {
@@ -42,6 +35,15 @@ ChatbroLoader({
                 text-decoration: none
             }
 
+@media screen and (max-width: 767px) {
+    #chatbro {
+        position: fixed; 
+        bottom: 10px; 
+        right: 10px; 
+    }
+}
+
+		
             ul,ul ul {
                 margin: 0;
                 padding: 0;
@@ -384,6 +386,15 @@ ChatbroLoader({
     </style>
 
 
+<script>
+    var chatbroScript = document.createElement("script");
+    chatbroScript.async = true;
+    chatbroScript.src = "https://www.chatbro.com/getcode?u=88x5P"; // Reemplaza "your_chatbro_code" con tu código Chatbro
+    var s = document.getElementsByTagName("script")[0];
+    s.parentNode.insertBefore(chatbroScript, s);
+</script>
+
+<script id="chatBroEmbedCode">/* Chatbro Widget Embed Code Start */function ChatbroLoader(chats,async){async=!1!==async;var params={embedChatsParameters:chats instanceof Array?chats:[chats],lang:navigator.language||navigator.userLanguage,needLoadCode:'undefined'==typeof Chatbro,embedParamsVersion:localStorage.embedParamsVersion,chatbroScriptVersion:localStorage.chatbroScriptVersion},xhr=new XMLHttpRequest;xhr.withCredentials=!0,xhr.onload=function(){eval(xhr.responseText)},xhr.onerror=function(){console.error('Chatbro loading error')},xhr.open('GET','https://www.chatbro.com/embed.js?'+btoa(unescape(encodeURIComponent(JSON.stringify(params)))),async),xhr.send()}/* Chatbro Widget Embed Code End */ChatbroLoader({encodedChatId: '88x5P'});</script>
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.7.1/jquery.min.js"></script>
 </head>
 <body link="#547484" onload="guardaHorario();dT();" vlink="#547484">
@@ -563,7 +574,7 @@ NBA:  Raptors vs. Lakers
 </ul>		    
 </div>
 <br>
-   
+   <div id="chatbro"></div>
  <script type="text/javascript">
         $(function() {
             var menu_ul = $(".menu > li > ul"),
