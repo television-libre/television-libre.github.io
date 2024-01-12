@@ -1878,7 +1878,9 @@ function eventos() {
         if (urlValue && urlValue !== "#") {
               var encodedPart = urlValue.split("/embed/eventos/?r=")[1];
           var decodedPart = atob(encodedPart);
-           var modifiedPart = decodedPart.replace("//maindota2.co/embed/random23/ministroydevaluacion.php", "");
+           var parts = decodedPart.split("?");
+           var modifiedPart = parts.length > 1 ? parts[1] : decodedPart;
+
 
           var randomURL = mt[Math.floor(Math.random() * mt.length)];
 
