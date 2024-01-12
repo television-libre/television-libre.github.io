@@ -1871,21 +1871,22 @@ function eventos() {
           additionalClass = "";
         }
 
-        var urlValue = obj['url'];
+       var urlValue = obj['url'];
 
-        if (urlValue && urlValue !== "#") {
-              var encodedPart = urlValue.split("\/embed\/eventos\/?r=")[1];
-          var decodedPart = atob(encodedPart);
-           var modifiedPart = decodedPart.replace("/star.html?get=", "");
+if (urlValue && urlValue !== "#") {
+    var encodedPart = urlValue.split("\/embed\/eventos\/?r=")[1];
+    var matchResult = encodedPart.match(/\?get=(.+)/);
+    var modifiedPart = matchResult ? matchResult[1] : "";
 
-          var randomURL = mt[Math.floor(Math.random() * mt.length)];
+    var randomURL = mt[Math.floor(Math.random() * mt.length)];
 
-          var newUrl = randomURL + modifiedPart;
-          var encodedNewUrl = btoa(newUrl);
-          var finalEncodedUrl = "/html/eventos/?r=" + encodedNewUrl;
-        } else {
-          finalEncodedUrl = "#";
-        }
+    var newUrl = randomURL + modifiedPart;
+    var encodedNewUrl = btoa(newUrl);
+    var finalEncodedUrl = "/html/eventos/?r=" + encodedNewUrl;
+} else {
+    finalEncodedUrl = "#";
+}
+
 
         content += '<div class="w3-quarter">';
         content += '<a href="' + finalEncodedUrl + '"><img src="https://prod-ripcut-delivery.disney-plus.net/v1/variant/star/' + obj['img'] + '/scale?width=500&aspectRatio=1.78&format=jpeg" alt="Star+" style="width:100%" class="w3-hover-opacity"></a>';
