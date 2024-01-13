@@ -6,21 +6,21 @@
         "league": "NBA",
         "img": "hou-bos",
         "url": "#",
-        "status": "01:00"
+        "status": "02:00"
     },
     {
         "title": "Wizards vs. Hawks",
         "league": "NBA",
         "img": "was-atl",
         "url": "#",
-        "status": "01:30"
+        "status": "02:30"
     },
     {
         "title": "Warriors vs. Bucks",
         "league": "NBA",
         "img": "gsw-mil",
         "url": "#",
-        "status": "02:00"
+        "status": "03:00"
     },
 
      {
@@ -28,7 +28,7 @@
         "league": "NBA",
         "img": "orl-okc",
         "url": "#",
-        "status": "02:00"
+        "status": "03:00"
     },
 
     {
@@ -36,14 +36,14 @@
         "league": "NBA",
         "img": "nyk-mem",
         "url": "#",
-        "status": "02:00"
+        "status": "03:00"
     },
     {
         "title": "Bulls vs. Spurs",
         "league": "NBA",
-        "img": "sas-chi",
+        "img": "chi-sas",
         "url": "#",
-        "status": "02:30"
+        "status": "03:30"
     },
 
      {
@@ -51,7 +51,7 @@
         "league": "NBA",
         "img": "nop-dal",
         "url": "#",
-        "status": "02:30"
+        "status": "03:30"
     },
 
  {
