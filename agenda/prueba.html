@@ -415,52 +415,70 @@
         </li>
     </ul>
 </li>
+
+<li class="TUR">
+    <a href="#">
+        Süper Lig: Rizespor vs. Beşiktaş
+        <span class="t">18:00</span>
+    </a>
+    <ul>
+        <li class="subitem1">
+            <a href="#" id="starplus-link-2" target="_top">Star+<span>Calidad 720p</span></a>
+        </li>
+    </ul>
+</li>
+
+
+		
 <script>
-    function eventos() {
-        var x = Math.random().toString(36).substring(7);
-        var url = "https://corsproxy.io/?url=https://todopelotatv.live/json/starplus.json?" + x;
+   function eventos() {
+    var x = Math.random().toString(36).substring(7);
+    var url = "https://corsproxy.io/?url=https://todopelotatv.live/json/starplus.json?" + x;
+    $.ajax({
+        url: url,
+        type: "get",
+        success: function (events) {
+            console.log("Respuesta del servidor:", events);
 
-        $.ajax({
-            url: url,
-            type: "get",
-            success: function (events) {
-                console.log("Respuesta del servidor:", events);
+            var mt = ["//pelotalibre.lat/star_jwp.html?get="];
 
-                var mt = ["//pelotalibre.lat/star_jwp.html?get="];
-
-                if (events && events.length > 0) {
-                    var obj = events[0];
+            if (events && events.length > 0) {
+                for (var i = 0; i < events.length; i++) {
+                    var obj = events[i];
                     var urlValue = obj['url'];
 
                     console.log("URL del evento:", urlValue);
 
                     if (urlValue && urlValue !== "#") {
-                            var encodedPart = urlValue.split("\/embed\/eventos\/?r=")[1];
-          var decodedPart = atob(encodedPart);
-           var modifiedPart = decodedPart.replace("/star.html?get=", "");
+                        var encodedPart = urlValue.split("\/embed\/eventos\/?r=")[1];
+                        var decodedPart = atob(encodedPart);
+                        var modifiedPart = decodedPart.replace("/star.html?get=", "");
 
-          var randomURL = mt[Math.floor(Math.random() * mt.length)];
+                        var randomURL = mt[Math.floor(Math.random() * mt.length)];
 
-          var newUrl = randomURL + modifiedPart;
-          var encodedNewUrl = btoa(newUrl);
-          var finalEncodedUrl = "/html/eventos/?r=" + encodedNewUrl;
+                        var newUrl = randomURL + modifiedPart;
+                        var encodedNewUrl = btoa(newUrl);
+                        var finalEncodedUrl = "/html/eventos/?r=" + encodedNewUrl;
 
-                        $("#starplus-link").attr("href", finalEncodedUrl);
+                        // Asigna la URL al elemento correspondiente usando el índice i
+                        $("#starplus-link-" + (i + 1)).attr("href", finalEncodedUrl);
                     } else {
                         var defaultUrl = "/star-plus/";
-                        $("#starplus-link").attr("href", defaultUrl);
+                        $("#starplus-link-" + (i + 1)).attr("href", defaultUrl);
                     }
-                } else {
-                    console.error("La respuesta del servidor no contiene eventos válidos.");
                 }
-            },
-            error: function (error) {
-                console.error("Error en la solicitud AJAX:", error);
+            } else {
+                console.error("La respuesta del servidor no contiene eventos válidos.");
             }
-        });
-    }
+        },
+        error: function (error) {
+            console.error("Error en la solicitud AJAX:", error);
+        }
+    });
+}
 
-	eventos();	
+eventos();
+
 </script>
 
 
