@@ -431,7 +431,7 @@
 
 		
 <script>
-   function eventos() {
+  function eventos() {
     var x = Math.random().toString(36).substring(7);
     var url = "https://corsproxy.io/?url=https://todopelotatv.live/json/starplus.json?" + x;
     $.ajax({
@@ -441,12 +441,12 @@
             console.log("Respuesta del servidor:", events);
 
             var mt = ["//pelotalibre.lat/star_jwp.html?get="];
-            var urlMap = {};
 
             if (events && events.length > 0) {
                 for (var i = 0; i < events.length; i++) {
                     var obj = events[i];
                     var urlValue = obj['url'];
+                    var title = obj['title'];
 
                     console.log("URL del evento:", urlValue);
 
@@ -461,20 +461,19 @@
                         var encodedNewUrl = btoa(newUrl);
                         var finalEncodedUrl = "/html/eventos/?r=" + encodedNewUrl;
 
-                        // Almacena el título y la URL en el objeto urlMap
-                        urlMap[obj['title']] = finalEncodedUrl;
-
                         // Asigna la URL al elemento correspondiente usando el índice i
                         var linkId = "starplus-link-" + (i + 1);
                         $("#" + linkId).attr("href", finalEncodedUrl);
+
+                        // Busca y actualiza la URL según el título del evento
+                        if (title === "Dia 1 - En español" || title === "Dia 1 - En español | 2") {
+                            $("#" + linkId).attr("href", finalEncodedUrl);
+                        }
                     } else {
                         var defaultUrl = "/star-plus/";
                         $("#starplus-link-" + (i + 1)).attr("href", defaultUrl);
                     }
                 }
-
-                // Luego de procesar los eventos, puedes utilizar el objeto urlMap para buscar las URLs según el título.
-                console.log(urlMap);
             } else {
                 console.error("La respuesta del servidor no contiene eventos válidos.");
             }
@@ -486,6 +485,7 @@
 }
 
 eventos();
+
 
 
 
