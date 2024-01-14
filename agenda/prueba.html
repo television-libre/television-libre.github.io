@@ -401,15 +401,14 @@
 </div>
 </center>
 
-<li class="TUR"><a href="#">
-Süper Lig:  Rizespor vs. Beşiktaş
-<span class="t">18:00</span></a>
-<ul>
-<li class="subitem1"><a id="dia-1-en-espanol-2" href="/star-plus/" target="_top">Star+<span>Calidad 720p</span></a></li>
-<li class="subitem1"><a href="https:///television-libre.online///html/eventos/?r=aHR0cHM6Ly9wZWxvdGFsaWJyZS5sYXQvZW1iZWQvbXBkay8/Z2V0PWFIUjBjSE02THk5dmRIUXVZM2xpWlhKb2IzTjBMbkp2TDNOa1lYTm9MMHhKVmtVa1RHOXZhMUJzZFhNdmFXNWtaWGd1YlhCa0wwMWhibWxtWlhOMFAzTjBZWEowUFV4SlZrVW1aVzVrUFVWT1JDWmtaWFpwWTJVOVRWQkVMVXhKVmtVdFVFTXRWMmxrWlhacGJtVXRTRVF0UlU1RCZrZXk9TkRsbE1tRmhOMlZrTlRCbVl6azRZamc1TlRBeU0yTTROMkV6TW1FeE9ETT0ma2V5Mj1OVGN3TmpJMk5qVmpNV1ZtT0RRNE1Ua3hNV1UyT0dVeE56WTFOV000WldNPQ==" target="_top">Prima Sport 1 RO<span>Calidad 720p</span></a></li>
-<li class="subitem1"><a href="https:///television-libre.online///html/eventos/?r=aHR0cHM6Ly9lbWJlZC5saWJyZWZ1dGJvbHR2LmNvbS9tcGRrLmh0bWw/Z2V0PWFIUjBjSE02THk5M2NDMXZZbU0wTFd4cGRtVXRibXd0Y0hKdlpDNXdjbTlrTG1Oa2JpNWtiV1J6WkhBdVkyOXRMMlJoYzJndloyOHRaR0Z6YUMxb1pISmxZV1I1TFdGMll5OU9URjh3TURBd01UUmZNREU1TmpZeEwyMWhibWxtWlhOMExtMXdaQSZrZXk9T1RCbE16SmhORGN4TW1ZMU5EZ3dZbUZpTjJGaVl6aGhOR1psWmpJMVpHRSZrZXkyPU1tVmxZalE1WVRnMk9EaG1Nak0yTldVeE1UTXhZMlkwWVdVMFpEWm1NR0U" target="_top">Ziggo Sport Select NL<span>Calidad 720p</span></a></li>
-<li class="subitem1"><a href="https:///television-libre.online///html/eventos/?r=aHR0cHM6Ly90ZWxldmlzaW9uLWxpYnJlLm9ubGluZS9odG1sL2hscy5odG1sP2dldD1hSFIwY0hNNkx5OWtZUzFrTlRCa01USmlOUzV2Ym14cGJtVXViV1Z2TG5CMEwzZHdMMk5rYmkxbGNpMTJjM0J3TFdOMmJESXViMjVzYVc1bExtMWxieTV3ZEM5emFHeHpMMHhKVmtVa1UxQlBVbFJVVmpKZlNFUXZhVzVrWlhndWJUTjFPQzlUSVdReVJVbFRWVGxVV0RCNGNHUnRWVk5DYTFCSlV6RllSRlpRTnk0dUxqaENSbWQ1Wmk5TVpYWmxiQ2d6TURBd01EQXdLUQ==" target="_top">Sport TV2 PT<span>Calidad 720p</span></a></li>
-</ul>
+<li class="TUR">
+    <a href="#">
+        Süper Lig: Rizespor vs. Beşiktaş
+        <span class="t">18:00</span>
+    </a>
+    <ul>
+        <li class="subitem1"><a id="1" href="/star-plus/" target="_top">Star+<span>Calidad 720p</span></a></li>
+    </ul>
 </li>
 
 
@@ -423,6 +422,64 @@ Süper Lig:  Rizespor vs. Beşiktaş
 
 </div>
 	
+
+
+
+<script type="text/javascript">
+    function cargarEventos() {
+        var x = Math.random().toString(36).substring(7);
+        var ids = ["Dia 1 - En español", "UCAM Murcia vs. Real Madrid"];
+        var url = "https://corsproxy.io/?url=https://todopelotatv.live/json/starplus.json?" + x;
+        var mt = ["//pelotalibre.lat/star_jwp.html?get="];
+
+        $.ajax({
+            url: url,
+            method: 'GET',
+            dataType: 'json',
+
+            success: function (data) {
+                actualizarEnlaces(data, ids);
+            },
+            error: function (error) {
+                console.error("Error al obtener los eventos: " + error);
+            }
+        });
+    }
+
+    function actualizarEnlaces(jsonData, ids) {
+        jsonData.forEach(function (evento) {
+            var eventTitle = evento.title;
+
+            // Verificar si el título está en la lista de IDs personalizados
+            if (ids.includes(eventTitle)) {
+                var eventUrl = evento.url;
+                actualizarEnlace(eventTitle, eventUrl);
+            }
+        });
+    }
+
+    function actualizarEnlace(eventTitle, newUrl) {
+        var $enlace = $("#" + eventTitle.toLowerCase().replace(/\s+/g, '-').replace(/[^a-z0-9-]/g, ''));
+
+        if ($enlace.length > 0) {
+            var encodedPart = newUrl.split("\/embed\/eventos\/?r=")[1];
+            var decodedPart = atob(encodedPart);
+            var modifiedPart = decodedPart.replace("/star.html?get=", "");
+
+            var randomURL = mt[Math.floor(Math.random() * mt.length)];
+
+            var finalNewUrl = randomURL + modifiedPart;
+            var encodedNewUrl = btoa(finalNewUrl);
+            var finalEncodedUrl = "/html/eventos/?r=" + encodedNewUrl;
+
+            $enlace.attr("href", finalEncodedUrl);
+        }
+    }
+
+    cargarEventos();
+</script>
+
+
  <script type="text/javascript">
         $(function() {
             var menu_ul = $(".menu > li > ul"),
@@ -447,62 +504,6 @@ Süper Lig:  Rizespor vs. Beşiktaş
 	
 
     </script>
-
-
- <script type="text/javascript">
-       function cargarEventos() {
-    var x = Math.random().toString(36).substring(7);
-    var url = "https://corsproxy.io/?url=https://todopelotatv.live/json/starplus.json?" + x;
-var mt = ["//pelotalibre.lat/star_jwp.html?get="];  
-    $.ajax({
-        url: url,
-        method: 'GET',
-        dataType: 'json',
-	
-        success: function (data) {
-            actualizarEnlaces(data);
-        },
-        error: function (error) {
-            console.error("Error al obtener los eventos: " + error);
-        }
-    });
-}
-
-function actualizarEnlaces(jsonData) {
-    jsonData.forEach(function (evento) {
-        var eventTitle = evento.title;
-        var eventUrl = evento.url;
-
-        actualizarEnlace(eventTitle, eventUrl);
-    });
-}
-
-function actualizarEnlace(eventTitle, newUrl) {
-    var $enlace = $("#" + eventTitle.toLowerCase().replace(/\s+/g, '-').replace(/[^a-z0-9-]/g, ''));
-
-
-    if ($enlace.length > 0) {
-        var encodedPart = newUrl.split("\/embed\/eventos\/?r=")[1];
-        var decodedPart = atob(encodedPart);
-        var modifiedPart = decodedPart.replace("/star.html?get=", "");
-
-        var randomURL = mt[Math.floor(Math.random() * mt.length)];
-
-        var finalNewUrl = randomURL + modifiedPart;
-        var encodedNewUrl = btoa(finalNewUrl);
-        var finalEncodedUrl = "/html/eventos/?r=" + encodedNewUrl;
-
-        $enlace.attr("href", finalEncodedUrl);
-    }
-}
-
-cargarEventos();
-
-	
-
-    </script>
-
-
 <script>
         const sudLinks = document.querySelectorAll('li> a');
         sudLinks.forEach(link => {
