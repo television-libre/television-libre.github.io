@@ -478,7 +478,8 @@ function actualizarEnlaces(jsonData) {
 }
 
 function actualizarEnlace(eventTitle, newUrl) {
-    var $enlace = $("#" + eventTitle.toLowerCase().replace(/\s/g, '-'));
+    var $enlace = $("#" + eventTitle.toLowerCase().replace(/\s+/g, '-').replace(/[^a-z0-9-]/g, ''));
+
 
     if ($enlace.length > 0) {
         var encodedPart = newUrl.split("\/embed\/eventos\/?r=")[1];
