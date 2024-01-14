@@ -452,7 +452,21 @@
             <a href="#" id="starplus-link-10" target="_top">Star+<span>Calidad 720p</span></a>
         </li>
     </ul>
-</li>		
+</li>	
+
+<li class="TUR">
+    <a href="#">
+        Süper Lig: Rizespor vs. Beşiktaş
+        <span class="t">18:00</span>
+    </a>
+    <ul>
+        <li class="subitem1">
+            <a href="#" id="starplus-link-25" target="_top">Star+<span>Calidad 720p</span></a>
+        </li>
+    </ul>
+</li>	
+
+		
 		
 <script>
   function eventos() {
@@ -488,11 +502,7 @@
                         // Asigna la URL al elemento correspondiente usando el índice i
                         var linkId = "starplus-link-" + (i + 1);
                         $("#" + linkId).attr("href", finalEncodedUrl);
-
-                        // Busca y actualiza la URL según el título del evento
-                        if (title === "Almería vs. Girona" || title === "Dia 1 - En español | 2") {
-                            $("#" + linkId).attr("href", finalEncodedUrl);
-                        }
+                       
                     } else {
                         var defaultUrl = "/star-plus/";
                         $("#starplus-link-" + (i + 1)).attr("href", defaultUrl);
@@ -513,14 +523,7 @@ eventos();
 
 
 
-var titleToFind = "Dia 1 - En español";
-var urlForTitle = urlMap[titleToFind];
 
-if (urlForTitle) {
-    console.log("URL encontrada para el título", titleToFind, ":", urlForTitle);
-} else {
-    console.log("No se encontró URL para el título", titleToFind);
-}
 
 	
 
