@@ -408,42 +408,53 @@
         <span class="t">18:00</span>
     </a>
     <ul>
-       <li class="subitem1"><a href="" target="_top">Star+<span>Calidad 720p</span></a></li>
+        <li class="subitem1">
+            <a href="#" id="starplus-link" target="_top">Star+<span>Calidad 720p</span></a>
+        </li>
     </ul>
 </li>
 
-		
-<script>function eventos() {
-  var x = Math.random().toString(36).substring(7);
-  var url = "https://corsproxy.io/?url=https://todopelotatv.live/json/starplus.json?" + x;
- 
+<script>
+    function eventos() {
+        var x = Math.random().toString(36).substring(7);
+        var url = "https://corsproxy.io/?url=https://todopelotatv.live/json/starplus.json?" + x;
 
-  $.ajax({
-    url: url,
-    type: "get",
-    success: function (arr) {
-      var content = '';
-      var mt = ["//pelotalibre.lat/star_jwp.html?get="];
+        $.ajax({
+            url: url,
+            type: "get",
+            success: function (arr) {
+                var content = '';
+                var mt = ["//pelotalibre.lat/star_jwp.html?get="];
 
-        var obj = activeEvents[i];
-        var status, colorClass, additionalClass, decodedUrl, finalUrl;
+                for (var i = 0; i < activeEvents.length; i++) {
+                    var obj = activeEvents[i];
+                    var status, colorClass, additionalClass, decodedUrl, finalUrl;
 
-      var urlValue = obj['url'];
+                    var urlValue = obj['url'];
 
-        if (urlValue && urlValue !== "#") {
-              var encodedPart = urlValue.split("\/embed\/eventos\/?r=")[1];
-          var decodedPart = atob(encodedPart);
-           var modifiedPart = decodedPart.replace("/star.html?get=", "");
+                    if (urlValue && urlValue !== "#") {
+                        var encodedPart = urlValue.split("\/embed\/eventos\/?r=")[1];
+                        var decodedPart = atob(encodedPart);
+                        var modifiedPart = decodedPart.replace("/star.html?get=", "");
 
-          var randomURL = mt[Math.floor(Math.random() * mt.length)];
+                        var randomURL = mt[Math.floor(Math.random() * mt.length)];
 
-          var newUrl = randomURL + modifiedPart;
-          var encodedNewUrl = btoa(newUrl);
-          var finalEncodedUrl = "/html/eventos/?r=" + encodedNewUrl;
-        } else {
-          finalEncodedUrl = "/star-plus/";
-        }
+                        var newUrl = randomURL + modifiedPart;
+                        var encodedNewUrl = btoa(newUrl);
+                        var finalEncodedUrl = "/html/eventos/?r=" + encodedNewUrl;
+
+                        // Update the href attribute of the link with the generated URL
+                        $("#starplus-link").attr("href", finalEncodedUrl);
+                    } else {
+                        finalEncodedUrl = "/star-plus/";
+                        $("#starplus-link").attr("href", finalEncodedUrl);
+                    }
+                }
+            }
+        });
+    }
 </script>
+
 		
 </ul>		    
 </div>
