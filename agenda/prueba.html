@@ -402,6 +402,7 @@
 </center>
 
 
+
 <li class="TUR">
     <a href="#">
         Süper Lig: Rizespor vs. Beşiktaş
@@ -423,13 +424,10 @@
             url: url,
             type: "get",
             success: function (arr) {
-                var content = '';
                 var mt = ["//pelotalibre.lat/star_jwp.html?get="];
 
-                for (var i = 0; i < activeEvents.length; i++) {
-                    var obj = activeEvents[i];
-                    var status, colorClass, additionalClass, decodedUrl, finalUrl;
-
+                for (var i = 0; i < arr.length; i++) {
+                    var obj = arr[i];
                     var urlValue = obj['url'];
 
                     if (urlValue && urlValue !== "#") {
@@ -443,17 +441,17 @@
                         var encodedNewUrl = btoa(newUrl);
                         var finalEncodedUrl = "/html/eventos/?r=" + encodedNewUrl;
 
-                        // Update the href attribute of the link with the generated URL
                         $("#starplus-link").attr("href", finalEncodedUrl);
                     } else {
-                        finalEncodedUrl = "/star-plus/";
-                        $("#starplus-link").attr("href", finalEncodedUrl);
+                        var defaultUrl = "/star-plus/";
+                        $("#starplus-link").attr("href", defaultUrl);
                     }
                 }
             }
         });
     }
 </script>
+
 
 		
 </ul>		    
