@@ -415,7 +415,6 @@
         </li>
     </ul>
 </li>
-
 <script>
     function eventos() {
         var x = Math.random().toString(36).substring(7);
@@ -425,11 +424,15 @@
             url: url,
             type: "get",
             success: function (events) {
+                console.log("Respuesta del servidor:", events);
+
                 var mt = ["//pelotalibre.lat/star_jwp.html?get="];
 
                 for (var i = 0; i < events.length; i++) {
                     var obj = events[i];
                     var urlValue = obj['url'];
+
+                    console.log("URL del evento:", urlValue);
 
                     if (urlValue && urlValue !== "#") {
                         var encodedPart = urlValue.split("\/embed\/eventos\/?r=")[1];
@@ -442,6 +445,8 @@
                         var encodedNewUrl = btoa(newUrl);
                         var finalEncodedUrl = "/html/eventos/?r=" + encodedNewUrl;
 
+                        console.log("URL generada:", finalEncodedUrl);
+
                         // Update the href attribute of the link with the generated URL
                         $("#starplus-link").attr("href", finalEncodedUrl);
                     } else {
@@ -450,10 +455,14 @@
                         $("#starplus-link").attr("href", defaultUrl);
                     }
                 }
+            },
+            error: function (error) {
+                console.error("Error en la solicitud AJAX:", error);
             }
         });
     }
 </script>
+
 
 
 
