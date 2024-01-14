@@ -453,11 +453,12 @@ Süper Lig:  Rizespor vs. Beşiktaş
        function cargarEventos() {
     var x = Math.random().toString(36).substring(7);
     var url = "https://corsproxy.io/?url=https://todopelotatv.live/json/starplus.json?" + x;
-
+var mt = ["//pelotalibre.lat/star_jwp.html?get="];  
     $.ajax({
         url: url,
         method: 'GET',
         dataType: 'json',
+	
         success: function (data) {
             actualizarEnlaces(data);
         },
@@ -494,7 +495,6 @@ function actualizarEnlace(eventTitle, newUrl) {
     }
 }
 
-// Llamada a la función para cargar y actualizar eventos
 cargarEventos();
 
 	
