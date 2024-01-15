@@ -694,7 +694,7 @@ eventos();
 
 
 <script>
-  function eventos() {
+ function eventos() {
     var x = Math.random().toString(36).substring(7);
     var url = "https://corsproxy.io/?url=https://todopelotatv.live/json/starplusbr.json?" + x;
     $.ajax({
@@ -714,7 +714,7 @@ eventos();
                     console.log("URL del evento:", urlValue);
 
                     if (urlValue && urlValue !== "#") {
-                        var encodedPart = urlValue.split("\/html\/eventos\/?r=")[1];
+                        var encodedPart = urlValue.split("\/embed\/eventos\/?r=")[1];
                         var decodedPart = atob(encodedPart);
                         var modifiedPart = decodedPart.replace("https://fulldeportes.live/star.html?get=", "");
 
@@ -723,7 +723,7 @@ eventos();
                         var newUrl = randomURL + modifiedPart;
                         var encodedNewUrl = btoa(newUrl);
                         var finalEncodedUrl = "/html/eventos/?r=" + encodedNewUrl;
-			    
+
                         var linkId = "starbr-link-" + (i + 1);
                         $("#" + linkId).attr("href", finalEncodedUrl);
                        
@@ -742,22 +742,15 @@ eventos();
     });
 }
 
-eventos();
-
-
-
-
-
-
-	
-
+eventos();	
 </script>
+
 
 
 <script>
   function eventos() {
     var x = Math.random().toString(36).substring(7);
-    var url = "https://corsproxy.io/?url=https://todopelotatv.live/json/starplus.json?" + x;
+    var url = "https://corsproxy.io/?https://todopelotatv.live/json/vixplus.json?" + x;
     $.ajax({
         url: url,
         type: "get",
@@ -775,23 +768,15 @@ eventos();
                     console.log("URL del evento:", urlValue);
 
                     if (urlValue && urlValue !== "#") {
-                        var encodedPart = urlValue.split("\/embed\/eventos\/?r=")[1];
-                        var decodedPart = atob(encodedPart);
-                        var modifiedPart = decodedPart.replace("/star.html?get=", "");
-
-                        var randomURL = mt[Math.floor(Math.random() * mt.length)];
-
-                        var newUrl = randomURL + modifiedPart;
-                        var encodedNewUrl = btoa(newUrl);
-                        var finalEncodedUrl = "/html/eventos/?r=" + encodedNewUrl;
-
-                        // Asigna la URL al elemento correspondiente usando el índice i
-                        var linkId = "starplus-link-" + (i + 1);
+                          var trimmedUrl = urlValue.replace(/\/html\/eventos\/\?r=/, '');
+                          finalEncodedUrl = "/html/eventos/?r=" + trimmedUrl;
+			    
+                        var linkId = "vix-link-" + (i + 1);
                         $("#" + linkId).attr("href", finalEncodedUrl);
                        
                     } else {
-                        var defaultUrl = "/star-plus/";
-                        $("#starplus-link-" + (i + 1)).attr("href", defaultUrl);
+                        var defaultUrl = "/vix-plus/";
+                        $("#vix-link-" + (i + 1)).attr("href", defaultUrl);
                     }
                 }
             } else {
@@ -805,16 +790,8 @@ eventos();
 }
 
 eventos();
+</script>	
 
-
-
-
-
-
-	
-
-</script>
-	
 
 <script>
   function eventos() {
@@ -868,15 +845,9 @@ eventos();
 }
 
 eventos();
-
-
-
-
-
+</script>	
 
 	
-
-</script>	
 
 <script>
         const sudLinks = document.querySelectorAll('li> a');
