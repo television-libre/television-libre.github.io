@@ -640,7 +640,7 @@ NBA: Thunder vs. Lakers
 
 
 <script>
-  function eventos() {
+function eventos() {
     var x = Math.random().toString(36).substring(7);
     var url = "https://corsproxy.io/?url=https://todopelotatv.live/json/starplus.json?" + x;
     $.ajax({
@@ -670,12 +670,12 @@ NBA: Thunder vs. Lakers
                         var encodedNewUrl = btoa(newUrl);
                         var finalEncodedUrl = "/html/eventos/?r=" + encodedNewUrl;
 			    
-                        var linkId = "starplus-link-" + (i + 1);
+                        var linkId = "starplus-link-" + i;
                         $("#" + linkId).attr("href", finalEncodedUrl);
                        
                     } else {
                         var defaultUrl = "/star-plus/";
-                        $("#starplus-link-" + (i + 1)).attr("href", defaultUrl);
+                        $("#starplus-link-" + i).attr("href", defaultUrl);
                     }
                 }
             } else {
@@ -689,13 +689,6 @@ NBA: Thunder vs. Lakers
 }
 
 eventos();
-
-
-
-
-
-
-	
 
 </script>
 
