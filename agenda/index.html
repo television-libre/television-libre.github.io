@@ -765,7 +765,7 @@ eventos();
 <script>
   function eventos() {
     var x = Math.random().toString(36).substring(7);
-    var url = "https://corsproxy.io/?https://todopelotatv.live/json/vixplus.json?" + x;
+    var url = "https://corsproxy.io/?url=https://todopelotatv.live/json/starplus.json?" + x;
     $.ajax({
         url: url,
         type: "get",
@@ -783,15 +783,23 @@ eventos();
                     console.log("URL del evento:", urlValue);
 
                     if (urlValue && urlValue !== "#") {
-                          var trimmedUrl = urlValue.replace(/\/html\/eventos\/\?r=/, '');
-                          finalEncodedUrl = "/html/eventos/?r=" + trimmedUrl;
-			    
-                        var linkId = "vix-link-" + (i + 1);
+                        var encodedPart = urlValue.split("\/embed\/eventos\/?r=")[1];
+                        var decodedPart = atob(encodedPart);
+                        var modifiedPart = decodedPart.replace("/star.html?get=", "");
+
+                        var randomURL = mt[Math.floor(Math.random() * mt.length)];
+
+                        var newUrl = randomURL + modifiedPart;
+                        var encodedNewUrl = btoa(newUrl);
+                        var finalEncodedUrl = "/html/eventos/?r=" + encodedNewUrl;
+
+                        // Asigna la URL al elemento correspondiente usando el índice i
+                        var linkId = "starplus-link-" + (i + 1);
                         $("#" + linkId).attr("href", finalEncodedUrl);
                        
                     } else {
-                        var defaultUrl = "/vix-plus/";
-                        $("#vix-link-" + (i + 1)).attr("href", defaultUrl);
+                        var defaultUrl = "/star-plus/";
+                        $("#starplus-link-" + (i + 1)).attr("href", defaultUrl);
                     }
                 }
             } else {
@@ -814,7 +822,6 @@ eventos();
 	
 
 </script>
-
 	
 
 <script>
