@@ -152,7 +152,7 @@ else
 			var data = JSON.parse(xhttp.responseText);
 			url = data["url"];
 			
-			document.getElementById('iframe').src = '//' +url + "/cvatt.html?get="+getURL+lang;
+			document.getElementById('iframe').src =  '//' + url + "/cvatt.html?get=" + getVal + "&lang=1";
 		}
 	}
 }
