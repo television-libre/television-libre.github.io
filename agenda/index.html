@@ -329,7 +329,7 @@ Copa Asiatica: Tailandia vs. Kirguistán
 <span class="t">15:30</span></a>
 <ul>
 <li class="subitem1"><a id="starplus-link-1" href="/star-plus/" target="_top">Star+<span>Calidad 720p</span></a></li>
-<li class="subitem1"><a  id="starbr-link-1" href="/star-plus-br/" target="_top">Star+ BR<span>Calidad 720p</span></a></li>
+<li class="subitem1"><a   href="/star-plus-br/" target="_top">Star+ BR<span>Calidad 720p</span></a></li>
 </ul>
 </li>
 
@@ -363,7 +363,7 @@ Copa Asiatica: Arabia Saudita vs. Omán
 <span class="t">18:30</span></a>
 <ul>
 <li class="subitem1"><a id="starplus-link-5" href="/star-plus/" target="_top">Star+<span>Calidad 720p</span></a></li>
-<li class="subitem1"><a id="starbr-link-2" href="/star-plus-br/" target="_top">Star+ BR<span>Calidad 720p</span></a></li>
+<li class="subitem1"><a  href="/star-plus-br/" target="_top">Star+ BR<span>Calidad 720p</span></a></li>
 </ul>
 </li>
 
@@ -382,7 +382,7 @@ Copa del Rey: Getafe vs. Sevilla
 <span class="t">20:00</span></a>
 <ul>
 <li class="subitem1"><a href="/en-vivo/dsports/" target="_top">DSports<span>Calidad 720p</span></a></li>
-<li class="subitem1"><a id="starbr-link-3" href="/star-plus-br/" target="_top">Star+ BR<span>Calidad 720p</span></a></li>
+<li class="subitem1"><a  href="/star-plus-br/" target="_top">Star+ BR<span>Calidad 720p</span></a></li>
 </ul>
 </li>
 
@@ -714,104 +714,7 @@ eventos();
 </script>
 
 
-<script>
- function eventos() {
-    var x = Math.random().toString(36).substring(7);
-    var url = "https://corsproxy.io/?url=https://todopelotatv.live/json/starplusbr.json?" + x;
-    $.ajax({
-        url: url,
-        type: "get",
-        success: function (events) {
-            console.log("Respuesta del servidor:", events);
 
-            var mt = ["https://alkadea.com/players/star_jwp.html?get="];
-
-            if (events && events.length > 0) {
-                for (var i = 0; i < events.length; i++) {
-                    var obj = events[i];
-                    var urlValue = obj['url'];
-                    var title = obj['title'];
-
-                    console.log("URL del evento:", urlValue);
-
-                    if (urlValue && urlValue !== "#") {
-                        var encodedPart = urlValue.split("\/html\/eventos\/?r=")[1];
-                        var decodedPart = atob(encodedPart);
-                        var modifiedPart = decodedPart.replace("https://fulldeportes.live/star.html?get=", "");
-
-                        var randomURL = mt[Math.floor(Math.random() * mt.length)];
-
-                        var newUrl = randomURL + modifiedPart;
-                        var encodedNewUrl = btoa(newUrl);
-                        var finalEncodedUrl = "/html/eventos/?r=" + encodedNewUrl;
-
-                        var linkId = "starbr-link-" + (i + 1);
-                        $("#" + linkId).attr("href", finalEncodedUrl);
-                       
-                    } else {
-                        var defaultUrl = "/star-plus-br/";
-                        $("#starbr-link-" + (i + 1)).attr("href", defaultUrl);
-                    }
-                }
-            } else {
-                console.error("La respuesta del servidor no contiene eventos válidos.");
-            }
-        },
-        error: function (error) {
-            console.error("Error en la solicitud AJAX:", error);
-        }
-    });
-}
-
-eventos();	
-</script>
-
-
-
-<script>
-  function eventos() {
-    var x = Math.random().toString(36).substring(7);
-    var url = "https://corsproxy.io/?https://todopelotatv.live/json/vixplus.json?" + x;
-    $.ajax({
-        url: url,
-        type: "get",
-        success: function (events) {
-            console.log("Respuesta del servidor:", events);
-
-            var mt = ["//pelotalibre.lat/star_jwp.html?get="];
-
-            if (events && events.length > 0) {
-                for (var i = 0; i < events.length; i++) {
-                    var obj = events[i];
-                    var urlValue = obj['url'];
-                    var title = obj['title'];
-
-                    console.log("URL del evento:", urlValue);
-
-                    if (urlValue && urlValue !== "#") {
-                          var trimmedUrl = urlValue.replace(/\/html\/eventos\/\?r=/, '');
-                          finalEncodedUrl = "/html/eventos/?r=" + trimmedUrl;
-			    
-                        var linkId = "vix-link-" + (i + 1);
-                        $("#" + linkId).attr("href", finalEncodedUrl);
-                       
-                    } else {
-                        var defaultUrl = "/vix-plus/";
-                        $("#vix-link-" + (i + 1)).attr("href", defaultUrl);
-                    }
-                }
-            } else {
-                console.error("La respuesta del servidor no contiene eventos válidos.");
-            }
-        },
-        error: function (error) {
-            console.error("Error en la solicitud AJAX:", error);
-        }
-    });
-}
-
-eventos();
-</script>	
 
 
 	
