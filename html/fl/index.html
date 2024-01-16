@@ -90,7 +90,7 @@ document.write('<iframe id="iframe" allow="encrypted-media" width="100%" height=
       if (xhttp.readyState == 4 && xhttp.status == 200) {
         var data = JSON.parse(xhttp.responseText);
         var url = data["url"];
-        var iframeSrc = '//' + url + "/cvattgb.html?get=" + getVal + lang;
+         var iframeSrc = '//' + url + "/cvattgb.html?get=" + getVal + "&lang=1";
         document.getElementById('iframe').src = iframeSrc;
       }
     }
