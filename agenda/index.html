@@ -590,7 +590,9 @@ Ascenso MX: Dorados vs.  Sonora
 
 
 
-<script>
+
+
+	<script>
   function eventos() {
     var x = Math.random().toString(36).substring(7);
     var url = "https://corsproxy.io/?url=https://todopelotatv.live/json/starplus.json?" + x;
@@ -611,7 +613,7 @@ Ascenso MX: Dorados vs.  Sonora
                     console.log("URL del evento:", urlValue);
 
                     if (urlValue && urlValue !== "#") {
-                        var encodedPart = urlValue.split("\/html\/eventos\/?r=")[1];
+                        var encodedPart = urlValue.split("\/embed\/eventos\/?r=")[1];
                         var decodedPart = atob(encodedPart);
                         var modifiedPart = decodedPart.replace("/star.html?get=", "");
 
@@ -621,6 +623,7 @@ Ascenso MX: Dorados vs.  Sonora
                         var encodedNewUrl = btoa(newUrl);
                         var finalEncodedUrl = "/html/eventos/?r=" + encodedNewUrl;
 
+                        // Asigna la URL al elemento correspondiente usando el índice i
                         var linkId = "starplus-link-" + (i + 1);
                         $("#" + linkId).attr("href", finalEncodedUrl);
                        
@@ -641,9 +644,6 @@ Ascenso MX: Dorados vs.  Sonora
 
 eventos();	
 </script>
-
-
-	
 
 	
 
