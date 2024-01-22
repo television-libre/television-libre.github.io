@@ -56,8 +56,10 @@
 <script src="https://kit.fontawesome.com/ccee9ace0a.js" crossorigin="anonymous"></script>   
 <link rel="stylesheet" href="/css/app.css">
 <link href='https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css' rel='stylesheet'>
-<script src="https://code.jquery.com/jquery-3.6.4.min.js"></script>
 
+<script src="https://code.jquery.com/jquery-3.5.1.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/OwlCarousel2/2.3.4/owl.carousel.min.js"></script>
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/OwlCarousel2/2.3.4/assets/owl.carousel.min.css">
 </head>
 
 
@@ -179,7 +181,45 @@
 scrollbar-width: thin; 
 scrollbar-color: #141d26 #eef8fc ; 
 
-</style> 
+</style> <style media="screen">
+
+
+
+.wrapper{
+width: 100%;
+}
+.carousel{
+max-width: 1200px;
+margin: auto;
+padding: 0 30px;
+}
+
+
+
+
+  .owl-dots{
+text-align: center;
+margin-top: 25px;
+}
+.owl-dot{
+height: 15px;
+width: 30px;
+margin: 0 5px;
+outline: none;
+border-radius: 14px;
+border: 2px solid #35afe3!important;
+box-shadow: 0px 4px 15px rgba(0,0,0,0.2);
+transition: all 0.3s ease;
+}
+.owl-dot.active,
+.owl-dot:hover{
+background: #35afe3!important;
+}
+
+
+
+  
+ </style>
 <style type="text/css">@media screen and (min-width:0px) and (max-width:767px){.iframe-container iframe{height:266px}}</style>
 <body class="flex flex-col h-screen justify-between dark:bg-slate-800 dark:text-slate-300 font-sans">
 <nav class="bg-slate-100 shadow dark:bg-slate-700">
@@ -220,17 +260,46 @@ scrollbar-color: #141d26 #eef8fc ;
 "> <span><i class="bx bxs-calendar-star" style="
     margin: 10px;
 "></i></span>Eventos</h1>
-<center><div class="p-2 rounded bg-slate-200 border dark:bg-slate-700 dark:border-gray-600" style="
-    display: inline-block;
-    margin: 5px;
-">
+
+  <div class="wrapper">
+    <div class="carousel owl-carousel">
+     <div class="p-2 rounded bg-slate-200 border dark:bg-slate-700 dark:border-gray-600">
+         <span class="inf">Argentina</span>
 <a class="flex flex-col justify-evenly items-center h-full channel-link" href="/en-vivo/gran-hermano/">
 <img class="w-28 h-28 object-contain rounded" loading="lazy" src="/img/gh.webp" title="Gran Hermano en VIVO online" alt="Gran Hermano">
 <p class="des">Ver Gran Hermano en vivo online</p>
 <span class="bg-cyan-700 hover:bg-cyan-800 p-2 text-center block w-full m-2 rounded text-white mt-auto">Ver canal</span>
 </a>
-</div></center>
+ </div>
+        <div class="p-2 rounded bg-slate-200 border dark:bg-slate-700 dark:border-gray-600">
+   <span class="inf">Eventos</span>
+<a class="flex flex-col justify-evenly items-center h-full channel-link" href="/star-plus/">
+<img class="w-28 h-28 object-contain rounded" loading="lazy" src="/img/starplus.webp" title="Star+ en VIVO online" alt="Star+ (Star Plus)">
+<p class="des" >Ver Star+ en vivo online</p>
+<span class="bg-cyan-700 hover:bg-cyan-800 p-2 text-center block w-full m-2 rounded text-white mt-auto">Ver canal</span>
+</a>
+</div> 
 
+  <div class="p-2 rounded bg-slate-200 border dark:bg-slate-700 dark:border-gray-600">
+   <span class="inf">Eventos</span>
+<a class="flex flex-col justify-evenly items-center h-full channel-link" href="/vix-plus/">
+<img class="w-28 h-28 object-contain rounded" loading="lazy" src="/img/vixplus.png" title="VIX+ en VIVO online" alt="VIX+ (VIX Plus)">
+<p class="des" >Ver VIX+ en vivo online</p>
+<span class="bg-cyan-700 hover:bg-cyan-800 p-2 text-center block w-full m-2 rounded text-white mt-auto">Ver canal</span>
+</a>
+</div> 
+
+       <div class="p-2 rounded bg-slate-200 border dark:bg-slate-700 dark:border-gray-600">
+   <span class="inf">Eventos</span>
+<a class="flex flex-col justify-evenly items-center h-full channel-link" href="/nba-pass/">
+<img class="w-28 h-28 object-contain rounded" loading="lazy" src="https://cdn.nba.com/manage/2023/02/NBA_League_Pass_horiz_onDkBkgd-2.png" title="Nba League pass en VIVO online" alt="NBA LEague pass">
+<p class="des" >Ver NBA League Pass en vivo online</p>
+<span class="bg-cyan-700 hover:bg-cyan-800 p-2 text-center block w-full m-2 rounded text-white mt-auto">Ver canal</span>
+</a>
+</div> 
+
+    </div>
+  </div>
 
 <h1 class="text-3xl my-3 text-center">Canales online en vivo y en directo Gratis</h1>
  <div style="padding-left: 1rem;
@@ -1814,7 +1883,18 @@ title="NBA TV en VIVO online" alt="NBA TV">
 });
 
 </script>
-
+<script> $(".carousel").owlCarousel({
+  margin: 20,
+  autoplay: true,
+  autoplayTimeout: 2500,
+  autoplayHoverPause: true,
+  responsive: {
+      0: { items: 1, nav: false },
+      600: { items: 2, nav: false },
+      1000: { items: 3, nav: false },
+  },
+});
+ </script>
 
 </body>
 </html>
