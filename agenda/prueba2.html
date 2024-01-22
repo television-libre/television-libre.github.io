@@ -60,7 +60,7 @@
 <link rel="stylesheet" href="/css/app.css">
 
 
-<script src="//code.jquery.com/jquery-3.3.1.min.js"></script>
+
 
 </head>
 
@@ -177,7 +177,74 @@
 ::-webkit-scrollbar-thumb {
   background: #eef8fc; 
 }
-.owl-dots{
+
+ /* firefox */
+
+scrollbar-width: thin; 
+scrollbar-color: #141d26 #eef8fc ; 
+
+</style> <style media="screen">
+
+*{
+margin: 0;
+padding: 0;
+box-sizing: border-box;
+font-family: 'Poppins', sans-serif;
+}
+body{
+min-height: 100vh;
+display: flex;
+align-items: center;
+}
+.wrapper{
+width: 100%;
+}
+.carousel{
+max-width: 1200px;
+margin: auto;
+padding: 0 30px;
+}
+.carousel .card{
+color: #fff;
+text-align: center;
+margin: 20px 0;
+line-height: 250px;
+font-size: 90px;
+font-weight: 600;
+border-radius: 10px;
+box-shadow: 0px 4px 15px rgba(0,0,0,0.2);
+}
+
+
+.carousel .card img{
+border-radius:10px;
+ 
+}
+
+p.des {
+    margin-bottom: 5px;
+    text-align: center;
+    line-height: 23px;
+  color: #fff;
+  
+  }
+  .inf {
+    background-color: #eef8fc;
+    border-radius: 5px;
+
+    color: #1d2745;
+    font-size: 12px;
+    font-weight: 700;
+    padding: 2px 10px;
+    position: absolute;
+  
+}
+.object-contain {
+
+ object-fit: contain;
+ margin-top: 1.6rem;
+  }
+  .owl-dots{
 text-align: center;
 margin-top: 25px;
 }
@@ -201,31 +268,15 @@ background: #35afe3!important;
 }
 .owl-carousel .card:hover {
     transform: scale(.92);
- }.wrapper{
-width: 100%;
 }
-.carousel{
-max-width: 1200px;
-margin: auto;
-padding: 0 30px;
+
+.card img:hover {
+    transition: all 0.2s ease-in-out;
+    filter: brightness(50%);
 }
-.carousel .card{
-color: #fff;
-text-align: center;
-margin: 20px 0;
-line-height: 250px;
-font-size: 90px;
-font-weight: 600;
- display: flex;
-border-radius: 10px;
-box-shadow: 0px 4px 15px rgba(0,0,0,0.2);
- }
- /* firefox */
 
-scrollbar-width: thin; 
-scrollbar-color: #141d26 #eef8fc ; 
-
-</style> 
+  
+</style>
 <style type="text/css">@media screen and (min-width:0px) and (max-width:767px){.iframe-container iframe{height:266px}}</style>
 <body class="flex flex-col h-screen justify-between dark:bg-slate-800 dark:text-slate-300 font-sans">
 <nav class="bg-slate-100 shadow dark:bg-slate-700">
@@ -267,39 +318,7 @@ scrollbar-color: #141d26 #eef8fc ;
     margin: 10px;
 "></i></span>Eventos</h1>
   
-  <div class="wrapper">
-    <div class="carousel owl-carousel">
-        <div class="p-2 rounded bg-slate-200 border dark:bg-slate-700 dark:border-gray-600 card">
-   <span class="inf">Deportes</span>
-<a class="flex flex-col justify-evenly items-center h-full channel-link" href="/star-plus/">
-<img class="w-28 h-28 object-contain rounded" loading="lazy" src="/img/starplus.webp" title="Star+ en VIVO online" alt="Star+ (Star Plus)">
-<p class="des" >Ver Star+ Eventos en vivo online</p>
-<span class="bg-cyan-700 hover:bg-cyan-800 p-2 text-center block w-full m-2 rounded text-white mt-auto">Ver canal</span>
-</a>
-</div> 
 
-  <div class="p-2 rounded bg-slate-200 border dark:bg-slate-700 dark:border-gray-600 card">
-   <span class="inf">Deportes</span>
-<a class="flex flex-col justify-evenly items-center h-full channel-link" href="/vix-plus/">
-<img class="w-28 h-28 object-contain rounded" loading="lazy" src="/img/vixplus.png" title="VIX+ en VIVO online" alt="VIX+ (VIX Plus)">
-<p class="des" >Ver VIX+ Eventos en vivo online</p>
-<span class="bg-cyan-700 hover:bg-cyan-800 p-2 text-center block w-full m-2 rounded text-white mt-auto">Ver canal</span>
-</a>
-</div> 
-
-    </div>
- </div><script> $(".carousel").owlCarousel({
-  margin: 20,
-  autoplay: true,
-  autoplayTimeout: 2500,
-  autoplayHoverPause: true,
-  responsive: {
-      0: { items: 1, nav: false },
-      600: { items: 2, nav: false },
-      1000: { items: 3, nav: false },
-  },
-});
- </script>
 <div style="padding-left: 1rem;
     padding-right: 1rem;" class="main__filter"><form action="#" class="main__filter-search search-form"><input autocomplete="off" id="buscar" type="text" placeholder="Buscar canal..." class="form-control" data-search="true"><button type="button"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M21.71,20.29,18,16.61A9,9,0,1,0,16.61,18l3.68,3.68a1,1,0,0,0,1.42,0A1,1,0,0,0,21.71,20.29ZM11,18a7,7,0,1,1,7-7A7,7,0,0,1,11,18Z"></path></svg></button></form></div>
 
