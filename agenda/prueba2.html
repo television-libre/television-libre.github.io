@@ -173,7 +173,48 @@
 ::-webkit-scrollbar-thumb {
   background: #eef8fc; 
 }
+.owl-dots{
+text-align: center;
+margin-top: 25px;
+}
+.owl-dot{
+height: 15px;
+width: 30px;
+margin: 0 5px;
+outline: none;
+border-radius: 14px;
+border: 2px solid #35afe3!important;
+box-shadow: 0px 4px 15px rgba(0,0,0,0.2);
+transition: all 0.3s ease;
+}
+.owl-dot.active,
+.owl-dot:hover{
+background: #35afe3!important;
+}
 
+.owl-carousel .card {
+    transition: transform 0.3s ease-in-out;
+}
+.owl-carousel .card:hover {
+    transform: scale(.92);
+ }.wrapper{
+width: 100%;
+}
+.carousel{
+max-width: 1200px;
+margin: auto;
+padding: 0 30px;
+}
+.carousel .card{
+color: #fff;
+text-align: center;
+margin: 20px 0;
+line-height: 250px;
+font-size: 90px;
+font-weight: 600;
+border-radius: 10px;
+box-shadow: 0px 4px 15px rgba(0,0,0,0.2);
+ }
  /* firefox */
 
 scrollbar-width: thin; 
@@ -220,11 +261,39 @@ scrollbar-color: #141d26 #eef8fc ;
 "> <span><i class="bx bxs-calendar-star" style="
     margin: 10px;
 "></i></span>Eventos</h1>
-<div id="eventos"></div>
-<script>
-            $(document).ready(function() {
-                $("#eventos").load("/html/slider.html");
-            });
+  
+  <div class="wrapper">
+    <div class="carousel owl-carousel">
+        <div class="p-2 rounded bg-slate-200 border dark:bg-slate-700 dark:border-gray-600">
+   <span class="inf">Deportes</span>
+<a class="flex flex-col justify-evenly items-center h-full channel-link" href="/star-plus/">
+<img class="w-28 h-28 object-contain rounded" loading="lazy" src="/img/starplus.webp" title="Star+ en VIVO online" alt="Star+ (Star Plus)">
+<p class="des" >Ver Star+ Eventos en vivo online</p>
+<span class="bg-cyan-700 hover:bg-cyan-800 p-2 text-center block w-full m-2 rounded text-white mt-auto">Ver canal</span>
+</a>
+</div> 
+
+  <div class="p-2 rounded bg-slate-200 border dark:bg-slate-700 dark:border-gray-600">
+   <span class="inf">Deportes</span>
+<a class="flex flex-col justify-evenly items-center h-full channel-link" href="/vix-plus/">
+<img class="w-28 h-28 object-contain rounded" loading="lazy" src="/img/vixplus.png" title="VIX+ en VIVO online" alt="VIX+ (VIX Plus)">
+<p class="des" >Ver VIX+ Eventos en vivo online</p>
+<span class="bg-cyan-700 hover:bg-cyan-800 p-2 text-center block w-full m-2 rounded text-white mt-auto">Ver canal</span>
+</a>
+</div> 
+
+    </div>
+ </div><script> $(".carousel").owlCarousel({
+  margin: 20,
+  autoplay: true,
+  autoplayTimeout: 2500,
+  autoplayHoverPause: true,
+  responsive: {
+      0: { items: 1, nav: false },
+      600: { items: 2, nav: false },
+      1000: { items: 3, nav: false },
+  },
+});
  </script>
 <div style="padding-left: 1rem;
     padding-right: 1rem;" class="main__filter"><form action="#" class="main__filter-search search-form"><input autocomplete="off" id="buscar" type="text" placeholder="Buscar canal..." class="form-control" data-search="true"><button type="button"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M21.71,20.29,18,16.61A9,9,0,1,0,16.61,18l3.68,3.68a1,1,0,0,0,1.42,0A1,1,0,0,0,21.71,20.29ZM11,18a7,7,0,1,1,7-7A7,7,0,0,1,11,18Z"></path></svg></button></form></div>
