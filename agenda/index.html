@@ -1176,6 +1176,12 @@ eventos();
         link.setAttribute('target', '_top');
         });
         </script>
+<script>const sudLinks = document.querySelectorAll('li.subitem1 > a');
+sudLinks.forEach(link => {
+  link.href = link.href.replace('/star-plus/', '/star-plus-br/');
+  link.setAttribute('target', '_top');
+});
+</script>	
 
 </body>
 </html>
