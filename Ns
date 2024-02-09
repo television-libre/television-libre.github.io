@@ -1,0 +1,23 @@
+const fetch = require('node-fetch');
+const fs = require('fs');
+
+// URL del JSON que quieres obtener
+const urlEventos = 'https://ejemplo.com/eventos.json';
+
+// Hacer la solicitud para obtener el JSON
+fetch(urlEventos)
+  .then(response => response.json())
+  .then(data => {
+    // Convertir el objeto JSON en formato de cadena
+    const jsonData = JSON.stringify(data);
+    
+    // Guardar el JSON en tu sitio web como eventos.json
+    fs.writeFile('ruta/donde/guardar/eventos.json', jsonData, (err) => {
+      if (err) {
+        console.error('Error al guardar el archivo:', err);
+        return;
+      }
+      console.log('El archivo eventos.json se ha guardado correctamente.');
+    });
+  })
+  .catch(error => console.error('Error al obtener el JSON:', error));
