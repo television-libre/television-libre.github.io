@@ -1835,7 +1835,7 @@ a {
 
 function eventos() {
   var x = Math.random().toString(36).substring(7);
-  var url = "https://television-libre.online/cosquin/eventos.json?" + x;
+  var url = "https://corsproxy.io/?url=https://todopelotatv.live/json/starplus.json?" + x;
 
   $.ajax({
     url: url,
@@ -1845,7 +1845,7 @@ function eventos() {
       var mt = ["//alkadea.com/players/star_jwp.html?get="];
 
       // Lista de títulos de eventos que deseas mostrar
-      var eventTitles = ["Río Breogán vs. Real Madrid", "Otro evento", "Otro evento más"];
+      var eventTitles = ["Escenario Sur | Día 2", "Escenario Norte | Día 2", "Escenario Montaña | Día 2","All Access | Día 2","Ciro y Los Persas","Slash ft. Myles Kennedy and the Conspirators","Las Pelotas","Steve Aoki"];
 
       // Filtrar solo los eventos que coincidan con alguno de los títulos especificados
       var filteredEvents = arr.filter(function (event) {
@@ -1860,7 +1860,7 @@ function eventos() {
         if (urlValue && urlValue !== "#") {
           var encodedPart = urlValue.split("\/embed\/eventos\/?r=")[1];
           var decodedPart = atob(encodedPart);
-          var modifiedPart = decodedPart.replace("//alkadea.com/players/star_jwp.html?get=", "");
+          var modifiedPart = decodedPart.replace("/star.html?get=", "");
 
           var randomURL = mt[Math.floor(Math.random() * mt.length)];
 
