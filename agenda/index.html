@@ -774,6 +774,42 @@ Liga BetPlay: Alianza vs. Pereira
 
     </script>
 
+$(document).ready(function() {
+    function actualizarURLs() {
+        var x = Math.random().toString(36).substring(7);
+        var url = "https://corsproxy.io/?url=https://todopelotatv.live/json/starplus.json?" + x;
+
+        $.ajax({
+            url: url,
+            type: "GET",
+            success: function(response) {
+                // Verificamos si la respuesta es válida y contiene datos
+                if (response && response.length > 0) {
+                    // Iteramos sobre cada elemento del JSON
+                    response.forEach(function(evento) {
+                        var imgURL = evento.img;
+                        var dataTitle = imgURL.replace(/\W/g, ''); // Remover caracteres no alfanuméricos
+                        var finalURL = "/html/eventos/?r=" + evento.url;
+
+                        // Actualizamos los enlaces que coincidan con el atributo data-img
+                        $('a[data-img="' + imgURL + '"]').attr('href', finalURL);
+                    });
+                } else {
+                    console.error("La respuesta del servidor no contiene eventos válidos.");
+                }
+            },
+            error: function(error) {
+                console.error("Error en la solicitud AJAX:", error);
+            }
+        });
+    }
+
+    // Llamamos a la función para actualizar las URL al cargar la página
+    actualizarURLs();
+
+    // Llamamos a la función cada cierto intervalo de tiempo (por ejemplo, cada 1 minuto)
+    setInterval(actualizarURLs, 60000);
+});
 
 <script>
 
