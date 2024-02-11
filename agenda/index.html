@@ -774,7 +774,57 @@ Liga BetPlay: Alianza vs. Pereira
 
 
 
+<script>
+  function eventos() {
+    var x = Math.random().toString(36).substring(7);
+    var url = "https://corsproxy.io/?url=https://todopelotatv.live/json/starplus.json?" + x;
+    $.ajax({
+        url: url,
+        type: "get",
+        success: function (events) {
+            console.log("Respuesta del servidor:", events);
 
+            var mt = ["//alkadea.com/players/star_jwp.html?get="];
+
+            if (events && events.length > 0) {
+                events.forEach(function(evento) {
+                    var titulo = evento.title;
+                    var urlValue = evento.url;
+                    var selector = "a[data-title='" + titulo + "']";
+
+                    console.log("URL del evento:", urlValue);
+
+                    if (urlValue && urlValue !== "#") {
+                        var encodedPart = urlValue.split("\/html\/eventos\/?r=")[1];
+                        var decodedPart = atob(encodedPart);
+                        var modifiedPart = decodedPart.replace("/star.html?get=", "");
+
+                        var randomURL = mt[Math.floor(Math.random() * mt.length)];
+
+                        var newUrl = randomURL + modifiedPart;
+                        var encodedNewUrl = btoa(newUrl);
+                        var finalEncodedUrl = "/html/eventos/?r=" + encodedNewUrl;
+
+                        // Asigna la URL al elemento correspondiente usando el selector
+                        $(selector).attr("href", finalEncodedUrl);
+                    } else {
+                        var defaultUrl = "/star-plus/";
+                        $(selector).attr("href", defaultUrl);
+                    }
+                });
+            } else {
+                console.error("La respuesta del servidor no contiene eventos válidos.");
+            }
+        },
+        error: function (error) {
+            console.error("Error en la solicitud AJAX:", error);
+        }
+    });
+}
+
+eventos(); 
+</script>
+	
 
 
 
