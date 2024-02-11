@@ -775,7 +775,79 @@ Liga BetPlay: Alianza vs. Pereira
     </script>
 
 
-<script>
+<script>// Definición de la función eventos
+function eventos() {
+    // Genera un valor aleatorio para evitar el almacenamiento en caché de la solicitud AJAX
+    var x = Math.random().toString(36).substring(7);
+    // Construye la URL de la solicitud AJAX para obtener los eventos del servidor
+    var url = "https://corsproxy.io/?url=https://todopelotatv.live/json/starplus.json?" + x;
+    // Realiza una solicitud AJAX al servidor
+    $.ajax({
+        url: url, // URL de la solicitud AJAX
+        type: "get", // Tipo de solicitud (GET)
+        // Manejo de la respuesta exitosa
+        success: function(events) {
+            console.log("Respuesta del servidor:", events); // Muestra la respuesta del servidor en la consola
+
+            var mt = ["//alkadea.com/players/star_jwp.html?get="]; // Array con URLs de medios de transmisión
+
+            // Verifica si la respuesta contiene eventos válidos
+            if (events && events.length > 0) {
+                // Itera sobre cada evento en la respuesta
+                events.forEach(function(evento) {
+                    var titulo = evento.title; // Título del evento
+                    var urlValue = evento.url; // URL del evento
+                    // Construye un selector jQuery utilizando el atributo data-title y el título del evento
+                    var selector = "a[data-title='" + titulo.replace(/'/g, "\\'") + "']";
+
+                    console.log("Título del evento:", titulo); // Muestra el título del evento en la consola
+                    console.log("URL del evento:", urlValue); // Muestra la URL del evento en la consola
+                    console.log("Selector:", selector); // Muestra el selector en la consola
+
+                    // Selecciona los enlaces que coinciden con el selector y los itera
+                    $(selector).each(function() {
+                        // Construye la URL final del evento
+                        var finalEncodedUrl = obtenerUrlFinal(urlValue, mt);
+                        console.log("URL final:", finalEncodedUrl); // Muestra la URL final en la consola
+
+                        // Asigna la URL final al atributo href del enlace correspondiente
+                        $(this).attr("href", finalEncodedUrl);
+                    });
+                });
+            } else {
+                console.error("La respuesta del servidor no contiene eventos válidos."); // Muestra un mensaje de error si la respuesta no contiene eventos válidos
+            }
+        },
+        // Manejo de errores en la solicitud AJAX
+        error: function(error) {
+            console.error("Error en la solicitud AJAX:", error); // Muestra un mensaje de error en la consola
+        }
+    });
+}
+
+// Función para obtener la URL final del evento
+function obtenerUrlFinal(urlValue, mt) {
+    if (urlValue && urlValue !== "#") {
+        // Realiza el procesamiento necesario de la URL del evento
+        var encodedPart = urlValue.split("\/html\/eventos\/?r=")[1];
+        var decodedPart = atob(encodedPart);
+        var modifiedPart = decodedPart.replace("/star.html?get=", "");
+
+        var randomURL = mt[Math.floor(Math.random() * mt.length)]; // Selecciona una URL aleatoria de medios de transmisión
+
+        var newUrl = randomURL + modifiedPart;
+        var encodedNewUrl = btoa(newUrl);
+        var finalEncodedUrl = "/html/eventos/?r=" + encodedNewUrl;
+
+        return finalEncodedUrl; // Retorna la URL final del evento
+    } else {
+        return "/star-plus/"; // Retorna una URL por defecto si la URL del evento es nula o #
+    }
+}
+
+// Llama a la función eventos para iniciar el proceso de obtención y actualización de eventos
+eventos();
+	
   function eventos() {
     var x = Math.random().toString(36).substring(7);
     var url = "https://corsproxy.io/?url=https://todopelotatv.live/json/starplus.json?" + x;
