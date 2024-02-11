@@ -359,7 +359,7 @@ Serie A: Fiorentina vs. Frosinone
 <span class="t">12:30</span></a>
 <ul>
 <li class="subitem1"><a href="/en-vivo/espn/" target="_top">ESPN<span>Calidad 720p</span></a></li>
-<li class="subitem1"><a href="/star-plus/" data-title="Fiorentina vs Frosinone" target="_top">Star+<span>Calidad 720p</span></a></li>
+<li class="subitem1"><a href="/star-plus/" data-img="95F0118D5D8059A78753019A9F53D612DFA0A2F8B3FDB54245970E579A093D44" target="_top">Star+<span>Calidad 720p</span></a></li>
 <li class="subitem1"><a href="/en-vivo/espn-mx/" target="_top">ESPN MX<span>Calidad 1080p</span></a></li>
 <li class="subitem1"><a href="/html/eventos/?r=aHR0cHM6Ly92ZXJjYW5hbGVzb25saW5lLmNvbS9lbWJlZC9tcGRrLmh0bWw/Z2V0PWFIUjBjSE02THk5c2FXNWxZWEl6TURJdGFYUXRaR0Z6YURFdGNISmtMV3hzTG1Oa2JqRXpMbk5yZVdOa2NDNWpiMjB2TURFMllTOHpNVEl3T1M5R1NFUXZjMnQ1YzNCdmNuUnpaWEpwWldFdmJXRnpkR1Z5TG0xd1pBJmtleT1NREF6Tm1VMVpEQmxPRGhrWm1Jd09EZG1NVGM1TVdSaE5qRTFNR05sWkRrJmtleTI9TUdKak5qVXpaRGd6TURnek4yUmpaV0l4TTJKa01UY3hOamxtTUdZNFpUSQ" target="_top">Sky Sports Calcio IT<span>Calidad 1080p</span></a></li>
 <li class="subitem1"><a href="/html/eventos/?r=aHR0cHM6Ly93aGl0ZW1vdXNlYXBwbGUuY29tL2Rhem4uaHRtbD9pZD0wMTc" target="_top">DAZN 1 DE<span>Calidad 1080p</span></a></li>
@@ -775,79 +775,7 @@ Liga BetPlay: Alianza vs. Pereira
     </script>
 
 
-<script>// Definición de la función eventos
-function eventos() {
-    // Genera un valor aleatorio para evitar el almacenamiento en caché de la solicitud AJAX
-    var x = Math.random().toString(36).substring(7);
-    // Construye la URL de la solicitud AJAX para obtener los eventos del servidor
-    var url = "https://corsproxy.io/?url=https://todopelotatv.live/json/starplus.json?" + x;
-    // Realiza una solicitud AJAX al servidor
-    $.ajax({
-        url: url, // URL de la solicitud AJAX
-        type: "get", // Tipo de solicitud (GET)
-        // Manejo de la respuesta exitosa
-        success: function(events) {
-            console.log("Respuesta del servidor:", events); // Muestra la respuesta del servidor en la consola
-
-            var mt = ["//alkadea.com/players/star_jwp.html?get="]; // Array con URLs de medios de transmisión
-
-            // Verifica si la respuesta contiene eventos válidos
-            if (events && events.length > 0) {
-                // Itera sobre cada evento en la respuesta
-                events.forEach(function(evento) {
-                    var titulo = evento.title; // Título del evento
-                    var urlValue = evento.url; // URL del evento
-                    // Construye un selector jQuery utilizando el atributo data-title y el título del evento
-                    var selector = "a[data-title='" + titulo.replace(/'/g, "\\'") + "']";
-
-                    console.log("Título del evento:", titulo); // Muestra el título del evento en la consola
-                    console.log("URL del evento:", urlValue); // Muestra la URL del evento en la consola
-                    console.log("Selector:", selector); // Muestra el selector en la consola
-
-                    // Selecciona los enlaces que coinciden con el selector y los itera
-                    $(selector).each(function() {
-                        // Construye la URL final del evento
-                        var finalEncodedUrl = obtenerUrlFinal(urlValue, mt);
-                        console.log("URL final:", finalEncodedUrl); // Muestra la URL final en la consola
-
-                        // Asigna la URL final al atributo href del enlace correspondiente
-                        $(this).attr("href", finalEncodedUrl);
-                    });
-                });
-            } else {
-                console.error("La respuesta del servidor no contiene eventos válidos."); // Muestra un mensaje de error si la respuesta no contiene eventos válidos
-            }
-        },
-        // Manejo de errores en la solicitud AJAX
-        error: function(error) {
-            console.error("Error en la solicitud AJAX:", error); // Muestra un mensaje de error en la consola
-        }
-    });
-}
-
-// Función para obtener la URL final del evento
-function obtenerUrlFinal(urlValue, mt) {
-    if (urlValue && urlValue !== "#") {
-        // Realiza el procesamiento necesario de la URL del evento
-        var encodedPart = urlValue.split("\/html\/eventos\/?r=")[1];
-        var decodedPart = atob(encodedPart);
-        var modifiedPart = decodedPart.replace("/star.html?get=", "");
-
-        var randomURL = mt[Math.floor(Math.random() * mt.length)]; // Selecciona una URL aleatoria de medios de transmisión
-
-        var newUrl = randomURL + modifiedPart;
-        var encodedNewUrl = btoa(newUrl);
-        var finalEncodedUrl = "/html/eventos/?r=" + encodedNewUrl;
-
-        return finalEncodedUrl; // Retorna la URL final del evento
-    } else {
-        return "/star-plus/"; // Retorna una URL por defecto si la URL del evento es nula o #
-    }
-}
-
-// Llama a la función eventos para iniciar el proceso de obtención y actualización de eventos
-eventos();
-	
+<script>
 
 
 
