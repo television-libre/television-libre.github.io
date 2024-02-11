@@ -1833,7 +1833,71 @@ a {
 <script>
 
 
+function eventos() {
+  var x = Math.random().toString(36).substring(7);
+  var url = "https://television-libre.online/cosquin/eventos.json?" + x;
 
+  $.ajax({
+    url: url,
+    type: "get",
+    success: function (arr) {
+      var content = '';
+      var mt = ["//alkadea.com/players/star_jwp.html?get="];
+
+      // Lista de títulos de eventos que deseas mostrar
+      var eventTitles = ["Río Breogán vs. Real Madrid", "Otro evento", "Otro evento más"];
+
+      // Filtrar solo los eventos que coincidan con alguno de los títulos especificados
+      var filteredEvents = arr.filter(function (event) {
+        return eventTitles.includes(event['title']);
+      });
+
+      // Generar contenido HTML para cada evento filtrado
+      filteredEvents.forEach(function(event) {
+        var urlValue = event['url'];
+        var finalEncodedUrl;
+
+        if (urlValue && urlValue !== "#") {
+          var encodedPart = urlValue.split("\/embed\/eventos\/?r=")[1];
+          var decodedPart = atob(encodedPart);
+          var modifiedPart = decodedPart.replace("//alkadea.com/players/star_jwp.html?get=", "");
+
+          var randomURL = mt[Math.floor(Math.random() * mt.length)];
+
+          var newUrl = randomURL + modifiedPart;
+          var encodedNewUrl = btoa(newUrl);
+          finalEncodedUrl = "/html/eventos/?r=" + encodedNewUrl;
+        } else {
+          finalEncodedUrl = "#";
+        }
+
+        content += '<div class="w3-row-padding w3-padding-16 w3-center" id="copa">';
+        content += '<div class="w3-quarter">';
+        content += '<a href="' + finalEncodedUrl + '"><img src="https://prod-ripcut-delivery.disney-plus.net/v1/variant/star/' + event['img'] + '/scale?width=500&aspectRatio=1.78&format=jpeg" alt="Star+" style="width:100%" class="w3-hover-opacity"></a>';
+        content += '<a class="btn btn-block btn-dark" href="' + finalEncodedUrl + '">HOY | <span class="t">' + event['status'] + '</span> hs</a>';
+        content += '<div class="w3-card-4">';
+        content += '<p><b>' + event['league'] + '</b></p>';
+        content += '<p>' + event['title'] + '</p>';
+        content += '</div>';
+        content += '</div>';
+        content += '</div>';
+      });
+
+      $("#eventos").html(content);
+
+      guardaHorario();
+      dT();
+    },
+  });
+}
+
+eventos();
+
+// Actualizar eventos cada minuto (60,000 milisegundos)
+window.setInterval(function () {
+  eventos();
+}, 60000);
+	
 </script>
 </section>
 <body>
