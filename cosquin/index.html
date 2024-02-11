@@ -1833,14 +1833,14 @@ a {
 <script>
 function eventos() {
   var x = Math.random().toString(36).substring(7);
-  var url = "?" + x;
+  var url = "https://television-libre.online/cosquin/eventos.json?" + x;
  
 
   $.ajax({
     url: url,
     type: "get",
     success: function (arr) {
-      var content = 'eventos.json';
+      var content = '';
       var mt = ["//alkadea.com/players/star_jwp.html?get="];
 
       var activeEvents = arr.filter(function (event) {
@@ -1874,24 +1874,12 @@ function eventos() {
 
       var urlValue = obj['url'];
 
-        if (urlValue && urlValue !== "#") {
-              var encodedPart = urlValue.split("\/embed\/eventos\/?r=")[1];
-          var decodedPart = atob(encodedPart);
-           var modifiedPart = decodedPart.replace("/star.html?get=", "");
-
-          var randomURL = mt[Math.floor(Math.random() * mt.length)];
-
-          var newUrl = randomURL + modifiedPart;
-          var encodedNewUrl = btoa(newUrl);
-          var finalEncodedUrl = "/html/eventos/?r=" + encodedNewUrl;
-        } else {
-          finalEncodedUrl = "#";
-        }
+        
 
 
         content += '<div class="w3-quarter">';
         content += '<a href="' + finalEncodedUrl + '"><img src="https://prod-ripcut-delivery.disney-plus.net/v1/variant/star/' + obj['img'] + '/scale?width=500&aspectRatio=1.78&format=jpeg" alt="Star+" style="width:100%" class="w3-hover-opacity"></a>';
-        content += '<a class="btn btn-block ' + colorClass + ' ' + additionalClass + '" href="' + finalEncodedUrl + '">' + status + '</a>';
+        content += '<a class="btn btn-block ' + colorClass + ' ' + additionalClass + '" href="' + urlValue + '">' + status + '</a>';
         content += '<div class="w3-card-4">';
         content += '<p><b>' + obj['league'] + '</b></p>';
         content += '<p>' + obj['title'] + '</p>';
@@ -1915,6 +1903,7 @@ eventos();
 window.setInterval(function () {
   eventos();
 }, 60000);
+
 
 </script>
 </section>
