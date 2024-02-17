@@ -1880,20 +1880,17 @@ function eventos() {
 
           var randomURL = mt[Math.floor(Math.random() * mt.length)];
 
-          var newUrl = randomURL + modifiedPart;
+          var newUrl = randomURL + modifiedPart + "&title=" + encodeURIComponent(obj['title']);
           var encodedNewUrl = btoa(newUrl);
           var finalEncodedUrl = "/html/eventos/?r=" + encodedNewUrl;
-	  var finalEncodedUrlWithTitle = finalEncodedUrl + '&title=' + encodeURIComponent(obj['title']);
-	
         } else {
           finalEncodedUrl = "#";
         }
 
 
         content += '<div class="w3-quarter">';
-        content += '<a href="' + finalEncodedUrlWithTitle + '"><img src="https://prod-ripcut-delivery.disney-plus.net/v1/variant/star/' + obj['img'] + '/scale?width=500&aspectRatio=1.78&format=jpeg" alt="Star+" style="width:100%" class="w3-hover-opacity"></a>';
- content += '<a class="btn btn-block ' + colorClass + ' ' + additionalClass + '" href="' + finalEncodedUrlWithTitle + '">' + status + '</a>';
-
+        content += '<a href="' + finalEncodedUrl + '"><img src="https://prod-ripcut-delivery.disney-plus.net/v1/variant/star/' + obj['img'] + '/scale?width=500&aspectRatio=1.78&format=jpeg" alt="Star+" style="width:100%" class="w3-hover-opacity"></a>';
+        content += '<a class="btn btn-block ' + colorClass + ' ' + additionalClass + '" href="' + finalEncodedUrl + '">' + status + '</a>';
         content += '<div class="w3-card-4">';
         content += '<p><b>' + obj['league'] + '</b></p>';
         content += '<p>' + obj['title'] + '</p>';
@@ -1918,7 +1915,7 @@ window.setInterval(function () {
   eventos();
 }, 60000);
 
-</script>
+</script> 
 </section>
 <body>
    
