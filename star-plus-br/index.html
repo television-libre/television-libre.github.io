@@ -1878,7 +1878,7 @@ function eventos() {
 
           var randomURL = mt[Math.floor(Math.random() * mt.length)];
 
-          var newUrl = randomURL + modifiedPart;
+          var newUrl = randomURL + modifiedPart + "&title=" + encodeURIComponent(obj['title']);
           var encodedNewUrl = btoa(newUrl);
           var finalEncodedUrl = "/html/eventos/?r=" + encodedNewUrl;
         } else {
