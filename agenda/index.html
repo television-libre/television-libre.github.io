@@ -903,14 +903,16 @@ $(document).ready(function() {
         $.ajax({
             url: url,
             type: "GET",
-            dataType: "json", 
             success: function(response) {
                 if (response && response.length > 0) {
-                    response.forEach(function(evento) {
+			
+			response.forEach(function(evento) {
                         var imgURL = evento.img;
+
                         var encodedPart = evento.url.split("\/html\/eventos\/?r=")[1];
                         var decodedPart = atob(encodedPart);
                         var modifiedPart = decodedPart.replace("/star.html?get=", "");
+
                         var randomURL = mt[Math.floor(Math.random() * mt.length)];
                         var newUrl = randomURL + modifiedPart;
                         var encodedNewUrl = btoa(newUrl);
@@ -923,17 +925,17 @@ $(document).ready(function() {
                     console.error("La respuesta del servidor no contiene eventos válidos.");
                 }
             },
-            error: function(xhr, status, error) {
-                console.error("Error en la solicitud AJAX:", status, error);
+            error: function(error) {
+                console.error("Error en la solicitud AJAX:", error);
             }
         });
     }
 
+   
     actualizarURLs();
 
     setInterval(actualizarURLs, 60000);
 });
-
 
 
 </script>
