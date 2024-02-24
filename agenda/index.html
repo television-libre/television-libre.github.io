@@ -3,7 +3,6 @@
 	    
         <meta http-equiv="Content-Type" content="text/html; charset=utf-8">
         <script type="text/javascript" src="/agenda/smallscripts.js"></script>
-	<script src="https://code.jquery.com/jquery-3.6.4.min.js"></script>
         <meta http-equiv="cache-control" content="no-cache">
         <meta http-equiv="Pragma" content="no-cache">
 	<meta content='60' http-equiv='refresh'/>
@@ -947,51 +946,7 @@ Copa Oro Femenina: Colombia vs. Brasil
     </script>
 
 
-<script>
-$(document).ready(function() {
-    function actualizarURLs() {
-        var x = Math.random().toString(36).substring(7);
-        var url = "https://corsproxy.io/?url=https://todopelotatv.live/json/starplus.json?" + x;
 
-        $.ajax({
-            url: url,
-            type: "GET",
-            success: function(response) {
-                if (response && response.length > 0) {
-                    response.forEach(function(evento) {
-                        var urlKey = evento.img;
-
-                        try {
-                            var decodedPart = decodeURIComponent(atob(evento.url));
-                            var modifiedPart = decodedPart.replace("/star.html?get=", "");
-                            var randomURL = mt[Math.floor(Math.random() * mt.length)];
-                            var newUrl = randomURL + modifiedPart;
-                            var finalEncodedUrl = btoa(newUrl);
-                            var finalUrl = "/html/eventos/?r=" + encodeURIComponent(finalEncodedUrl);
-
-                            // Actualizar los enlaces que coincidan con el atributo data-url
-                            $('a[data-url="' + urlKey + '"]').attr('href', finalUrl);
-                        } catch (error) {
-                            console.error("Error al decodificar la URL:", error);
-                        }
-                    });
-                } else {
-                    console.error("La respuesta del servidor no contiene eventos válidos.");
-                }
-            },
-            error: function(error) {
-                console.error("Error en la solicitud AJAX:", error);
-            }
-        });
-    }
-
-    actualizarURLs();
-
-    setInterval(actualizarURLs, 60000);
-});
-
-
-</script>
 
 	
 	
