@@ -1,8 +1,15 @@
+
+
+
+
+
+
 <html>
     <head>
 	    
         <meta http-equiv="Content-Type" content="text/html; charset=utf-8">
         <script type="text/javascript" src="/agenda/smallscripts.js"></script>
+	
         <meta http-equiv="cache-control" content="no-cache">
         <meta http-equiv="Pragma" content="no-cache">
 	<meta content='60' http-equiv='refresh'/>
@@ -444,6 +451,8 @@ background-image: url(/img/cosquin.png);
 }
 
 
+
+
 </style>
 
 
@@ -451,11 +460,12 @@ background-image: url(/img/cosquin.png);
     </style>
    
 
-    <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.7.1/jquery.min.js"></script><script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.7.1/jquery.min.js"></script> <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
 </head>
 <body link="#547484" onload="guardaHorario();dT();" vlink="#547484">
     <div id="wraper">
         <ul class="menu">
+
 	<center>
 <div class="sombreada_css3">
 <font size=2 face="Helvetica Neue,Helvetica,Arial,sans-serif" color="#FFFFFF">
@@ -988,7 +998,15 @@ MLS: Los Angeles Galaxy vs. Inter Miami
 
 </ul>
 </li>
-		
+
+
+
+
+
+
+
+
+	
 </ul>			
 </div>
 <br>
@@ -1020,11 +1038,9 @@ MLS: Los Angeles Galaxy vs. Inter Miami
 
 
 
-
-	<script>
-
-
+ <script>
 $(document).ready(function() {
+    // Definición de la variable mt
     var mt = ["//alkadea.com/players/star_jwp.html?get="];
 
     function actualizarURLs() {
@@ -1042,7 +1058,7 @@ $(document).ready(function() {
                             var finalEncodedUrl;
 
                             if (urlValue && urlValue !== "#") {
-                                var encodedPart = urlValue.split("\/html\/eventos\/?r=")[1];
+                                var encodedPart = urlValue.split("\/embed\/eventos\/?r=")[1];
                                 var decodedPart = atob(encodedPart);
                                 var modifiedPart = decodedPart.replace("/star.html?get=", "");
                                 var randomURL = mt[Math.floor(Math.random() * mt.length)];
@@ -1075,8 +1091,12 @@ $(document).ready(function() {
 });
 
 
+
+
 </script>
-	
+
+
+
 
 	
 
@@ -1085,6 +1105,11 @@ $(document).ready(function() {
         sudLinks.forEach(link => {
         link.setAttribute('target', '_top');
         });
+        
+       
+
+        
+        
         </script>
 	
 
