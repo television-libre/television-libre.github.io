@@ -53,7 +53,18 @@
     }
          
 
-      </script>
+      </script><script>
+    window.addEventListener('DOMContentLoaded', function() {
+        var urlParams = new URLSearchParams(window.location.search);
+        var parametroV = urlParams.get('v');
+
+        if (parametroV === 'star') {
+            document.getElementById('opciones').style.display = 'block';
+        } else {
+            document.getElementById('opciones').style.display = 'none';
+        }
+    });
+</script>
 </head>
 <style>
 .button-container {
@@ -106,6 +117,8 @@
     }</script></div>
 <div class="grid md:grid-cols-5 gap-3">
  <div class="md:col-span-3 player w-full mx-auto">
+ <div id="opciones" style="display: none;" > <button class="btn btn-md" onclick="reproducirVideo(1)">Opción 1</button>
+ <button class="btn btn-md" onclick="reproducirVideo(2)">Opción 2</button></div>
 <script type="text/javascript">
                     if (embed) {document.write('<iframe class="shadow-lg rounded" width="100%" style="aspect-ratio:16/9;margin-bottom:20px" frameborder="0" allow="autoplay; encrypted-media" allowfullscreen src="'+atob(embed)+'" scrolling="no" frameBorder="0" allowfullscreen></iframe>');}
                         </script>
@@ -117,7 +130,52 @@
 
 </div>
 </main>
+  <script>
+            function reproducirVideo(boton) {
+                var urlParams = new URLSearchParams(window.location.search);
+                var enlaceOriginal = urlParams.get('r');
 
+                if (enlaceOriginal) {
+                    var enlaceDecodificado = atob(enlaceOriginal);
+                    var enlaceModificado = "";
+
+                    switch (boton) {
+                        case 1:
+                            enlaceModificado = modificarEnlaceBoton1(enlaceDecodificado);
+                            break;
+                        case 2:
+                            enlaceModificado = modificarEnlaceBoton2(enlaceDecodificado);
+                            break;
+                        case 3:
+                            enlaceModificado = modificarEnlaceBoton3(enlaceDecodificado);
+                            break;
+                        default:
+                            enlaceModificado = enlaceDecodificado;
+                            break;
+                    }
+
+                    var iframe = document.querySelector('.mx-auto iframe');
+
+                    if (iframe) {
+                        iframe.src = enlaceModificado;
+
+                        iframe.play();
+                    }
+                }
+            }
+
+            function modificarEnlaceBoton1(enlace) {
+                return enlace;
+            }
+
+            function modificarEnlaceBoton2(enlace) {
+                return enlace.replace('https://live-ftc-na-south-2.', 'https://live-ftc-sa-east-2.').replace('/ctr-all-complete.m3u8', '/ctr-all-sliding.m3u8');
+            }
+
+            function modificarEnlaceBoton3(enlace) {
+                return enlace.replace('https://live-ftc-na-south-2.', 'https://live-ftc-sa-east-2.').replace('/ctr-all-complete.m3u8', '/ctr-all-complete.m3u8');
+            }
+        </script>
 <div id="footer"></div>
 <script>
             $(document).ready(function() {
