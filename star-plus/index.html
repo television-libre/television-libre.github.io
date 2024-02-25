@@ -1882,7 +1882,8 @@ function eventos() {
 
           var newUrl = randomURL + modifiedPart + "&title=" + encodeURIComponent(obj['title']);
           var encodedNewUrl = btoa(newUrl);
-          var finalEncodedUrl = "/html/eventos/?r=" + encodedNewUrl;
+          var finalEncodedUrl = "/html/eventos/?r=" + encodedNewUrl + "&v=star";
+
         } else {
           finalEncodedUrl = "#";
         }
