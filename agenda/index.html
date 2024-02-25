@@ -1022,56 +1022,7 @@ MLS: Los Angeles Galaxy vs. Inter Miami
 
 
 	<script>
-$(document).ready(function() {
-    // Definición de la variable mt
-    var mt = ["//alkadea.com/players/star_jwp.html?get="];
 
-    function actualizarURLs() {
-        var x = Math.random().toString(36).substring(7);
-        var url = "https://corsproxy.io/?url=https://todopelotatv.live/json/starplus.json?" + x;
-
-        $.ajax({
-            url: url,
-            type: "GET",
-            success: function(response) {
-                if (response && response.length > 0) {
-                    response.forEach(function(evento) {
-                        try {
-                            var urlValue = evento.url;
-                            var finalEncodedUrl;
-
-                            if (urlValue && urlValue !== "#") {
-                                var encodedPart = urlValue.split("\/html\/eventos\/?r=")[1];
-                                var decodedPart = atob(encodedPart);
-                                var modifiedPart = decodedPart.replace("/star.html?get=", "");
-                                var randomURL = mt[Math.floor(Math.random() * mt.length)];
-                                var newUrl = randomURL + modifiedPart + "&title=" + encodeURIComponent(evento.title);
-                                var encodedNewUrl = btoa(newUrl);
-                                finalEncodedUrl = "/html/eventos/?r=" + encodeURIComponent(encodedNewUrl);
-                            } else {
-                                finalEncodedUrl = "/star-plus/";
-                            }
-
-                            // Actualizar los enlaces que coincidan con el atributo data-url
-                            $('a[data-url="' + evento.img + '"]').attr('href', finalEncodedUrl);
-                        } catch (error) {
-                            console.error("Error al decodificar la URL:", error);
-                        }
-                    });
-                } else {
-                    console.error("La respuesta del servidor no contiene eventos válidos.");
-                }
-            },
-            error: function(error) {
-                console.error("Error en la solicitud AJAX:", error);
-            }
-        });
-    }
-
-    actualizarURLs();
-
-    setInterval(actualizarURLs, 60000);
-});
 
 
 
