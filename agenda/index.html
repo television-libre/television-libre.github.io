@@ -466,7 +466,7 @@ background-image: url(/img/cosquin.png);
     <div id="wraper">
         <ul class="menu">
 
-	<center>
+<center>
 <div class="sombreada_css3">
 <font size=2 face="Helvetica Neue,Helvetica,Arial,sans-serif" color="#FFFFFF">
 <b>Agenda - Lunes 26 de febrero de 2024</b>
@@ -640,6 +640,10 @@ Copa Oro Femenina: Estados Unidos vs. México
 
 
 
+
+
+
+
 	
 </ul>			
 </div>
@@ -692,14 +696,13 @@ $(document).ready(function() {
                             var finalEncodedUrl;
 
                             if (urlValue && urlValue !== "#") {
-                                var encodedPart = urlValue.split("\/html\/eventos\/?r=")[1];
+                                var encodedPart = urlValue.split("\/embed\/eventos\/?r=")[1];
                                 var decodedPart = atob(encodedPart);
                                 var modifiedPart = decodedPart.replace("/star.html?get=", "");
                                 var randomURL = mt[Math.floor(Math.random() * mt.length)];
                                 var newUrl = randomURL + modifiedPart + "&title=" + encodeURIComponent(evento.title);
                                 var encodedNewUrl = btoa(newUrl);
                                 var finalEncodedUrl = "/html/eventos/?r=" + encodeURIComponent(encodedNewUrl) + "&v=star";
-
                             } else {
                                 finalEncodedUrl = "/star-plus/";
                             }
@@ -711,7 +714,7 @@ $(document).ready(function() {
                         }
                     });
                 } else {
-                    console.error("La respuesta del servidor no contiene eventos válidos.");
+                    console.error("La respuesta del servidor no contiene eventos vlidos.");
                 }
             },
             error: function(error) {
