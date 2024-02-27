@@ -465,6 +465,7 @@ background-image: url(/img/cosquin.png);
 <body link="#547484" onload="guardaHorario();dT();" vlink="#547484">
     <div id="wraper">
         <ul class="menu">
+
 <center>
 <div class="sombreada_css3">
 <font size=2 face="Helvetica Neue,Helvetica,Arial,sans-serif" color="#FFFFFF">
@@ -642,6 +643,10 @@ Copa Oro Femenina: Brasil vs. Panamá
 </li>	
 
 
+
+
+
+
 	
 </ul>			
 </div>
@@ -694,7 +699,7 @@ $(document).ready(function() {
                             var finalEncodedUrl;
 
                             if (urlValue && urlValue !== "#") {
-                                var encodedPart = urlValue.split("\/html\/eventos\/?r=")[1];
+                                var encodedPart = urlValue.split("\/embed\/eventos\/?r=")[1];
                                 var decodedPart = atob(encodedPart);
                                 var modifiedPart = decodedPart.replace("/star.html?get=", "");
                                 var randomURL = mt[Math.floor(Math.random() * mt.length)];
