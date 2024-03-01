@@ -58,30 +58,43 @@ var getLang = getParameterByName('lang');
 
   </style>
 <body>
- <div id="loading-overlay">
-    <div id="loading-message">Cargando... Por favor, espere.</div>
-    <div id="loading-info">El reproductor puede tardar hasta más de 1 minuto.</div>
-  </div>
-  <div id="player"></div>
-  <script>
-    document.write('<iframe id="iframe" allow="encrypted-media" width="100%" height="100%" scrolling="no" frameBorder="0" allowfullscreen></iframe>');
-  </script>
+<div id="loading-overlay">
+  <div id="loading-message">Cargando... Por favor, espere.</div>
+  <div id="loading-info">El reproductor puede tardar hasta más de 1 minuto.</div>
+</div>
+<div id="player"></div>
+
 <script>
-var getVal = getParameterByName('get');
+  document.write('<iframe id="iframe" allow="encrypted-media" width="100%" height="100%" scrolling="no" frameBorder="0" allowfullscreen></iframe>');
+</script>
+
+<script type="text/javascript">
+  function getParameterByName(name) {
+    name = name.replace(/[\[]/, "\[").replace(/[\]]/, "\]");
+    var regex = new RegExp("[\?&]" + name + "=([^&#]*)"),
+      results = regex.exec(location.search);
+    return results === null ? "" : decodeURIComponent(results[1].replace(/\+/g, " "));
+  }
+
+  var getVal = getParameterByName('get');
   if (getVal == "#") {
     alert('Vuelve a la página anterior');
   }
   var getLang = getParameterByName('lang');
   var xhttp = new XMLHttpRequest();
-xhttp.open("GET", "/html/cv2.json?" + Math.floor(Math.random() * 9000 + 1000).toString(), true);
-xhttp.send();
-xhttp.onreadystatechange = function() {
+  xhttp.open("GET", "/html/cv.json?" + Math.floor(Math.random() * 9000 + 1000).toString(), true);
+  xhttp.send();
+  xhttp.onreadystatechange = function() {
     if (xhttp.readyState == 4 && xhttp.status == 200) {
-        var data = JSON.parse(xhttp.responseText);
-        url = data["url"];
-        document.getElementById('iframe').src = '//' + url + "/cvatt.html?get=" + getVal + "&lang=1";
-        document.getElementById('loading-overlay').style.display = 'none'; 
+      var data = JSON.parse(xhttp.responseText);
+      url = data["url"];
+      document.getElementById('iframe').src = '//' + url + "/cvatt.html?get=" + getVal + "&lang=1";
+
+      var iframe = document.getElementById('iframe');
+      iframe.onload = function() {
+        document.getElementById('loading-overlay').style.display = 'none';
+      };
     }
-}
+  }
 </script>
 </body>
