@@ -1874,16 +1874,9 @@ function eventos() {
 
         var urlValue = obj['url'];
 
-        if (urlValue && urlValue !== "#") {
-          var trimmedUrl = urlValue.replace(/\/html\/eventos\/\?r=/, '');
-          finalEncodedUrl = "/html/eventos/?r=" + trimmedUrl;
-        } else {
-          finalEncodedUrl = "#";
-        }
-
         content += '<div class="w3-quarter">';
         content += '<a href="' + finalEncodedUrl + '"><img src="https://static.flow.com.ar/images/5319x20240315x1530/S_DESC/600/500/0/0/' + obj['img'] + '.jpg"  alt="Lollapalooza 2024" style="width:100%" class="w3-hover-opacity"></a>';
-        content += '<a class="btn btn-block ' + colorClass + ' ' + additionalClass + '" href="' + finalEncodedUrl + '">' + status + '</a>';
+        content += '<a class="btn btn-block ' + colorClass + ' ' + additionalClass + '" href="' + urlValue + '">' + status + '</a>';
         content += '<div class="w3-card-4">';
         content += '<p><b>' + obj['league'] + '</b></p>';
         content += '<p>' + obj['title'] + '</p>';
