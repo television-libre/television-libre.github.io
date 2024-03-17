@@ -1840,15 +1840,13 @@ a {
 <script>
 function eventos() {
   var x = Math.random().toString(36).substring(7);
-  var url = "https://maindota2.co/nba_lp.php?" + x;
+  var url = "eventos.json?" + x;
  
 
   $.ajax({
     url: url,
     type: "get",
-    data: {
-        'domain': "https://megadeportestv2.com"
-      },
+
     success: function (arr) {
       var content = '';
       var mt = ["https://alkadea.com/players/nba.html?"];
