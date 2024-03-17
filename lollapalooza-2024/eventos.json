@@ -1,17 +1,17 @@
 
 [
     {
-        "title": "Día 2 - Escenario Flow",
+        "title": "Día 3 - Escenario Flow",
         "league": "Lollapalooza 2024",
-        "img": "10106649618",
+        "img": "10106670183",
         "url": "escenario-flow/",
         "status": "17:15"
     },
 
  {
-        "title": "Día 2 - Escenario Alternative",
+        "title": "Día 3 - Escenario Alternative",
         "league": "Lollapalooza 2024",
-        "img": "10106658894",
+        "img": "10106673017",
         "url": "escenario-alternative/",
         "status": "17:15"
     },
@@ -19,17 +19,17 @@
     
 
  {
-        "title": "Día 2 - Escenario Perry's",
+        "title": "Día 3 - Escenario Perry's",
         "league": "Lollapalooza 2024",
-        "img": "10106654299",
+        "img": "10106660370",
         "url": "escenario-perrys/",
-        "status": "17:30"
+        "status": "17:15"
     },
   
  {
-        "title": "Día 2 - Escenario Samsung",
+        "title": "Día 3 - Escenario Samsung",
         "league": "Lollapalooza 2024",
-        "img": "10106651753",
+        "img": "10106675887",
         "url": "escenario-samsung/",
         "status": "17:45"
     }
