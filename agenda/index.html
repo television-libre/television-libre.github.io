@@ -696,6 +696,15 @@ Primera Nacional: Chacarita vs. San Martín de Tucumán
 </li>		
 
 <li class="AR"><a href="#">
+Primera Nacional: Almirante Brown  vs. Gimnasia y Esgrima
+<span class="t">20:00</span></a>
+<ul>
+<li class="subitem1"><a id="link" href="/html/eventos/?r=" target="_top">TyC Sports Play<span>Calidad 720p</span></a></li>
+</ul>
+</li>	
+		
+
+<li class="AR"><a href="#">
 Copa Argentina: Godoy Cruz vs. San Martín de San Juan
 <span class="t">21:15</span></a>
 <ul>
@@ -823,7 +832,20 @@ Amistoso Sub-23:  México vs. Argentina
 
     </script>
 
-
+<script>
+    document.addEventListener("DOMContentLoaded", function() {
+        var link = document.getElementById('link');
+        
+        if (link.getAttribute('href') === '/html/eventos/?r=') {
+            link.removeAttribute('href'); 
+            link.style.cursor = 'not-allowed'; 
+            link.onclick = function() {
+                alert('El enlace no está listo aún.'); 
+                return false; 
+            };
+        }
+    });
+</script>
 
  <script>
 $(document).ready(function() {
