@@ -689,7 +689,7 @@ Primera Nacional: Atlanta  vs. Nueva Chicago
 Primera Nacional: Atlético Rafaela vs. Brown de Adrogué
 <span class="t">01:00</span></a>
 <ul>
-<li class="subitem1"><a id="link"  href="/html/eventos/?r=" target="_top">TyC Sports Play<span>Calidad 720p</span></a></li>
+<li class="subitem1"><a class="link"  href="/html/eventos/?r=" target="_top">TyC Sports Play<span>Calidad 720p</span></a></li>
 </ul>
 </li>		
 
@@ -697,7 +697,7 @@ Primera Nacional: Atlético Rafaela vs. Brown de Adrogué
 Primera Nacional: Chaco For Ever vs. Defensores de Belgrano
 <span class="t">01:00</span></a>
 <ul>
-<li class="subitem1"><a id="link"  href="/html/eventos/?r=" target="_top">TyC Sports Play<span>Calidad 720p</span></a></li>
+<li class="subitem1"><a class="link"  href="/html/eventos/?r=" target="_top">TyC Sports Play<span>Calidad 720p</span></a></li>
 </ul>
 </li>	
 
@@ -705,7 +705,7 @@ Primera Nacional: Chaco For Ever vs. Defensores de Belgrano
 Primera Nacional: Estudiantes Río Cuarto vs.  Mitre
 <span class="t">01:00</span></a>
 <ul>
-<li class="subitem1"><a id="link"  href="/html/eventos/?r=" target="_top">TyC Sports Play<span>Calidad 720p</span></a></li>
+<li class="subitem1"><a class="link"  href="/html/eventos/?r=" target="_top">TyC Sports Play<span>Calidad 720p</span></a></li>
 </ul>
 </li>	
 
@@ -776,15 +776,17 @@ Amistoso Sub-23:  México vs. Argentina
 
 <script>
     document.addEventListener("DOMContentLoaded", function() {
-        var link = document.getElementById('link');
+        var links = document.querySelectorAll('.AR .link');
         
-        if (link.getAttribute('href') === '/html/eventos/?r=') {
-            link.removeAttribute('href'); 
-            link.onclick = function() {
-                alert('El enlace no está listo aún.'); 
-                return false; 
-            };
-        }
+        links.forEach(function(link) {
+            if (link.getAttribute('href') === '/html/eventos/?r=') {
+                link.removeAttribute('href'); 
+                link.onclick = function() {
+                    alert('El enlace no está listo aún.'); 
+                    return false;
+                };
+            }
+        });
     });
 </script>
 
