@@ -94,7 +94,7 @@ function eventos() {
   var x = Math.random().toString(36).substring(7);
 
   $.ajax({
-    url: "eventos.json?" + x,
+    url: "https://corsproxy.io/?url=https://alkadea.com/json/tycplay.json?" + x,
     type: "get",
     success: function (arr) {
       var content = '';
