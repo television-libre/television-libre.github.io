@@ -1,3 +1,4 @@
+
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -12,28 +13,6 @@
 <script type='text/javascript'>
       document.oncontextmenu = function(){return false}
   </script>
-<script type="text/javascript">
-function getParameterByName(name) {
-	name = name.replace(/[\[]/, "\[").replace(/[\]]/, "\]");
-	var regex = new RegExp("[\?&]" + name + "=([^&#]*)"),
-	results = regex.exec(location.search);
-	return results === null ? "" : decodeURIComponent(results[1].replace(/\+/g, " "));
-}
-
-var get = getParameterByName('get');
-var key = getParameterByName('key');
-var key2 = getParameterByName('key2');
-var getIMG = getParameterByName('img');
-</script>
-  <script src="https://cdn.jsdelivr.net/npm/console-ban@4.1.0/dist/console-ban.min.js"></script>
-  <script>
-      // default options
-      ConsoleBan.init()
-      // custom options
-      ConsoleBan.init({
-        redirect: '/'
-      })
-    </script> 
 <script type="text/javascript">
     aclib.runPop({
         zoneId: '7692102',
@@ -55,7 +34,7 @@ var getIMG = getParameterByName('img');
       const eventImg = urlParams.get('img');
 
       function setupPlayer() {
-        fetch('json' + eventId + '.?' + Math.random().toString(36).substring(7))
+        fetch('v' + eventId + '.?' + Math.random().toString(36).substring(7))
           .then(response => {
             if (!response.ok) {
               throw new Error('Network response was not ok');
@@ -65,28 +44,24 @@ var getIMG = getParameterByName('img');
           .then(data => {
             var playerInstance = jwplayer("player");
 
-playerInstance.setup({
-	playlist: [{
-		"image": atob(getIMG),
-		"sources": [
-			{
-				"default": false,
-				"type": "dash",
-				"file": atob(get),
-				"drm": {
-					"clearkey": { "keyId": atob(key), "key": atob(key2) }
-				},
-				"label": "0"
-			}
-		]
-	}],
-	width: "100%",
-	height: "100%",
-	aspectratio: "16:9",
-	autostart: false,
-	cast: {},
-	sharing: {}
-});
+            playerInstance.setup({
+              playlist: [{
+                title: "",
+                description: "",
+                image: eventImg,
+                sources: [{
+                  default: false,
+                  file: atob(data.url),
+                  label: "0",
+                  type: "hls"
+                }],
+              }],
+              width: "100%",
+              height: "100%",
+              aspectratio: "16:9",
+              autostart: false,
+              sharing: {}
+            });
 
             playerInstance.on('error', function() {
               location.reload();
