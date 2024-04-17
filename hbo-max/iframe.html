@@ -1,0 +1,64 @@
+
+
+
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <style type="text/css">
+        #iframeContainer {
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            display: none;
+            overflow: hidden; /* Impede que o conteúdo do iframe ultrapasse a altura do contêiner */
+        }
+        iframe {
+            width: 100%;
+            height: 100%;
+            border: 0;
+        }
+    </style>
+</head>
+<body>
+
+<!-- Container para o iframe -->
+<div id="iframeContainer">
+    <head>
+<iframe allow="encrypted-media" id="myIframe" frameborder="0" sandbox="allow-same-origin allow-scripts allow-forms" allowfullscreen></iframe>
+</div>
+
+<script>
+// Função para obter parâmetros da URL
+function getParameterByName(name, url) {
+    if (!url) url = window.location.href;
+    name = name.replace(/[\[\]]/g, "\\$&");
+    var regex = new RegExp("[?&]" + name + "(=([^&#]*)|&|#|$)"),
+        results = regex.exec(url);
+    if (!results) return null;
+    if (!results[2]) return '';
+    return decodeURIComponent(results[2].replace(/\+/g, " "));
+}
+
+// Obter a URL da query string
+var urlParam = getParameterByName('url');
+
+// Verificar se a URL foi passada como parâmetro
+if (urlParam) {
+    // Configurar a URL do iframe
+    var iframe = document.getElementById('myIframe');
+    iframe.src = urlParam;
+    // Exibir o contêiner quando a URL é definida
+    document.getElementById('iframeContainer').style.display = 'block';
+} else {
+    // Exibir uma mensagem de erro se a URL não foi fornecida
+    document.getElementById('iframeContainer').innerHTML = '<p>Por favor, forneça uma URL usando o parâmetro "url" na query string.</p>';
+}
+</script>
+
+</body>
+</html>
