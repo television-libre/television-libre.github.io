@@ -74,85 +74,106 @@
 
      
 
-<script type="text/javascript">
+<script>
 function eventos() {
-  var x = Math.random().toString(36).substring(7);
+    var x = Math.random().toString(36).substring(7);
 
-  $.ajax({
-    url: "https://corsproxy.io/?url=https://todopelotatvhd.com/live/max-45.json?" + x,
-    type: "get",
-    success: function (arr) {
-      var content = '';
-      var mt = ["//pelotalibre.lat/star_jwp.html?get=", "//mpdkflow.blogspot.com/?get=", "//starjwp.blogspot.com/?get="];
+    $.ajax({
+        url: "https://corsproxy.io/?url=https://todopelotatvhd.com/live/max-45.json?" + x,
+        type: "get",
+        success: function (arr) {
+            var content = '';
 
-      var activeEvents = arr.filter(function (event) {
-        return event['status'] !== "FINALIZADO";
-      });
+            for (var i = 0; i < arr.length; i++) {
+                if (i % 4 == 0) {
+                    if (i != 0)
+                        content += '</div>';
 
-      for (var i = 0; i < activeEvents.length; i++) {
-        if (i % 4 === 0) {
-          if (i !== 0)
-            content += '</div>';
+                    content += '<div class="w3-row-padding w3-padding-16 w3-center" id="copa">';
+                }
 
-          content += '<div class="w3-row-padding w3-padding-16 w3-center" id="copa">';
-        }
+                var obj = arr[i];
+                var status, colorClass, additionalClass, decodedUrl, finalUrl;
 
-        var obj = activeEvents[i];
-        var status, colorClass, additionalClass, finalEncodedUrl;
+                if (obj['fecha-evento'] == "FINALIZADO" || obj['fecha-evento'] == "EN VIVO") {
+                    status = obj['fecha-evento'];
+                } else {
+                    var fechaEvento = new Date(obj['fecha-evento']);
+                    status = '' + formatTimeDifference(fechaEvento) + '';
+                }
 
-        if (obj['status'] == "FINALIZADO" || obj['status'] == "EN VIVO")
-          status = obj['status'];
-        else
-          status = 'HOY | <span class="t">' + obj['status'] + '</span> hs';
+                if (status == "EN VIVO") {
+                    colorClass = "btn-custom-red";
+                    additionalClass = "live-indicator-block";
+                    status = '<i class="fa fa-circle blink" aria-hidden="true"></i> ' + status;
+                } else if (status == "FINALIZADO") {
+                    colorClass = "btn-black";
+                } else {
+                    colorClass = "btn-dark";
+                    additionalClass = "";
+                }
 
-        if (status == "EN VIVO") {
-          colorClass = "btn-custom-red";
-          additionalClass = "live-indicator-block";
-          status = '<i class="fa fa-circle blink" aria-hidden="true"></i> ' + status;
-        } else {
-          colorClass = "btn-dark";
-          additionalClass = "";
-        }
+                var urlValue = obj['url'];
 
-        if (obj.url && obj.url !== "#") {
-          var encodedPart = obj.url.split("\/embed\/eventos\/?r=")[1];
-          var finalEncodedUrl = "/html/eventos/?r=" + encodedPart;
-        } else {
-          finalEncodedUrl = "#";
-        }     
+                if (urlValue && urlValue !== "#") {
+                 var encodedPart = urlValue.split("\/embed\/embed02.html?r=")[1];
 
-        content += '<div class="w3-quarter">';
-        content += '<a href="' + finalEncodedUrl + '"><img src="'  + obj['img'] +  '"  alt="MAX" style="width:100%" class="w3-hover-opacity"></a>';
-        content += '<a class="btn btn-block ' + colorClass + ' ' + additionalClass + '" href="'+ finalEncodedUrl +  '">' + status + '</a>';
-        content += '<div class="w3-card-4">';
-        content += '<p><b>' + obj['league'] + '</b></p>';
-        content += '<p>' + obj['title'] + '</p>';
-        content += '</div>';
-        content += '</div>';
+  
+    var decodedPart = atob(encodedPart);
 
-        if (i === activeEvents.length - 1)
-          content += '</div>';
-      }
+   
+    var modifiedPart = decodedPart.replace("https://fulldeportes.live/hbomx.html?get=", "");
 
-      $("#eventos").html(content);
+  
+    var newUrl = "//pelotalibre.lat/hbo_jwp.html?get=" + modifiedPart;
 
-      guardaHorario();
-      dT();
-    },
-  });
+
+    var encodedNewUrl = btoa(newUrl);
+
+    
+    var finalEncodedUrl = "/html/eventos/?r=" + encodedNewUrl;
+
+                } else {
+                    finalEncodedUrl = "#";
+                }
+
+                content += '<div class="w3-quarter">';
+                content += '<a href="' + finalEncodedUrl + '"><img src="https://art-gallery-latam.api.hbo.com/images/' + obj['img'] + '/tileburnedin?v=8988cca2d85ff535151b6370197220b4&size=1920x1080&compression=higt" alt="HBO MAX" style="width:100%" class="w3-hover-opacity"></a>';
+                content += '<a class="btn btn-block ' + colorClass + ' ' + additionalClass + '" href="' + finalEncodedUrl + '">' + status + '</a>';
+                content += '<div class="w3-card-4">';
+                content += '<p><b>' + obj['league'] + '</b></p>';
+                content += '<p>' + obj['title'] + '</p>';
+                content += '</div>';
+                content += '</div>';
+
+                if (i == arr.length - 1)
+                    content += '</div>';
+            }
+
+            $("#eventos").html(content);
+
+            guardaHorario();
+            dT();
+        },
+    });
+}
+
+function formatTimeDifference(date) {
+    var now = new Date();
+    var difference = date - now;
+
+    var hours = Math.floor(difference / 3600000); 
+    var minutes = Math.floor((difference % 3600000) / 60000); 
+
+    return 'Faltan | ' + hours + 'hs  y ' + minutes + 'm';
 }
 
 eventos();
 
 window.setInterval(function () {
-  eventos();
+    eventos();
 }, 60000);
-
-
-	
-  </script>
-
-
+</script>
 
 
 
