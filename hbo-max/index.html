@@ -93,7 +93,7 @@ function eventos() {
                 }
 
                 var obj = arr[i];
-                var status, colorClass, additionalClass, finalEncodedUrl;
+                var status, colorClass, additionalClass, decodedUrl, finalUrl;
 
                 if (obj['fecha-evento'] == "FINALIZADO" || obj['fecha-evento'] == "EN VIVO") {
                     status = obj['fecha-evento'];
@@ -116,16 +116,29 @@ function eventos() {
                 var urlValue = obj['url'];
 
                 if (urlValue && urlValue !== "#") {
-                    var urlObject = new URL(urlValue);
-                    urlObject.pathname = "/html/eventos/";
-                    urlObject.searchParams.set("r", urlObject.searchParams.get("r"));
-                    finalEncodedUrl = urlObject.href;
+                 var encodedPart = urlValue.split("\/embed\/embed02.html?r=")[1];
+
+  
+    var decodedPart = atob(encodedPart);
+
+   
+    var modifiedPart = decodedPart.replace("https://fulldeportes.live/hbomx.html?get=", "");
+
+  
+    var newUrl = "//television-libre.online/hbo-max/iframe.html" + modifiedPart;
+
+
+    var encodedNewUrl = btoa(newUrl);
+
+    
+    var finalEncodedUrl = "/html/eventos/?r=" + encodedNewUrl;
+
                 } else {
                     finalEncodedUrl = "#";
                 }
 
                 content += '<div class="w3-quarter">';
-                content += '<a href="' + finalEncodedUrl + '"><img src="' + obj['img'] + '" alt="HBO MAX" style="width:100%" class="w3-hover-opacity"></a>';
+                content += '<a href="' + finalEncodedUrl + '"><img src="https://art-gallery-latam.api.hbo.com/images/' + obj['img'] + '/tileburnedin?v=8988cca2d85ff535151b6370197220b4&size=1920x1080&compression=higt" alt="HBO MAX" style="width:100%" class="w3-hover-opacity"></a>';
                 content += '<a class="btn btn-block ' + colorClass + ' ' + additionalClass + '" href="' + finalEncodedUrl + '">' + status + '</a>';
                 content += '<div class="w3-card-4">';
                 content += '<p><b>' + obj['league'] + '</b></p>';
@@ -159,8 +172,7 @@ eventos();
 
 window.setInterval(function () {
     eventos();
-}, 60000);
-
+}, 60000); 
 </script>
 
 
