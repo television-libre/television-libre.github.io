@@ -55,10 +55,11 @@
   
     var iframeURLs = {
   
-'ESPN': {
-            url: 'https://clarovideo.alkadea.com/mpdk2.html?get=aHR0cHM6Ly9hcmxvY2FsbGl2ZWNoYW5uZWxzZGFzaC5sY2RuLmNsYXJvdHYuY29tLmFyL0NvbnRlbnQvREFTSF9EQVNIX0ZLL0xpdmUvY2hhbm5lbChFU1BOKS9tYXN0ZXIubXBk&key=ZTI3MDExOTRhNTUxZDMwYjM1YTdkNDkzOTM3ZTUwZjE=&key2=MzgyZmYwMTUyMjc4ZDhiYTk0NmQ0ZmQ4MmEwOWIyMTI=',
+'ESPNPY': {
+            url: 'https://clarovideo.alkadea.com/mpdk.html?get=aHR0cHM6Ly9weWxvY2FsbGl2ZWNsYXJvdmlkZW8uYWthbWFpemVkLm5ldC9Db250ZW50L0RBU0hfREFTSF9GSy9MaXZlL2NoYW5uZWwoRVNQTl9TVVIpL21hbmlmZXN0Lm1wZA==&key=OWZmNmIxOTdlYjc1YzJhNGY2ODRlNmNjNTdkMGY4NWY=&key2=ZGRkMTRlNWMxYTYzMWY4ZjI0NmFlYmQ0OTYzMzg5ZmQ=',
         },
 
+        
 'ESPN2PY': {
             url: 'https://clarovideo.alkadea.com/mpdk.html?get=aHR0cHM6Ly9weWxvY2FsbGl2ZWNsYXJvdmlkZW8uYWthbWFpemVkLm5ldC9Db250ZW50L0RBU0hfREFTSF9GSy9MaXZlL2NoYW5uZWwoRVNQTjJfQU5ESU5BKS9tYW5pZmVzdC5tcGQ=&key=Y2Q2ZDNkNjkwYmM0ODA0N2E2NzFiNzFhZTg2NGRlMTc=&key2=M2JiNDc1YTk1Y2E0ZGYzNjIxNTBmZWFiNWExY2Y0MGM=',
         },
@@ -67,20 +68,28 @@
             url: 'https://clarovideo.alkadea.com/mpdk.html?get=aHR0cHM6Ly9weWxvY2FsbGl2ZWNsYXJvdmlkZW8uYWthbWFpemVkLm5ldC9Db250ZW50L0RBU0hfREFTSF9GSy9MaXZlL2NoYW5uZWwoRVNQTjNfQU5ESU5BKS9tYW5pZmVzdC5tcGQ=&key=NDJlMjIzMDYyYTk4OTBlZDNmYjQ0NGY2Y2Q4YjBhOGQ=&key2=Y2E0N2EwYzE5MGFmYjE4YjliMGZhYTUwMjUyYTAxYmI=',
         },
                 
+'ESPNCO': {
+            url: 'https://clarovideo.alkadea.com/mpdk.html?get=aHR0cHM6Ly9sYXRhbXZvc2xpdmVjbGFyb3ZpZGVvLmFrYW1haXplZC5uZXQvQ29udGVudC9EQVNIX0RBU0hfRksvTGl2ZS9DaGFubmVsKEVTUE5fSEQpL21hbmlmZXN0Lm1wZA==&key=MGY4NWE0ZTFmYzU5MzdhODI3MzEzNTk3ZDA0ZjhlMjc=&key2=Y2MxZDgyMTliZTAxMzBkYTg1ZTRjNGNlNzNhNzVhYmI=',
+        },
+
         
 'ESPN2CO': {
             url: 'https://clarovideo.alkadea.com/mpdk.html?get=aHR0cHM6Ly9sYXRhbXZvc2xpdmVjbGFyb3ZpZGVvLmFrYW1haXplZC5uZXQvQ29udGVudC9EQVNIX0RBU0hfRksvTGl2ZS9DaGFubmVsKEVTUE5fMl9IRCkvbWFuaWZlc3QubXBk&key=OGQ3Y2I4ZmJjODFjZjNlZGRmOGViYjVkYjVlMTEyODI=&key2=YjdhOTg4MTJhYjhkODk3NDY0OWE2ZWM0MjBjMDEzZTE=',
-        },
-
-'ESPNCO': {
-            url: 'https://clarovideo.alkadea.com/mpdk.html?get=aHR0cHM6Ly9sYXRhbXZvc2xpdmVjbGFyb3ZpZGVvLmFrYW1haXplZC5uZXQvQ29udGVudC9EQVNIX0RBU0hfRksvTGl2ZS9DaGFubmVsKEVTUE5fSEQpL21hbmlmZXN0Lm1wZA==&key=MGY4NWE0ZTFmYzU5MzdhODI3MzEzNTk3ZDA0ZjhlMjc=&key2=Y2MxZDgyMTliZTAxMzBkYTg1ZTRjNGNlNzNhNzVhYmI=',
         },
 
 
  'ESPN3CO': {
             url: 'https://clarovideo.alkadea.com/mpdk.html?get=aHR0cHM6Ly9sYXRhbXZvc2xpdmVjbGFyb3ZpZGVvLmFrYW1haXplZC5uZXQvQ29udGVudC9EQVNIX0RBU0hfRksvTGl2ZS9DaGFubmVsKEVTUE5fM19IRCkvbWFuaWZlc3QubXBk&key=ZWIwNGU0ZWM3MDQ5YzA3MTJlMDljNTdhZWE5YzFjYjc=&key2=NDA0NjM2ZWM3OGRmYWYzNjMzMzM4MDVjOWEyYzNmNjY=',
 },
-     
+
+ 'ESPN4': {
+            url: 'https://clarovideo.alkadea.com/mpdk.html?get=aHR0cHM6Ly9sYXRhbXZvc2xpdmVjbGFyb3ZpZGVvLmFrYW1haXplZC5uZXQvQ29udGVudC9EQVNIX0RBU0hfRksvTGl2ZS9DaGFubmVsKEVTUE5fUExVU19IRCkvbWFuaWZlc3QubXBk&key=MWVkZWUxZWY2ODNlOTUxOGExNzJhZjgyNGIwNzY0MmE=&key2=MzkzNzFiYWNhMDk2ZTNjMWM4OTZlNTViYWI4OGI1NjQ=',
+        },
+
+ 'ESPN5': {
+            url: 'https://clarovideo.alkadea.com/mpdk.html?get=aHR0cHM6Ly9sYXRhbXZvc2xpdmVjbGFyb3ZpZGVvLmFrYW1haXplZC5uZXQvQ29udGVudC9EQVNIX0RBU0hfRksvTGl2ZS9DaGFubmVsKEZPWF9TUE9SVFNfSEQpL21hbmlmZXN0Lm1wZA==&key=NDUwOWNjMTI4ODdmNWQ4NDAyY2M5YzAwMjVlY2RkNTI=&key2=MjM0NDc2NjkwMTQxMGVkNjMwNmU0NDVhOWM0MzI0OWU=',
+        },       
+        
 
 'ESPNCL': {
             url: 'https://clarovideo.alkadea.com/mpdk.html?get=aHR0cHM6Ly9jbGJwa3RzdHZkYXNoLTMuY2xhcm92aWRlby5jb20vYnBrLXR2L0VTUE5IRC9kYXNoX2ZrL2luZGV4Lm1wZA==&key=MmNkODkwMjU5ZmM2ODMzNTBmNmY2MzQwOWVhOTgwZTg=&key2=YmJmMWNiNTQ5Njk2NTQxMTQ4ZTg1ZjUxM2Q3MzcxMDU=',
@@ -117,41 +126,9 @@
             url: 'https://clarovideo.alkadea.com/mpdk.html?get=aHR0cHM6Ly9jbGJwa3RzdHZkYXNoLTIuY2xhcm92aWRlby5jb20vYnBrLXR2L0NISUxFVklTSU9OSEQvZGFzaF9may9pbmRleC5tcGQ=&key=OTY5YmJjYjRmMzZjNDIzOWYzNTUzNDM1OWFhYjc4MGQ=&key2=YjIyYTY3YzFhNWJhYzc0ODhiZDFlNDUwYWIzMDc4Y2Q=',
 },        
 
-'ESPN2': {
-            url: 'https://clarovideo.alkadea.com/mpdk2.html?get=Ly9hcmxvY2FsbGl2ZWNoYW5uZWxzZGFzaC5sY2RuLmNsYXJvdHYuY29tLmFyL0NvbnRlbnQvREFTSF9EQVNIX0ZLL0xpdmUvY2hhbm5lbChFU1BOMikvbWFzdGVyLm1wZA==&key=NTc5ZmMwY2QxMTg0MmJjZTljMDQ1YTBkNTVhYTQ4NzI=&key2=YmY1NGQ5MjhlMjcwNjFhMTNmYWZkZGU5MzQxNDY0NzI=',
-        },
-      
-'ESPN3': {
-            url: 'https://clarovideo.alkadea.com/mpdk2.html?get=aHR0cHM6Ly9hcmxvY2FsbGl2ZWNoYW5uZWxzZGFzaC5sY2RuLmNsYXJvdHYuY29tLmFyL0NvbnRlbnQvREFTSF9EQVNIX0ZLL0xpdmUvY2hhbm5lbChFU1BOMykvbWFzdGVyLm1wZA==&key=MWI2NDUxODVjZDYyZDg4MWZhOTFmZDkyMTcwNjkwZWE=&key2=ZTVmNzU5ZTI1NmM3NjhjNjM0OWRlYjljYzQ0NmNhYmU=',
-        },
 
-'ESPN4': {
-            url: 'https://clarovideo.alkadea.com/mpdk.html?get=aHR0cHM6Ly9sYXRhbXZvc2xpdmVjbGFyb3ZpZGVvLmFrYW1haXplZC5uZXQvQ29udGVudC9EQVNIX0RBU0hfRksvTGl2ZS9DaGFubmVsKEZPWF9TUE9SVFNfSEQpL21hbmlmZXN0Lm1wZA==&key=NDUwOWNjMTI4ODdmNWQ4NDAyY2M5YzAwMjVlY2RkNTI=&key2=MjM0NDc2NjkwMTQxMGVkNjMwNmU0NDVhOWM0MzI0OWU=',
-        },
- 'ESPNEXTRA': {
-            url: 'https://clarovideo.alkadea.com/mpdk.html?get=aHR0cHM6Ly9sYXRhbXZvc2xpdmVjbGFyb3ZpZGVvLmFrYW1haXplZC5uZXQvQ29udGVudC9EQVNIX0RBU0hfRksvTGl2ZS9DaGFubmVsKEVTUE5fUExVU19IRCkvbWFuaWZlc3QubXBk&key=MWVkZWUxZWY2ODNlOTUxOGExNzJhZjgyNGIwNzY0MmE=&key2=MzkzNzFiYWNhMDk2ZTNjMWM4OTZlNTViYWI4OGI1NjQ=',
-        },
 
-'FOXSPORTS': {
-            url: 'https://clarovideo.alkadea.com/mpdk2.html?get=aHR0cHM6Ly9hcmxvY2FsbGl2ZWNoYW5uZWxzZGFzaC5sY2RuLmNsYXJvdHYuY29tLmFyL0NvbnRlbnQvREFTSF9EQVNIX0ZLL0xpdmUvY2hhbm5lbChGT1hfU1BPUlRTKS9tYXN0ZXIubXBk&key=NmE1ZWUwNDY1ODQ2YjU2MDIxMTM2YzZjNjk3NDEzNzU=&key2=YTI3M2Q3NGM5YzkyNjljMDc5Mzg2MmRhNDFjZjQxYjk=',
-},
-'FOXSPORTS2': {
-            url: 'https://clarovideo.alkadea.com/mpdk2.html?get=aHR0cHM6Ly9hcmxvY2FsbGl2ZWNoYW5uZWxzZGFzaC5sY2RuLmNsYXJvdHYuY29tLmFyL0NvbnRlbnQvREFTSF9EQVNIX0ZLL0xpdmUvY2hhbm5lbChGT1hfU1BPUlRTXzIpL21hc3Rlci5tcGQ=&key=ZDZlMzQ3ZTU1Zjc5M2RmMTFlNGVkN2ZjNGNhMzk3ZGQ=&key2=Y2NjMGRmNDE0NTE1N2FhNzUzZTYxYTM5NDA2MDNkMGI=',
-},
-'FOXSPORTS3': {
-            url: 'https://clarovideo.alkadea.com/mpdk2.html?get=aHR0cHM6Ly9hcmxvY2FsbGl2ZWNoYW5uZWxzZGFzaC5sY2RuLmNsYXJvdHYuY29tLmFyL0NvbnRlbnQvREFTSF9EQVNIX0ZLL0xpdmUvY2hhbm5lbChGT1hfU1BPUlRTXzMpL21hc3Rlci5tcGQ=&key=MDdkNmRlMDk2M2ZhZjk5MWVhZGRlNTdjOTA2MDUzNTA=&key2=MjE0ZjhjMDgyZGZiOGJhMzBjMjhkMTAzNGY1YzFlYjI=',
-        },
-'TYC': {
-            url: 'https://clarovideo.alkadea.com/mpdk2.html?get=aHR0cHM6Ly9hcmxvY2FsbGl2ZWNoYW5uZWxzZGFzaC5sY2RuLmNsYXJvdHYuY29tLmFyL0NvbnRlbnQvREFTSF9EQVNIX0ZLL0xpdmUvY2hhbm5lbChUWUNfU1BPUlRTKS9tYXN0ZXIubXBk&key=ZjdkY2FiODI5Y2FlZmZiNjEyNzQwYTFjNTFmMDQ3OGQ=&key2=YjI0NjZiYjUxOWI3NTlhZTNkZTE4MTg5ODg1MzI0NTM=',
-        },
 
-'ESPNMX': {
-            url: 'https://clarovideo.alkadea.com/mpdk.html?get=aHR0cHM6Ly9sYXRhbXZvc2xpdmVjbGFyb3ZpZGVvLmFrYW1haXplZC5uZXQvQ29udGVudC9EQVNIX0RBU0hfRksvTGl2ZS9DaGFubmVsKEVTUE5IRFBBTikvbWFuaWZlc3QubXBk&key=OGQ3MTAzYzQ4OGIyMDc0MTMwODk0Y2RkOTRjZDcyMjM=&key2=ZTIzNTk1NzYyZDI5MjQxMjA2ODU2ODJlYzExODBiNjE=&aut=true&lang=0',
-        },
-
-'TVP': {
-            url: 'https://clarovideo.alkadea.com/mpdk2.html?get=aHR0cHM6Ly9hcmxvY2FsbGl2ZWNoYW5uZWxzZGFzaC5sY2RuLmNsYXJvdHYuY29tLmFyL0NvbnRlbnQvREFTSF9EQVNIX0ZLL0xpdmUvY2hhbm5lbChUVl9QVUJMSUNBKS9tYXN0ZXIubXBk&key=Zjg4NzM3NWQxYzdmMDA3ZmIxMDQ0N2U4NDU4MWJlNzA=&key2=ODE4MzAwNzkzMjM1OWEzY2YxNDUxOThiNTEyOTExOWM=',
-        },
 
 'TVNCL': {
             url: 'https://clarovideo.alkadea.com/mpdk.html?get=aHR0cHM6Ly9jbGJwa3RzdHZkYXNoLTMuY2xhcm92aWRlby5jb20vYnBrLXR2L1RWTkhEL2Rhc2hfZmsvaW5kZXgubXBk&key=YmVjNGViZTY2YTg0MzFmMTI2NjhmNzEyM2IzZTEyNzM=&key2=OTA3MzdlNmZhODhlMzc4M2MxN2NiYWEzZDA5ZDM1MWQ=',
