@@ -28,124 +28,66 @@ var getURL = getParameterByName('get');
 if (getURL == "#") {alert('Vuelve a la pÃ¡gina anterior');}
 var getLang = getParameterByName('lang');
 </script>
-  <style type="text/css">
-
-    #loading-overlay {
-      position: fixed;
-      top: 0;
-      left: 0;
-      width: 100%;
-      height: 100%;
-      background: rgb(0 0 0);
-      display: flex;
-      flex-direction: column;
-      justify-content: center;
-      align-items: center;
-      z-index: 9999;
-      font-family: math;
-    }
-
-    #loading-message {
-      font-size: 36px;
-      color: #fff;
-      text-align: center;
-      margin-bottom: 20px;
-    }
-
-    #loading-info {
-      font-size: 24px;
-      color: #fff;
-      text-align: center;
-    }
-
-  </style>
 </head>
 <body>
- <div id="loading-overlay">
-  <div id="loading-message">Cargando... Por favor, espere.</div>
-  <div id="loading-info">El reproductor puede tardar hasta más de 1 minuto.</div>
-</div>
-<div id="player"></div>
-
+ <div id="player"></div>
 <script>
-  document.write('<iframe id="iframe" allow="encrypted-media" width="100%" height="100%" scrolling="no" frameBorder="0" allowfullscreen></iframe>');
-</script>
+document.write('<iframe id="iframe" allow="encrypted-media" width="100%" height="100%" scrolling="no" frameBorder="0" allowfullscreen></iframe>');
 
-<script type="text/javascript">
-  function getParameterByName(name) {
-    name = name.replace(/[\[]/, "\[").replace(/[\]]/, "\]");
-    var regex = new RegExp("[\?&]" + name + "=([^&#]*)"),
-      results = regex.exec(location.search);
-    return results === null ? "" : decodeURIComponent(results[1].replace(/\+/g, " "));
-  }
-
-  var getVal = getParameterByName('get');
-  if (getVal == "#") {
-    alert('Vuelve a la página anterior');
-  }
-
-/* if (getVal == "VE5UX1Nwb3J0c19IRA")
+if (getURL == "RVNQTjJIRA" || getURL == "RVNQTjM")
 {
-	  window.location = 'https://television-libre.online/tw2.html';
-}
-if (getVal == "Rm94X1Nwb3J0c19QcmVtaXVuX0hE")
-{
-	  window.location = 'https://television-libre.online/tw.html';
-}*/
-
-	
-  var getLang = getParameterByName('lang');
-
-if (getURL == "RVNQTjJIRA" || getURL == "RVNQTjM") {
-    $.getJSON("https://directory.cookieyes.com/api/v1/ip", function(response) {
-      if (response.country != "AR" && response.country != "UY" && response.country != "PY") {
-        if (getURL == "RVNQTjJIRA") {
+	$.getJSON("https://directory.cookieyes.com/api/v1/ip", function (response) {
+		if (response.country != "AR" && response.country != "UY" && response.country != "PY")
+		{
+			if (getURL == "RVNQTjJIRA") {
           document.getElementById('iframe').src = 'https://clarovideo.alkadea.com/mpdk2.html?get=aHR0cHM6Ly9hcmxvY2FsbGl2ZWNoYW5uZWxzZGFzaC5sY2RuLmNsYXJvdHYuY29tLmFyL0NvbnRlbnQvREFTSF9EQVNIX0ZLL0xpdmUvY2hhbm5lbChFU1BOKS9tYXN0ZXIubXBkP2lwPTIwMC43LjE0Ny45MiZleHA9MTc3MTE3Mzc4NSZobWFjPTYyNDUwMTI2M2YwZWU3OTZlODc0YzgwODEzN2ZjZjUwMWU5ZjU4NDQ=&key=ZTI3MDExOTRhNTUxZDMwYjM1YTdkNDkzOTM3ZTUwZjE=&key2=MzgyZmYwMTUyMjc4ZDhiYTk0NmQ0ZmQ4MmEwOWIyMTI=';
         } else if (getURL == "RVNQTjM") {
           document.getElementById('iframe').src = 'https://librefutboltv.net/embed/mpdk.html?get=aHR0cHM6Ly9jbGJwa3RzdHZkYXNoLTMuY2xhcm92aWRlby5jb20vYnBrLXR2L0VTUE4zSEQvZGFzaF9may9pbmRleC5tcGQ&key=NmVhNjAxZDEzNTI3NTIyYTk3OGU4YTM0NWQ1NDU2MWY=&key2=Mzc3ZTQzZGRmNjY1MjE4NzZkNDgzY2JlOTM1ZDU2MTE=';
         }
-        var iframe = document.getElementById('iframe');
-        iframe.onload = function() {
-          document.getElementById('loading-overlay').style.display = 'none';
-        };
-      } else {
-        var xhttp = new XMLHttpRequest();
-        xhttp.open("GET", "/html/cv.json?" + Math.floor(Math.random() * 9000 + 1000).toString(), true);
-        xhttp.send();
-        xhttp.onreadystatechange = function() {
-          if (xhttp.readyState == 4 && xhttp.status == 200) {
-            var data = JSON.parse(xhttp.responseText);
-            var url = data["url"];
-            document.getElementById('iframe').src = '//' + url + "/cvatt.html?get=" + getURL + "&lang=1";
+		}
+		else
+		{
+			if (getLang)
+				lang = "&lang="+getLang;
+			else
+				lang = "";
+				
+			var url = "";
 
-            var iframe = document.getElementById('iframe');
-            iframe.onload = function() {
-              document.getElementById('loading-overlay').style.display = 'none';
-            };
-          }
-        };
-      }
-    });
-  } else {
-        var xhttp = new XMLHttpRequest();
-        xhttp.open("GET", "/html/cv.json?" + Math.floor(Math.random() * 9000 + 1000).toString(), true);
-        xhttp.send();
-        xhttp.onreadystatechange = function() {
-          if (xhttp.readyState == 4 && xhttp.status == 200) {
-            var data = JSON.parse(xhttp.responseText);
-            var url = data["url"];
-            document.getElementById('iframe').src = '//' + url + "/cvatt.html?get=" + getURL + "&lang=1";
+			var xhttp = new XMLHttpRequest();
+			xhttp.open("GET", "/html/cv.json?" + Math.floor(Math.random() * 9000 + 1000).toString(), true);
+			xhttp.send();
+			xhttp.onreadystatechange = function() {
+				if (xhttp.readyState == 4 && xhttp.status == 200) {
+						var data = JSON.parse(xhttp.responseText);
+						url = data["url"];
 
-            var iframe = document.getElementById('iframe');
-            iframe.onload = function() {
-              document.getElementById('loading-overlay').style.display = 'none';
-            };
-          }
-        };
-      }
-    });
-  }
+						  document.getElementById('iframe').src = '//' + url + "/cvatt.html?get=" + getURL + "&lang=1";
+				}
+			}
+		}
+	});
+}
+else
+{
+	if (getLang)
+		lang = "&lang="+getLang;
+	else
+		lang = "";
+				
+	var url = "";
+
+	var xhttp = new XMLHttpRequest();
+	xhttp.open("GET", "/html/cv.json?" + Math.floor(Math.random() * 9000 + 1000).toString(), true);
+	xhttp.send();
+	xhttp.onreadystatechange = function() {
+		if (xhttp.readyState == 4 && xhttp.status == 200) {
+				var data = JSON.parse(xhttp.responseText);
+				url = data["url"];
+
+				document.getElementById('iframe').src = '//' + url + "/cvatt.html?get=" + getURL + "&lang=1";
+		}
+	}
+}
 </script>
-
-
 </body>
