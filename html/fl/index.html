@@ -96,7 +96,7 @@ if (getVal == "Rm94X1Nwb3J0c19QcmVtaXVuX0hE")
 	
   var getLang = getParameterByName('lang');
 
-if (getVal == "RVNQTjJIRA" || getVal == "RVNQTjM") {
+if (getURL == "RVNQTjJIRA" || getURL == "RVNQTjM") {
     $.getJSON("https://directory.cookieyes.com/api/v1/ip", function(response) {
       if (response.country != "AR" && response.country != "UY" && response.country != "PY") {
         if (getURL == "RVNQTjJIRA") {
@@ -127,10 +127,23 @@ if (getVal == "RVNQTjJIRA" || getVal == "RVNQTjM") {
       }
     });
   } else {
-    var iframe = document.getElementById('iframe');
-    iframe.onload = function() {
-      document.getElementById('loading-overlay').style.display = 'none';
-    };
+        var xhttp = new XMLHttpRequest();
+        xhttp.open("GET", "/html/cv.json?" + Math.floor(Math.random() * 9000 + 1000).toString(), true);
+        xhttp.send();
+        xhttp.onreadystatechange = function() {
+          if (xhttp.readyState == 4 && xhttp.status == 200) {
+            var data = JSON.parse(xhttp.responseText);
+            var url = data["url"];
+            document.getElementById('iframe').src = '//' + url + "/cvatt.html?get=" + getURL + "&lang=1";
+
+            var iframe = document.getElementById('iframe');
+            iframe.onload = function() {
+              document.getElementById('loading-overlay').style.display = 'none';
+            };
+          }
+        };
+      }
+    });
   }
 </script>
 
