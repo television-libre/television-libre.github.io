@@ -858,7 +858,7 @@ $(document).ready(function() {
                             var finalEncodedUrl;
 
                             if (urlValue && urlValue !== "#") {
-                                var encodedPart = urlValue.split("\/html\/eventos\/?r=")[1];
+                                var encodedPart = urlValue.split("\/embed\/eventos\/?r=")[1];
                                 var decodedPart = atob(encodedPart);
                                 var modifiedPart = decodedPart.replace("/star.html?get=", "");
                                 var randomURL = mt[Math.floor(Math.random() * mt.length)];
