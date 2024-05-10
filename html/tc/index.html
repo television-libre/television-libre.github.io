@@ -66,8 +66,7 @@
     var getKEY = getParameterByName('key');
     var getKEY2 = getParameterByName('key2');
 
-    var channelUrl = 'https://tl.realintic.online/php/' + getURL + '-update.php
-
+    
     $.getJSON(channelUrl, function(data) {
       var url = data.url;
       var playerInstance = jwplayer("player");
