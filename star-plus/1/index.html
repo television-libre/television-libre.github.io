@@ -1,0 +1,187 @@
+
+
+<!DOCTYPE html>
+<html lang="es">
+<head>  
+<link rel="apple-touch-icon" sizes="57x57" href="/favicon/apple-icon-57x57.png">
+<link rel="apple-touch-icon" sizes="60x60" href="/favicon/apple-icon-60x60.png">
+<link rel="apple-touch-icon" sizes="72x72" href="/favicon/apple-icon-72x72.png">
+<link rel="apple-touch-icon" sizes="76x76" href="/favicon/apple-icon-76x76.png">
+<link rel="apple-touch-icon" sizes="114x114" href="/favicon/apple-icon-114x114.png">
+<link rel="apple-touch-icon" sizes="120x120" href="/favicon/apple-icon-120x120.png">
+<link rel="apple-touch-icon" sizes="144x144" href="/favicon/apple-icon-144x144.png">
+<link rel="apple-touch-icon" sizes="152x152" href="/favicon/apple-icon-152x152.png">
+<link rel="apple-touch-icon" sizes="180x180" href="/favicon/apple-icon-180x180.png">
+<link rel="icon" type="image/png" sizes="192x192"  href="/favicon/android-icon-192x192.png">
+<link rel="icon" type="image/png" sizes="32x32" href="/favicon/favicon-32x32.png">
+<link rel="icon" type="image/png" sizes="96x96" href="/favicon/favicon-96x96.png">
+<link rel="icon" type="image/png" sizes="16x16" href="/favicon/favicon-16x16.png">
+<link rel="manifest" href="/favicon/manifest.json">
+<meta name="msapplication-TileColor" content="#ffffff">
+<meta name="msapplication-TileImage" content="/favicon/ms-icon-144x144.png">
+<meta name="theme-color" content="#ffffff">
+ <script id="aclib" type="text/javascript" src="//acscdn.com/script/aclib.js"></script>
+
+<script type="text/javascript">
+    aclib.runPop({
+        zoneId: '8104838',
+    });
+</script>
+<script type="text/javascript" src="/html/hora.js?v"></script>
+<meta charset="UTF-8">
+<meta http-equiv="X-UA-Compatible" content="IE=edge">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Television Libre - Star +</title>
+<meta name="description" content="Ver Star+. Ver eventos deportivos como Futbol, NBA, NFL, MLB, UFC, etc.">
+<meta name="robots" content="noindex">
+<meta http-Equiv="Cache-Control" Content="no-cache" />
+<meta http-Equiv="Pragma" Content="no-cache" />
+<meta http-Equiv="Expires" Content="0" />
+<meta name="robots" content="noindex,nofollow">
+<link rel="stylesheet" href="/css/app.css">
+<script src="https://kit.fontawesome.com/ccee9ace0a.js" crossorigin="anonymous"></script> 
+<script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
+<link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.0.6/css/all.css">
+<link rel="stylesheet" href="https://television-libre.online/css/cardv.css">
+</head>
+<style>
+.button-container {
+  display: flex;
+  align-items: center;
+}
+
+.md-link {
+  margin-right: 8px;
+ 
+}
+
+</style>
+
+<body class="flex flex-col h-screen justify-between dark:bg-slate-800 dark:text-slate-300 font-sans">
+<div id="navbar"></div>
+<script>
+            $(document).ready(function() {
+                $("#navbar").load("/html/header.html");
+            });
+         </script>
+  
+      <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
+      <center>
+                <img src="/img/starplus.webp" alt="Star+" width="100" height="60">
+               <h2 style="color: #fff;font-size: 25px;font-weight: 600;">Elige el evento:</h2>
+            </center>
+ 
+<div id="eventos"></div>
+<br>
+
+
+
+<script>
+function eventos() {
+  var x = Math.random().toString(36).substring(7);
+  var url = "https://corsproxy.io/?url=https://television.libre.futbol/tv2/star-plus/eventos.json?" + x;
+ 
+
+  $.ajax({
+    url: url,
+    type: "get",
+    success: function (arr) {
+      var content = '';
+      var mt = ["//star.alkadea.com/?get="];
+
+      var activeEvents = arr.filter(function (event) {
+        return event['status'] !== "FINALIZADO";
+      });
+      
+       var eventosMostrar = [
+        "1E6682AA9D87779640E55ED1EAC19A67189BF6AD9D28157F9494FB5798D9C983", "FFD79172E2A720ED0E1A46088F9FA7F18DCC3FC35B7625AD49A4373C4347D2F3", 
+        "70295742298B06A225731F8C096ED01D6362641A1A40574BBE61F5C3920E588B", "2522AEE3E9E9A1F99A43B342182B218D161E03740297CDE2FADFB0A0575E6393",
+        "F0D7369C7B01C1181C15E0FDD74F3E795B9CF0DBCA5508F9C7BB8EC5C6A2DF21", "B095A3088EFD44FF9E39D85DAFF6434722173BE20F1E5E209C5F3E82572055D8",
+        "3AED127931F6CB04EE0239BA00B4C9700AE1F684EC85921AA17EBA2727778728",  
+      ];     
+
+      for (var i = 0; i < activeEvents.length; i++) {
+        if (i % 4 == 0) {
+          if (i != 0)
+            content += '</div>';
+
+          content += '<div class="w3-row-padding w3-padding-16 w3-center" id="copa">';
+        }
+if (eventosMostrar.includes(activeEvents[i]['img'])) {
+        var obj = activeEvents[i];
+        var status, colorClass, additionalClass, decodedUrl, finalUrl;
+
+        if (obj['status'] == "FINALIZADO" || obj['status'] == "EN VIVO")
+          status = obj['status'];
+        else
+          status = 'HOY | <span class="t">' + obj['status'] + '</span> hs';
+
+        if (obj['status'] == "EN VIVO") {
+          colorClass = "btn-custom-red";
+          additionalClass = "live-indicator-block";
+          status = '<i class="fa fa-circle blink" aria-hidden="true"></i> ' + status;
+        } else {
+          colorClass = "btn-dark";
+          additionalClass = "";
+        }
+
+      var urlValue = obj['url'];
+
+        if (urlValue && urlValue !== "#") {
+              var encodedPart = urlValue.split("\/embed\/eventos\/?r=")[1];
+          var decodedPart = atob(encodedPart);
+           var modifiedPart = decodedPart.replace("https://embed.maindots.co/star_jwp.html?get=", "");
+
+          var randomURL = mt[Math.floor(Math.random() * mt.length)];
+
+           var newUrl = randomURL + modifiedPart + "&title=" + encodeURIComponent(obj['title']);
+          var encodedNewUrl = btoa(newUrl);
+          var finalEncodedUrl = "/html/eventos/?r=" + encodedNewUrl + "&v=star";
+        } else {
+          finalEncodedUrl = "#";
+        }
+
+
+        content += '<div class="w3-quarter">';
+        content += '<a href="' + finalEncodedUrl + '"><img src="https://prod-ripcut-delivery.disney-plus.net/v1/variant/star/' + obj['img'] + '/scale?width=500&aspectRatio=1.78&format=jpeg" alt="Star+" style="width:100%" class="w3-hover-opacity"></a>';
+        content += '<a class="btn btn-block ' + colorClass + ' ' + additionalClass + '" href="' + finalEncodedUrl + '">' + status + '</a>';
+        content += '<div class="w3-card-4">';
+        content += '<p><b>' + obj['league'] + '</b></p>';
+        content += '<p>' + obj['title'] + '</p>';
+        content += '</div>';
+        content += '</div>';
+
+        if (i == activeEvents.length - 1)
+          content += '</div>';
+      }
+      }
+
+      $("#eventos").html(content);
+
+      guardaHorario();
+      dT();
+    },
+  });
+}
+
+eventos();
+
+window.setInterval(function () {
+  eventos();
+}, 60000);
+
+</script>
+</section>
+<body>
+   
+  
+   <div id="footer"></div>
+<script>
+            $(document).ready(function() {
+                $("#footer").load("/html/footer.html");
+            });
+         </script>
+  
+    
+  </body>
+  </html>
