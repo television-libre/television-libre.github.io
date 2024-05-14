@@ -82,25 +82,18 @@ var getLang = getParameterByName('lang');
     alert('Vuelve a la página anterior');
   }
 
-/* if (getVal == "VE5UX1Nwb3J0c19IRA")
-{
-	  window.location = 'https://television-libre.online/tw2.html';
-}
-if (getVal == "Rm94X1Nwb3J0c19QcmVtaXVuX0hE")
-{
-	  window.location = 'https://television-libre.online/tw.html';
-}*/
-
-	
   var getLang = getParameterByName('lang');
   var xhttp = new XMLHttpRequest();
   xhttp.open("GET", "/html/cv.json?" + Math.floor(Math.random() * 9000 + 1000).toString(), true);
   xhttp.send();
-  xhttp.onreadystatechange = function() {	  
+  xhttp.onreadystatechange = function() {   
     if (xhttp.readyState == 4 && xhttp.status == 200) {
       var data = JSON.parse(xhttp.responseText);
-      url = data["url"];
-      document.getElementById('iframe').src = '//' + url + "/cvatt.html?get=" + getVal + "&lang=1";
+      var urls = data["urls"];
+      var randomIndex = Math.floor(Math.random() * urls.length);
+      var chosenUrl = urls[randomIndex];
+
+      document.getElementById('iframe').src = '//' + chosenUrl + "/cvatt.html?get=" + getVal + "&lang=1";
 
       var iframe = document.getElementById('iframe');
       iframe.onload = function() {
@@ -109,6 +102,7 @@ if (getVal == "Rm94X1Nwb3J0c19QcmVtaXVuX0hE")
     }
   }
 </script>
+
 
 
 </body>
