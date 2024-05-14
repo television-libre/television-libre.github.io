@@ -74,8 +74,8 @@ var getLang = getParameterByName('lang');
 
 <script type="text/javascript">
   function getParameterByName(name) {
-    name = name.replace(/[\[]/, "\[").replace(/[\]]/, "\]");
-    var regex = new RegExp("[\?&]" + name + "=([^&#]*)"),
+    name = name.replace(/[\[]/, "\\[").replace(/[\]]/, "\\]");
+    var regex = new RegExp("[\\?&]" + name + "=([^&#]*)"),
       results = regex.exec(location.search);
     return results === null ? "" : decodeURIComponent(results[1].replace(/\+/g, " "));
   }
@@ -86,13 +86,15 @@ var getLang = getParameterByName('lang');
   }
   var getLang = getParameterByName('lang');
   var xhttp = new XMLHttpRequest();
-  xhttp.open("GET", "/html/cv.json?" + Math.floor(Math.random() * 9000 + 1000).toString(), true);
+  xhttp.open("GET", "/html/cv2.json?" + Math.floor(Math.random() * 9000 + 1000).toString(), true);
   xhttp.send();
   xhttp.onreadystatechange = function() {
     if (xhttp.readyState == 4 && xhttp.status == 200) {
       var data = JSON.parse(xhttp.responseText);
-      url = data["url"];
-      document.getElementById('iframe').src = '//' + url + "/cvatt2.html?get=" + getVal + "&lang=1";
+      var urls = data["urls"];
+      var randomIndex = Math.floor(Math.random() * urls.length);
+      var randomUrl = urls[randomIndex];
+      document.getElementById('iframe').src = '//' + randomUrl + "/cvatt.html?get=" + getVal + "&lang=1";
 
       var iframe = document.getElementById('iframe');
       iframe.onload = function() {
