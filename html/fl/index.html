@@ -59,7 +59,7 @@ var getLang = getParameterByName('lang');
   </style>
 </head>
 <body>
- <div id="loading-overlay">
+<div id="loading-overlay">
   <div id="loading-message">Cargando... Por favor, espere.</div>
   <div id="loading-info">El reproductor puede tardar hasta más de 1 minuto.</div>
 </div>
@@ -71,19 +71,16 @@ var getLang = getParameterByName('lang');
 
 <script type="text/javascript">
   function getParameterByName(name) {
-    name = name.replace(/[\[]/, "\[").replace(/[\]]/, "\]");
-    var regex = new RegExp("[\?&]" + name + "=([^&#]*)"),
+    name = name.replace(/[\[]/, "\\[").replace(/[\]]/, "\\]");
+    var regex = new RegExp("[\\?&]" + name + "=([^&#]*)"),
       results = regex.exec(location.search);
     return results === null ? "" : decodeURIComponent(results[1].replace(/\+/g, " "));
   }
 
-
-	
   var getVal = getParameterByName('get');
   if (getVal == "#") {
     alert('Vuelve a la página anterior');
-  }	
-	
+  }
   var getLang = getParameterByName('lang');
   var xhttp = new XMLHttpRequest();
   xhttp.open("GET", "/html/cv.json?" + Math.floor(Math.random() * 9000 + 1000).toString(), true);
@@ -91,8 +88,10 @@ var getLang = getParameterByName('lang');
   xhttp.onreadystatechange = function() {
     if (xhttp.readyState == 4 && xhttp.status == 200) {
       var data = JSON.parse(xhttp.responseText);
-      url = data["url"];
-      document.getElementById('iframe').src = '//' + url + "/cvatt.html?get=" + getVal + "&lang=1";
+      var urls = data["urls"];
+      var randomIndex = Math.floor(Math.random() * urls.length);
+      var randomUrl = urls[randomIndex];
+      document.getElementById('iframe').src = '//' + randomUrl + "/cvatt.html?get=" + getVal + "&lang=1";
 
       var iframe = document.getElementById('iframe');
       iframe.onload = function() {
