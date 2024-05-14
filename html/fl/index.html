@@ -77,23 +77,22 @@ var getLang = getParameterByName('lang');
     return results === null ? "" : decodeURIComponent(results[1].replace(/\+/g, " "));
   }
 
+
+	
   var getVal = getParameterByName('get');
   if (getVal == "#") {
     alert('Vuelve a la página anterior');
-  }
-
+  }	
+	
   var getLang = getParameterByName('lang');
   var xhttp = new XMLHttpRequest();
   xhttp.open("GET", "/html/cv.json?" + Math.floor(Math.random() * 9000 + 1000).toString(), true);
   xhttp.send();
-  xhttp.onreadystatechange = function() {   
+  xhttp.onreadystatechange = function() {
     if (xhttp.readyState == 4 && xhttp.status == 200) {
       var data = JSON.parse(xhttp.responseText);
-      var urls = data["urls"];
-      var randomIndex = Math.floor(Math.random() * urls.length);
-      var chosenUrl = urls[randomIndex];
-
-      document.getElementById('iframe').src = '//' + chosenUrl + "/cvatt.html?get=" + getVal + "&lang=1";
+      url = data["url"];
+      document.getElementById('iframe').src = '//' + url + "/cvatt.html?get=" + getVal + "&lang=1";
 
       var iframe = document.getElementById('iframe');
       iframe.onload = function() {
