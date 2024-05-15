@@ -65,6 +65,12 @@ var getLang = getParameterByName('lang');
   if (getVal == "#") {
     alert('Vuelve a la página anterior');
   }	
+
+  if (getVal == "Rm94U3BvcnRz")
+{
+	  window.location = '/html/rb/?r=FOX';
+}
+	
   var getLang = getParameterByName('lang');
   var xhttp = new XMLHttpRequest();
   xhttp.open("GET", "/html/cv.json?" + Math.floor(Math.random() * 9000 + 1000).toString(), true);
