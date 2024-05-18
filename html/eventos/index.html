@@ -94,10 +94,7 @@
 .my-0{margin-top:0!important;margin-bottom:0!important}
 .mr-md-auto{margin-right:auto!important}
 .btn-warning{color:#fff;background-color:#f0ad4e;border-color:#f0ad4e}.btn-warning:hover{color:#fff;background-color:#ec971f;border-color:#eb9316}.btn-warning:focus,.btn-warning.focus{-webkit-box-shadow:0 0 0 2px rgba(240,173,78,0.5);box-shadow:0 0 0 2px rgba(240,173,78,0.5)}.btn-warning.disabled,.btn-warning:disabled{background-color:#f0ad4e;border-color:#f0ad4e}.btn-warning:active,.btn-warning.active,.show > .btn-warning.dropdown-toggle{color:#fff;background-color:#ec971f;background-image:none;border-color:#eb9316}
- .grid {
-   display: block!important;
-    padding: 0 50px 50px;
-}
+
 
 
 @media screen and (min-width:0px) and (max-width:767px){.my-3 {
@@ -108,9 +105,12 @@
 @media screen and (min-width:0px) and (max-width:767px){ .grid {
     padding: 0!important;
 }}
- 
+  
 </style>    
-
+<!--.grid {
+   display: block!important;
+    padding: 0 50px 50px;
+}-->
 <body class="flex flex-col h-screen justify-between dark:bg-slate-800 dark:text-slate-300 font-sans">
 <div id="navbar"></div>
 <script>
@@ -140,7 +140,9 @@
 
   </div>
   <div style="display: flex; flex-direction: column-reverse; align-items: flex-end;">
-
+  <div style="width:100%" id="chatbro"></div>
+<script id="chatBroEmbedCode">/* Chatbro Widget Embed Code Start */function ChatbroLoader(chats,async){async=!1!==async;var params={embedChatsParameters:chats instanceof Array?chats:[chats],lang:navigator.language||navigator.userLanguage,needLoadCode:'undefined'==typeof Chatbro,embedParamsVersion:localStorage.embedParamsVersion,chatbroScriptVersion:localStorage.chatbroScriptVersion},xhr=new XMLHttpRequest;xhr.withCredentials=!0,xhr.onload=function(){eval(xhr.responseText)},xhr.onerror=function(){console.error('Chatbro loading error')},xhr.open('GET','https://www.chatbro.com/embed.js?'+btoa(unescape(encodeURIComponent(JSON.stringify(params)))),async),xhr.send()}/* Chatbro Widget Embed Code End */ChatbroLoader({encodedChatId: '88x5P'});</script>
+ <!-- ShareThis BEGIN --><div style="width:100%" class="sharethis-inline-share-buttons"></div><!-- ShareThis END --></div>
 
 </div>
 </main>
