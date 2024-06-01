@@ -139,7 +139,7 @@ ChatbroLoader({encodedChatId: '58xKJ'});</script>
 <div class="grid md:grid-cols-5 gap-3">
  <div class="md:col-span-3 player w-full mx-auto">
  <div id="opciones" style="display: none;" > <button class="btn btn-md" onclick="reproducirVideo(1)">Opción 1</button>
- <button class="btn btn-md" onclick="reproducirVideo(2)">Opción 2</button><button class="btn btn-md" onclick="reproducirVideo(3)">Opción 3</button></div>
+ <button class="btn btn-md" onclick="reproducirVideo(2)">Opción 2</button><button class="btn btn-md" onclick="reproducirVideo(3)">Opción 3</button><button class="btn btn-md" onclick="reproducirVideo(4)">Opción 4</button></div>
 <script type="text/javascript">
                     if (embed) {document.write('<iframe class="shadow-lg rounded" width="100%" style="aspect-ratio:16/9;margin-bottom:20px" frameborder="0" allow="autoplay; encrypted-media" allowfullscreen src="'+atob(embed)+'" scrolling="no" frameBorder="0" allowfullscreen></iframe>');}
                         </script>
@@ -175,6 +175,9 @@ ChatbroLoader({encodedChatId: '58xKJ'});</script>
                         case 3:
                             enlaceModificado = modificarEnlaceBoton3(enlaceDecodificado);
                             break;
+                        case 4:
+                            enlaceModificado = modificarEnlaceBoton4(enlaceDecodificado);
+                            break;   
                         default:
                             enlaceModificado = enlaceDecodificado;
                             break;
@@ -201,6 +204,11 @@ ChatbroLoader({encodedChatId: '58xKJ'});</script>
              function modificarEnlaceBoton3(enlace) {
                 return enlace.replace('https://live-ftc-na-south-2.', 'https://live-ftc-sa-east-1.').replace('/ctr-all-complete.m3u8', '/ctr-all-complete.m3u8');
             }
+
+             function modificarEnlaceBoton4(enlace) {
+                return enlace.replace('https://live-ftc-na-south-2.', 'https://live-ftc-na-south-1').replace('/ctr-all-complete.m3u8', '/ctr-all-complete.m3u8');
+            }
+   
         </script>
 <div id="footer"></div>
 <script>
