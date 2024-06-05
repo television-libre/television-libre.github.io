@@ -81,7 +81,7 @@
 <script>
 function eventos() {
   var x = Math.random().toString(36).substring(7);
-  var url = "https://corsproxy.io/?url=https://todopelotatv.live/json/starplus.json?" + x;
+  var url = "https://corsproxy.io/?url=https://maindota2.co/json/datos.json?" + x;
  
 
   $.ajax({
@@ -125,7 +125,7 @@ function eventos() {
         if (urlValue && urlValue !== "#") {
               var encodedPart = urlValue.split("\/embed\/eventos\/?r=")[1];
           var decodedPart = atob(encodedPart);
-           var modifiedPart = decodedPart.replace("/star.html?get=", "");
+           var modifiedPart = decodedPart.replace("https://embed.maindots.co/star_jwp.html?get=", "");
 
           var randomURL = mt[Math.floor(Math.random() * mt.length)];
 
