@@ -82,7 +82,7 @@ var getLang = getParameterByName('lang');
       var urls = data["urls"];
       var randomIndex = Math.floor(Math.random() * urls.length);
       var randomUrl = urls[randomIndex];
-      document.getElementById('iframe').src = '//' + randomUrl + "/cvatt3.html?get=" + getVal + "&lang=1";
+      document.getElementById('iframe').src = '//' + randomUrl + "/extension.html?get=" + getVal + "&lang=1";
 
       var iframe = document.getElementById('iframe');
       iframe.onload = function() {
