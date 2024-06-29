@@ -29,7 +29,7 @@
 <meta charset="UTF-8">
 <meta http-equiv="X-UA-Compatible" content="IE=edge">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>Television Libre - Star +</title>
+<title>Television Libre - Disney +</title>
 <meta name="description" content="Ver Star+. Ver eventos deportivos como Futbol, NBA, NFL, MLB, UFC, etc.">
 <meta name="robots" content="index,follow">
 <link rel="stylesheet" href="/css/app.css">
@@ -81,37 +81,35 @@
 <script>
 function eventos() {
   var x = Math.random().toString(36).substring(7);
-  var url = "https://corsproxy.io/?url=https://www.todopelotatv.live/json/starplus.json?" + x;
- 
 
   $.ajax({
-    url: url,
+    url: "//star.nebunexa.com/disney/eventos.json" + x,
     type: "get",
     success: function (arr) {
       var content = '';
-      var mt = ["https://1.downmalll.rodeo/star_jwp.html?get="];
+      var mt = ["//pelotalibre.lat/star_jwp.html?get=",];
 
       var activeEvents = arr.filter(function (event) {
         return event['status'] !== "FINALIZAD";
       });
 
       for (var i = 0; i < activeEvents.length; i++) {
-        if (i % 4 == 0) {
-          if (i != 0)
+        if (i % 4 === 0) {
+          if (i !== 0)
             content += '</div>';
 
           content += '<div class="w3-row-padding w3-padding-16 w3-center" id="copa">';
         }
 
         var obj = activeEvents[i];
-        var status, colorClass, additionalClass, decodedUrl, finalUrl;
+        var status, colorClass, additionalClass, finalEncodedUrl;
 
         if (obj['status'] == "FINALIZADO" || obj['status'] == "EN VIVO")
           status = obj['status'];
         else
           status = 'HOY | <span class="t">' + obj['status'] + '</span> hs';
 
-        if (obj['status'] == "EN VIVO") {
+        if (status == "EN VIVO") {
           colorClass = "btn-custom-red";
           additionalClass = "live-indicator-block";
           status = '<i class="fa fa-circle blink" aria-hidden="true"></i> ' + status;
@@ -120,34 +118,18 @@ function eventos() {
           additionalClass = "";
         }
 
-      var urlValue = obj['url'];
-
-        if (urlValue && urlValue !== "#") {
-              var encodedPart = urlValue.split("\/embed\/eventos\/?r=")[1];
-          var decodedPart = atob(encodedPart);
-           var modifiedPart = decodedPart.replace("https://alwaysdomain01.online/85043671.html?get=", "");
-
-          var randomURL = mt[Math.floor(Math.random() * mt.length)];
-
-          var newUrl = randomURL + modifiedPart + "&title=" + encodeURIComponent(obj['title']);
-          var encodedNewUrl = btoa(newUrl);
-          var finalEncodedUrl = "/html/eventos/?r=" + encodedNewUrl + "&v=star";
-
-        } else {
-          finalEncodedUrl = "#";
-        }
-
+        var urlValue = obj['url'];
 
         content += '<div class="w3-quarter">';
-        content += '<a href="' + finalEncodedUrl + '"><img src="https://prod-ripcut-delivery.disney-plus.net/v1/variant/star/' + obj['img'] + '/scale?width=500&aspectRatio=1.78&format=jpeg" alt="Star+" style="width:100%" class="w3-hover-opacity"></a>';
-        content += '<a class="btn btn-block ' + colorClass + ' ' + additionalClass + '" href="' + finalEncodedUrl + '">' + status + '</a>';
+        content += '<a href="' + obj['url'] + '"><img src="' + obj['img'] + '" alt="Disney+" style="width:100%" class="w3-hover-opacity"></a>';
+        content += '<a class="btn btn-block ' + colorClass + ' ' + additionalClass + '" href="' + obj['url'] + '">' + status + '</a>';
         content += '<div class="w3-card-4">';
         content += '<p><b>' + obj['league'] + '</b></p>';
         content += '<p>' + obj['title'] + '</p>';
         content += '</div>';
         content += '</div>';
 
-        if (i == activeEvents.length - 1)
+        if (i === activeEvents.length - 1)
           content += '</div>';
       }
 
@@ -164,7 +146,6 @@ eventos();
 window.setInterval(function () {
   eventos();
 }, 60000);
-
 </script> 
 </section>
 <body>
