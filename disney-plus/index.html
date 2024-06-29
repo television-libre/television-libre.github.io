@@ -121,7 +121,7 @@ function eventos() {
         var urlValue = obj['url'];
 
         content += '<div class="w3-quarter">';
-        content += '<a href="' + obj['url'] + '"><img src="' + obj['img'] + '" alt="Disney+" style="width:100%" class="w3-hover-opacity"></a>';
+        content += '<a href="' + obj['url'] + '"><img src="https://prod-ripcut-delivery.disney-plus.net/v1/variant/star/' + obj['img'] + '/scale?width=200&aspectRatio=1.78&format=jpeg" alt="Disney+" style="width:100%" class="w3-hover-opacity"></a>';
         content += '<a class="btn btn-block ' + colorClass + ' ' + additionalClass + '" href="' + obj['url'] + '">' + status + '</a>';
         content += '<div class="w3-card-4">';
         content += '<p><b>' + obj['league'] + '</b></p>';
